@@ -1,0 +1,18 @@
+core: 8.x
+type: theme
+name: 'voi_lib_unb_ca'
+package: 'voi_lib_unb_ca'
+description: 'For voi_lib_unb_ca'
+base theme: bootstrap4
+
+libraries-override:
+  bootstrap4/global-styling: voi_lib_unb_ca/global-styling
+
+regions:
+  header: Header
+  navigation: 'Header navigation'
+  breadcrumb: Breadcrumbs
+  content: 'Main content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer

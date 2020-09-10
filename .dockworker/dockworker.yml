@@ -1,0 +1,22 @@
+dockworker:
+  version: '3.0'
+  application:
+    name: voi.lib.unb.ca
+    finish_marker: '99_zz_notify_user_URI'
+    project_prefix: VOI
+    upstream_images:
+      - unblibraries/drupal:8.x-3.x-unblib
+  deployment:
+    environments:
+      - dev
+      - prod
+  github:
+    repo: voi.lib.unb.ca
+    owner: unb-libraries
+  image:
+    push_branches:
+      - dev
+      - prod
+    name: unblibraries/voi.lib.unb.ca
+    date_tag_image: true
+    repository: dockercloud

@@ -1,0 +1,8 @@
+# Ignore everything
+*
+
+# Allow files and folders with a pattern starting with !
+!Dockerfile
+!custom
+!build
+!config-yml

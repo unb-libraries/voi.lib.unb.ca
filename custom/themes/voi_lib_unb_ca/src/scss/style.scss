@@ -1,0 +1,103 @@
+// Include custom sub theme.
+@import 'import';
+
+body {
+  font-family: 'ProximaNova-Regular', 'Montserrat', Helvetica, Arial, sans-serif;
+  background: $bg-page;
+}
+
+header {
+  border-bottom: 1px solid $footer-bg-color;
+
+  nav.navbar-dark {
+    background: #000;
+  }
+
+  nav .dropdown-menu .is-active {
+    background-color: #777;
+  }
+}
+
+header, footer {
+  a:hover, a:focus {
+    background: inherit;
+  }
+}
+
+#intro {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 100px 0;
+  text-align: center;
+  color: white;
+  background: url(../../images/intro-bg.jpg) no-repeat bottom center scroll;
+  background-color: black;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+
+  h1 {
+    font-size: 70px;
+    font-weight: 700;
+
+    span {
+      display: block;
+      font-size: medium;
+    }
+  }
+
+  .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .intro-text {
+    font-size: 26px;
+  }
+}
+
+main {
+  color: #fff;
+
+  hr {
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'ProximaNova-Bold', 'Montserrat', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  a:not([role="button"]) {
+      border-bottom: 1px dotted $link-fg-color;
+      box-shadow: none;
+      color: $link-fg-color;
+      transition: all $transition-duration $transition-timing;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background: inherit;
+      border-color: transparent;
+      color: $link-hover-fg-color;
+      box-shadow: 0 1px 0 0 $link-hover-fg-color;
+    }
+  }
+}
+
+h1.page-title {
+  text-align: left;
+}
+
+.navbar-brand {
+  font-family: 'ProximaNova-Bold', 'Montserrat', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+
+footer {
+  background-color: $footer-bg-color;
+}

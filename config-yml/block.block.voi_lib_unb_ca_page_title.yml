@@ -1,0 +1,20 @@
+uuid: 47050a9a-f433-4eb7-bd3c-dca2e5823b92
+langcode: en
+status: true
+dependencies:
+  theme:
+    - voi_lib_unb_ca
+_core:
+  default_config_hash: 8yptDf6WrXxeyevUz4nP5vfr7BtxQqCBMninhV2IJ1g
+id: voi_lib_unb_ca_page_title
+theme: voi_lib_unb_ca
+region: content
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

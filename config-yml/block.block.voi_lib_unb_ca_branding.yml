@@ -1,0 +1,25 @@
+uuid: 87ea8de7-bea9-4770-b1fc-049c6b4f0962
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - voi_lib_unb_ca
+_core:
+  default_config_hash: fRKXNB91UxDvEMkzCR8ZBsawfC6Fqbme2gtobei3gu4
+id: voi_lib_unb_ca_branding
+theme: voi_lib_unb_ca
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }
