@@ -1,7 +1,7 @@
 {
   "license": "MIT",
   "name": "unb-libraries/voi.lib.unb.ca-tests",
-  "description": "Libraries for behat testing for datasets.lib.unb.ca.",
+  "description": "Libraries for behat testing for voi.lib.unb.ca.",
   "authors": [
     {
       "name": "UNB Libraries",
