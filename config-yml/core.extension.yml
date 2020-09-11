@@ -6,6 +6,7 @@ module:
   color: 0
   comment: 0
   config: 0
+  config_translation: 0
   contact: 0
   contextual: 0
   datetime: 0
@@ -21,7 +22,9 @@ module:
   help: 0
   history: 0
   image: 0
+  language: 0
   link: 0
+  locale: 0
   menu_ui: 0
   node: 0
   options: 0
@@ -40,6 +43,7 @@ module:
   user: 0
   views_ui: 0
   menu_link_content: 1
+  content_translation: 10
   views: 10
   minimal: 1000
 theme:
