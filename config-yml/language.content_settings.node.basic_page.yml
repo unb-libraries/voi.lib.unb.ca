@@ -1,0 +1,16 @@
+uuid: 15dbc164-6a73-4bc2-b7f4-acdcb78e6be8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.basic_page
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.basic_page
+target_entity_type_id: node
+target_bundle: basic_page
+default_langcode: und
+language_alterable: true

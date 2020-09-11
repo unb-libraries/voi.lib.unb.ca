@@ -1,0 +1,29 @@
+uuid: f321340c-5fc5-4811-8de6-476ec8941507
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.document.body
+    - node.type.document
+  module:
+    - text
+    - user
+id: node.document.default
+targetEntityType: node
+bundle: document
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

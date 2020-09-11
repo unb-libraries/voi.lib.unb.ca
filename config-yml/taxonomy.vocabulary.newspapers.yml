@@ -1,0 +1,8 @@
+uuid: 77c39c32-647c-4830-b0d3-0cded87e14b1
+langcode: en
+status: true
+dependencies: {  }
+name: Newspapers
+vid: newspapers
+description: ''
+weight: 0

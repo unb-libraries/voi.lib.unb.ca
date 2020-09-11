@@ -1,0 +1,11 @@
+uuid: 693a73cc-2092-4124-83eb-fd52561f0249
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.newspapers
+id: taxonomy_term.newspapers
+target_entity_type_id: taxonomy_term
+target_bundle: newspapers
+default_langcode: und
+language_alterable: false
