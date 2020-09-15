@@ -17,7 +17,7 @@ require_once dirname(__FILE__) . "/settings.redis.inc";
 $databases['migrate']['default'] = array (
   'database'  => 'voi',
   'username'  => 'root',
-  'password'  => 'import',
+  'password'  => 'datadump',
   'host'      => 'mysqlimport',
   'port'      => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
