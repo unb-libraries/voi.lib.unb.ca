@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains voi_migration.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function voi_migration_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the voi_migration module.
+    case 'help.page.voi_migration':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('D7-&gt;D8 migration for voi.lib.unb.ca') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function voi_migration_theme() {
+  return [
+    'voi_migration' => [
+      'render element' => 'children',
+    ],
+  ];
+}

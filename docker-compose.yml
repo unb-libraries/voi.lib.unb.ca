@@ -62,6 +62,19 @@ services:
     networks:
       - voi.lib.unb.ca
 
+  # For migration.
+  mysqlimport:
+    image: mysql:5.7
+    expose:
+     - "3306"
+    environment:
+      MYSQL_DATABASE: voi
+      MYSQL_ROOT_PASSWORD: datadump
+    networks:
+      - voi.lib.unb.ca
+    volumes:
+      - /home/cam/db_dumps/:/docker-entrypoint-initdb.d
+
 networks:
   voi.lib.unb.ca:
     name: voi.lib.unb.ca
