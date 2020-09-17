@@ -4,12 +4,10 @@
 drush en --yes voi_migration
 
 # Run selected migrations.
-drush migrate-import d7_node_type
+drush migrate-import d7_user_role
 drush migrate-import d7_user
-drush migrate-import taxonomy_settings
-drush migrate-import d7_taxonomy_vocabulary
-drush migrate-import d7_language_content_taxonomy_vocabulary_settings
-drush migrate-import d7_taxonomy_vocabulary_translation
+drush migrate-import d7_node_type
+drush migrate-import taxonomy_vocabulary
 drush migrate-import d7_taxonomy_term:article_type
 drush migrate-import d7_taxonomy_term:newspapers
 drush migrate-import d7_taxonomy_term:tags
