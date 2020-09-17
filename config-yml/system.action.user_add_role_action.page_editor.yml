@@ -1,0 +1,14 @@
+uuid: a0dc9f4f-c09c-4d91-8793-5c5eb6c24199
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.page_editor
+  module:
+    - user
+id: user_add_role_action.page_editor
+label: 'Add the page editor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: page_editor

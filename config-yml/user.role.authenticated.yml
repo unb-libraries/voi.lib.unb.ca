@@ -5,8 +5,15 @@ dependencies: {  }
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
-label: 'Authenticated user'
+label: 'authenticated user'
 weight: 1
 is_admin: false
 permissions:
+  - 'access comments'
   - 'access content'
+  - 'flag document_data_bundle'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'unflag document_data_bundle'
+  - 'use text format filtered_html'
+  - 'view files'

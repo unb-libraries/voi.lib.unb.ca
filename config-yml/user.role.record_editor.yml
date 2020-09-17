@@ -1,0 +1,31 @@
+uuid: 1dd14ad3-a165-485d-90b3-0c0f364ea194
+langcode: en
+status: true
+dependencies: {  }
+id: record_editor
+label: 'record editor'
+weight: 4
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'access overlay'
+  - 'access toolbar'
+  - 'add terms in article_type'
+  - 'add terms in language'
+  - 'add terms in newspapers'
+  - 'create document content'
+  - 'delete any document content'
+  - 'delete own document content'
+  - 'delete terms in 2'
+  - 'delete terms in 3'
+  - 'delete terms in 4'
+  - 'edit any document content'
+  - 'edit own document content'
+  - 'edit terms in 2'
+  - 'edit terms in 3'
+  - 'edit terms in 4'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'view own unpublished content'
+  - 'view the administration theme'

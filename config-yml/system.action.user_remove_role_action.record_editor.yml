@@ -1,0 +1,14 @@
+uuid: c428d81e-91f7-4cb7-94b9-ee4d132a0060
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.record_editor
+  module:
+    - user
+id: user_remove_role_action.record_editor
+label: 'Remove the record editor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: record_editor

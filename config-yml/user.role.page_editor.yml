@@ -1,0 +1,21 @@
+uuid: d2a50056-f4b2-41c3-a490-484aec1b9319
+langcode: en
+status: true
+dependencies: {  }
+id: page_editor
+label: 'page editor'
+weight: 3
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'access overlay'
+  - 'create page content'
+  - 'delete any page content'
+  - 'delete own page content'
+  - 'edit any page content'
+  - 'edit own page content'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'view own unpublished content'
+  - 'view the administration theme'

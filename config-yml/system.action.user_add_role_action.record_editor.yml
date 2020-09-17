@@ -1,0 +1,14 @@
+uuid: 90cd278a-4245-4ce1-81e0-663be3e3de27
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.record_editor
+  module:
+    - user
+id: user_add_role_action.record_editor
+label: 'Add the record editor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: record_editor

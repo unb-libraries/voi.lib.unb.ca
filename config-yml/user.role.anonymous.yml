@@ -5,8 +5,13 @@ dependencies: {  }
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
-label: 'Anonymous user'
+label: 'anonymous user'
 weight: 0
 is_admin: false
 permissions:
+  - 'access comments'
   - 'access content'
+  - 'flag document_data_bundle'
+  - 'unflag document_data_bundle'
+  - 'use text format filtered_html'
+  - 'view files'
