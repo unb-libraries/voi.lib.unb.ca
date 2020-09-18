@@ -1,0 +1,20 @@
+uuid: 2729374c-338e-4b60-b191-c58a97a88c0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.ldap_user_current_dn
+  module:
+    - user
+id: user.user.ldap_user_current_dn
+field_name: ldap_user_current_dn
+entity_type: user
+bundle: user
+label: 'User LDAP DN'
+description: 'May change when user''s DN changes. This field should not be edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

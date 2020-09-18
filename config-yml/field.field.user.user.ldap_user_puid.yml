@@ -1,0 +1,20 @@
+uuid: a6292f02-17c8-40d5-8541-1eb46cca9ae7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.ldap_user_puid
+  module:
+    - user
+id: user.user.ldap_user_puid
+field_name: ldap_user_puid
+entity_type: user
+bundle: user
+label: 'Value of user''s permanent unique id.  This should never change for a given ldap identified user.'
+description: 'This field should not be edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

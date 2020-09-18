@@ -1,0 +1,20 @@
+uuid: 0717f017-6320-45d7-8595-f1247bae1fd8
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_newspaper
+field_name: field_newspaper
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

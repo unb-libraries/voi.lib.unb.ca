@@ -1,0 +1,21 @@
+uuid: 796dac12-7c9b-40ca-b696-6ca4bd659745
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_article_contents
+    - node.type.document
+  module:
+    - text
+id: node.document.field_article_contents
+field_name: field_article_contents
+entity_type: node
+bundle: document
+label: 'Article Contents'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

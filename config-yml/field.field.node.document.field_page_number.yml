@@ -1,0 +1,19 @@
+uuid: f8b0860c-bf61-476b-ab89-c6edf68ff035
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_number
+    - node.type.document
+id: node.document.field_page_number
+field_name: field_page_number
+entity_type: node
+bundle: document
+label: 'Page Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

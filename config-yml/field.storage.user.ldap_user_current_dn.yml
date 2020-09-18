@@ -1,0 +1,21 @@
+uuid: 14d4513b-582c-4691-aa31-a3aebeea9de5
+langcode: und
+status: true
+dependencies:
+  module:
+    - user
+id: user.ldap_user_current_dn
+field_name: ldap_user_current_dn
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

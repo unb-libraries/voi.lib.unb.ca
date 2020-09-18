@@ -1,0 +1,20 @@
+uuid: 1617b06d-cb6a-4054-a332-f911a082ff29
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.ldap_user_puid_property
+  module:
+    - user
+id: user.user.ldap_user_puid_property
+field_name: ldap_user_puid_property
+entity_type: user
+bundle: user
+label: 'Property specified as user''s puid.'
+description: 'This field should not be edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

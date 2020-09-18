@@ -1,0 +1,24 @@
+uuid: 552f05e8-6014-487f-b208-05586c13919d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.ldap_user_last_checked
+  module:
+    - user
+id: user.user.ldap_user_last_checked
+field_name: ldap_user_last_checked
+entity_type: user
+bundle: user
+label: 'Unix timestamp of when Drupal user was compard to ldap entry.  This could be for purposes of synching, deleteing drupal account, etc.'
+description: 'This field should not be edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

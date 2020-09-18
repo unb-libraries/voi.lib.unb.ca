@@ -1,0 +1,23 @@
+uuid: 59b7aebe-3bd5-4ed2-b0d5-a4b8ba9122a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_day
+    - node.type.document
+id: node.document.field_day
+field_name: field_day
+entity_type: node
+bundle: document
+label: Day
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

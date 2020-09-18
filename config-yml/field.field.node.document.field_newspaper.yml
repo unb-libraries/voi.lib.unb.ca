@@ -1,0 +1,23 @@
+uuid: 1f0b705d-a425-4ccf-bc78-b66dc9817b07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_newspaper
+    - node.type.document
+id: node.document.field_newspaper
+field_name: field_newspaper
+entity_type: node
+bundle: document
+label: Newspaper
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

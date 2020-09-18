@@ -1,0 +1,20 @@
+uuid: cc458cb7-ce26-4a6b-aa1e-3afce1dd0dac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.ldap_user_puid_sid
+  module:
+    - user
+id: user.user.ldap_user_puid_sid
+field_name: ldap_user_puid_sid
+entity_type: user
+bundle: user
+label: 'LDAP Server ID that puid was derived from.  NULL if puid is independent of server configuration instance.'
+description: 'This field should not be edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

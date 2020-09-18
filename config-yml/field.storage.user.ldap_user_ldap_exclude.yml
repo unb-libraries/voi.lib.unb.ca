@@ -1,0 +1,20 @@
+uuid: 2e8106a1-f1d6-48dc-8c25-898dba297f8d
+langcode: und
+status: true
+dependencies:
+  module:
+    - user
+id: user.ldap_user_ldap_exclude
+field_name: ldap_user_ldap_exclude
+entity_type: user
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
