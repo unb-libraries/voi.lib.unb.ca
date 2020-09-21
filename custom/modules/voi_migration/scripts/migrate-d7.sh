@@ -14,7 +14,6 @@ drush migrate-import d7_taxonomy_term:newspapers
 drush migrate-import d7_taxonomy_term:language
 drush migrate-import d7_taxonomy_term_localized_translation
 drush migrate-import d7_taxonomy_term_translation
-drush migrate-import d7_language_content_settings
 drush migrate-import d7_node_complete:document
 drush migrate-import d7_node_complete:page
 drush migrate-import d7_url_alias
