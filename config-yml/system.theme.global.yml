@@ -11,6 +11,6 @@ features:
 logo:
   path: ''
   url: ''
-  use_default: true
+  use_default: false
 _core:
   default_config_hash: KHk8rzK2GMRtdfoAeocFrll8Q7gGtiocl2GF5jnX9cY
