@@ -1,0 +1,16 @@
+uuid: 88c94e3c-cc4f-4daf-8714-cf7bebe06015
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.page
+target_entity_type_id: node
+target_bundle: page
+default_langcode: current_interface
+language_alterable: true
