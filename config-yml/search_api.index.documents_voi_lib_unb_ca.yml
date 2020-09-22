@@ -1,0 +1,199 @@
+uuid: 7e740114-cacd-448b-ac17-0af13534b956
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_solr
+    - node
+    - taxonomy
+    - search_api
+  config:
+    - field.storage.node.field_article_contents
+    - field.storage.node.field_article_type
+    - field.storage.node.field_author
+    - field.storage.node.field_day
+    - field.storage.node.field_language
+    - field.storage.node.field_month
+    - field.storage.node.field_newspaper
+    - field.storage.node.field_page_number
+    - field.storage.node.field_year
+    - search_api.server.drupal_solr_lib_unb_ca
+third_party_settings:
+  search_api_solr:
+    finalize: false
+    commit_before_finalize: false
+    commit_after_finalize: false
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
+    highlighter:
+      maxAnalyzedChars: 51200
+      fragmenter: gap
+      regex:
+        slop: 0.5
+        pattern: blank
+        maxAnalyzedChars: 10000
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
+      highlight:
+        mergeContiguous: false
+        requireFieldMatch: false
+        snippets: 3
+        fragsize: 0
+    mlt:
+      mintf: 1
+      mindf: 1
+      maxdf: 0
+      maxdfpct: 0
+      minwl: 0
+      maxwl: 0
+      maxqt: 100
+      maxntp: 2000
+      boost: false
+      interestingTerms: none
+    advanced:
+      index_prefix: ''
+      collection: ''
+      timezone: ''
+id: documents_voi_lib_unb_ca
+name: documents.voi.lib.unb.ca
+description: ''
+read_only: false
+field_settings:
+  field_article_type:
+    label: 'Article Type'
+    datasource_id: 'entity:node'
+    property_path: field_article_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_article_type
+  field_article_type_1:
+    label: 'Article Type'
+    datasource_id: 'entity:node'
+    property_path: field_article_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_article_type
+  field_author:
+    label: Author
+    datasource_id: 'entity:node'
+    property_path: field_author
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_author
+  field_day:
+    label: Day
+    datasource_id: 'entity:node'
+    property_path: field_day
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_day
+  field_language:
+    label: Language
+    datasource_id: 'entity:node'
+    property_path: field_language
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_language
+  field_month:
+    label: Month
+    datasource_id: 'entity:node'
+    property_path: field_month
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_month
+  field_newspaper:
+    label: Newspaper
+    datasource_id: 'entity:node'
+    property_path: field_newspaper
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_newspaper
+  field_page_number:
+    label: 'Page Number'
+    datasource_id: 'entity:node'
+    property_path: field_page_number
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_page_number
+  field_year:
+    label: Year
+    datasource_id: 'entity:node'
+    property_path: field_year
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_year
+  langcode:
+    label: Language
+    datasource_id: 'entity:node'
+    property_path: langcode
+    type: string
+    dependencies:
+      module:
+        - node
+  name:
+    label: 'Newspaper » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_newspaper:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_newspaper
+      module:
+        - taxonomy
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  processed:
+    label: 'Article Contents » Processed text'
+    datasource_id: 'entity:node'
+    property_path: 'field_article_contents:processed'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_article_contents
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - document
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  solr_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: lifo
+options:
+  index_directly: true
+  cron_limit: 100
+server: drupal_solr_lib_unb_ca
