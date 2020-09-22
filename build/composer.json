@@ -53,7 +53,7 @@
         }
     ],
     "require": {
-        "drupal/bootstrap4": "2.0.1",
+        "drupal/bootstrap4": "2.1.0",
         "drupal/core": "8.9.3",
         "drupal/fontawesome": "2.17",
         "drupal/google_analytics": "2.5",
