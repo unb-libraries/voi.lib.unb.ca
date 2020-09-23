@@ -1,0 +1,20 @@
+uuid: 016ed9dd-e76c-467f-87a4-5ce1170ecaef
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - voi_lib_unb_ca
+id: languageswitcher_2
+theme: voi_lib_unb_ca
+region: header
+weight: 0
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  provider: language
+  label_display: '0'
+visibility: {  }

@@ -17,3 +17,4 @@ permissions:
   - 'unflag document_data_bundle'
   - 'use text format filtered_html'
   - 'view files'
+  - 'view media'
