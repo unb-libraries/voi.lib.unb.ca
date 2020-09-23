@@ -53,7 +53,6 @@
         }
     ],
     "require": {
-        "drupal/bootstrap4": "2.1.0",
         "drupal/core": "8.9.3",
         "drupal/fontawesome": "2.17",
         "drupal/google_analytics": "2.5",
@@ -71,6 +70,7 @@
         "unb-libraries/drupal-builder": "^8.0.0"
     },
     "require-dev": {
+        "drupal/bootstrap4": "2.1.0",
         "unb-libraries/drupal-development-libraries": "^8.0.0"
     },
     "scripts": {
