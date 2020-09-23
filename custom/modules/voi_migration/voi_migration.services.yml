@@ -1,0 +1,5 @@
+services:
+  voi_migration.0_page_migrate_subscriber:
+    class: Drupal\voi_migration\Event\PageMigrateEvent
+    tags:
+      - { name: event_subscriber }
