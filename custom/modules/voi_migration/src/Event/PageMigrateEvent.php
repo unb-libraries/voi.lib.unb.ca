@@ -34,7 +34,35 @@ class PageMigrateEvent implements EventSubscriberInterface {
     switch ($migration_id) {
       // Page nodes.
       case 'd7_node_complete:page':
-        $body = file_get_contents('/app/html/modules/custom/voi_migration/data/pages/about_us.html');
+        $title = trim($row->getSourceProperty('title'));
+
+        switch ($title) {
+          case "About Us":
+            $value = file_get_contents('/app/html/modules/custom/voi_migration/data/pages/about.html');
+            break;
+
+          case "Qui sommes-nous?":
+            $value = file_get_contents('/app/html/modules/custom/voi_migration/data/pages/about-fr.html');
+            break;
+
+          case "What is Computer-Assisted Textual Analysis?":
+            $value = file_get_contents('/app/html/modules/custom/voi_migration/data/pages/what.html');
+            break;
+
+          case "Qu'est-ce que l'analyse de données textuelles?":
+            $value = file_get_contents('/app/html/modules/custom/voi_migration/data/pages/what-fr.html');
+            break;
+
+          default:
+            $value = $row->getSourceProperty('body')[0]['value'];
+            break;
+        }
+
+        $body = [
+          'value' => $value,
+          'format' => 'full_html',
+        ];
+
         $row->setSourceProperty('body', $body);
         break;
     }
