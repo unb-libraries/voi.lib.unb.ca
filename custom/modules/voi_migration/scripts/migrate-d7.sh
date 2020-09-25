@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Enable migration module.
+# Enable migration modules.
 drush en --yes voi_migration
 
 # Copy files required for migration of static pages.
@@ -22,3 +22,6 @@ drush migrate-import d7_taxonomy_term_translation
 drush migrate-import d7_node_complete:page
 drush migrate-import d7_node_complete:document
 drush migrate-import d7_url_alias
+
+# Disable migration modules.
+drush pmu migrate
