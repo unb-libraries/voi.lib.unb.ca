@@ -4,11 +4,12 @@ status: true
 dependencies:
   module:
     - search_api_solr
-    - node
     - taxonomy
+    - node
     - search_api
   config:
     - field.storage.node.field_article_contents
+    - field.storage.node.field_article_title
     - field.storage.node.field_article_type
     - field.storage.node.field_author
     - field.storage.node.field_day
@@ -61,27 +62,37 @@ name: documents.voi.lib.unb.ca
 description: ''
 read_only: false
 field_settings:
+  field_article_contents:
+    label: 'Article Contents » Processed text'
+    datasource_id: 'entity:node'
+    property_path: 'field_article_contents:processed'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_article_contents
+  field_article_title:
+    label: 'Article Title'
+    datasource_id: 'entity:node'
+    property_path: field_article_title
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_article_title
   field_article_type:
-    label: 'Article Type'
+    label: 'Article Type » Taxonomy term » Name'
     datasource_id: 'entity:node'
-    property_path: field_article_type
-    type: integer
+    property_path: 'field_article_type:entity:name'
+    type: text
     dependencies:
       config:
         - field.storage.node.field_article_type
-  field_article_type_1:
-    label: 'Article Type'
-    datasource_id: 'entity:node'
-    property_path: field_article_type
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_article_type
+      module:
+        - taxonomy
   field_author:
     label: Author
     datasource_id: 'entity:node'
     property_path: field_author
-    type: string
+    type: text
     dependencies:
       config:
         - field.storage.node.field_author
@@ -94,13 +105,15 @@ field_settings:
       config:
         - field.storage.node.field_day
   field_language:
-    label: Language
+    label: 'Language » Taxonomy term » Name'
     datasource_id: 'entity:node'
-    property_path: field_language
-    type: integer
+    property_path: 'field_language:entity:name'
+    type: text
     dependencies:
       config:
         - field.storage.node.field_language
+      module:
+        - taxonomy
   field_month:
     label: Month
     datasource_id: 'entity:node'
@@ -110,18 +123,20 @@ field_settings:
       config:
         - field.storage.node.field_month
   field_newspaper:
-    label: Newspaper
+    label: 'Newspaper » Taxonomy term » Name'
     datasource_id: 'entity:node'
-    property_path: field_newspaper
-    type: integer
+    property_path: 'field_newspaper:entity:name'
+    type: text
     dependencies:
       config:
         - field.storage.node.field_newspaper
+      module:
+        - taxonomy
   field_page_number:
     label: 'Page Number'
     datasource_id: 'entity:node'
     property_path: field_page_number
-    type: string
+    type: text
     dependencies:
       config:
         - field.storage.node.field_page_number
@@ -141,16 +156,6 @@ field_settings:
     dependencies:
       module:
         - node
-  name:
-    label: 'Newspaper » Taxonomy term » Name'
-    datasource_id: 'entity:node'
-    property_path: 'field_newspaper:entity:name'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_newspaper
-      module:
-        - taxonomy
   nid:
     label: ID
     datasource_id: 'entity:node'
@@ -159,19 +164,11 @@ field_settings:
     dependencies:
       module:
         - node
-  processed:
-    label: 'Article Contents » Processed text'
-    datasource_id: 'entity:node'
-    property_path: 'field_article_contents:processed'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_article_contents
   title:
     label: Title
     datasource_id: 'entity:node'
     property_path: title
-    type: string
+    type: text
     dependencies:
       module:
         - node
