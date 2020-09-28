@@ -63,9 +63,9 @@ description: ''
 read_only: false
 field_settings:
   field_article_contents:
-    label: 'Article Contents » Processed text'
+    label: 'Article Contents'
     datasource_id: 'entity:node'
-    property_path: 'field_article_contents:processed'
+    property_path: field_article_contents
     type: text
     dependencies:
       config:
