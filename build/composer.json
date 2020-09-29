@@ -55,6 +55,7 @@
     "require": {
         "drupal/bootstrap4": "2.1.0",
         "drupal/core": "8.9.3",
+        "drupal/facets": "1.5",
         "drupal/fontawesome": "2.17",
         "drupal/google_analytics": "2.5",
         "drupal/health_check": "1.2",

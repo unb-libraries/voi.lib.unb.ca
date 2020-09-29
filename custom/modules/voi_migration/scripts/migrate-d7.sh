@@ -24,4 +24,4 @@ drush migrate-import d7_node_complete:document
 drush migrate-import d7_url_alias
 
 # Disable migration modules.
-drush pmu migrate
+drush -y pmu migrate
