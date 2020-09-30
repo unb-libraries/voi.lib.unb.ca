@@ -10,6 +10,8 @@ dependencies:
     - taxonomy.vocabulary.article_type
     - taxonomy.vocabulary.language
     - taxonomy.vocabulary.newspapers
+  content:
+    - 'node:page:b222f151-7b63-49af-b2d1-ea4def227eaa'
   module:
     - search_api
 id: db_search
@@ -822,7 +824,20 @@ display:
             label: ''
           plugin_id: search_api
       title: Database
-      header: {  }
+      header:
+        entity_node:
+          id: entity_node
+          table: views
+          field: entity_node
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          target: b222f151-7b63-49af-b2d1-ea4def227eaa
+          view_mode: default
+          bypass_access: false
+          plugin_id: entity
       footer: {  }
       empty: {  }
       relationships: {  }
@@ -849,7 +864,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: db-search
+      path: search
       cache:
         type: none
       defaults:
