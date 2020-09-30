@@ -1,0 +1,35 @@
+label: ' Rechercher Dans La BDD'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Recherche
+      pager:
+        options:
+          tags:
+            first: '« Première page'
+            last: 'Dernière page »'
+      fields:
+        field_newspaper:
+          label: Journal
+        field_article_type:
+          label: 'Type d''article'
+        field_language:
+          label: Langue
+      filters:
+        search_api_fulltext:
+          expose:
+            label: 'Recherche Plein Texte'
+        field_article_type:
+          expose:
+            label: 'Type d''Article'
+        field_language:
+          expose:
+            label: Langue
+        field_year:
+          expose:
+            label: Année
+            min_placeholder: 'Début de la période'
+            max_placeholder: 'Fin de la période'
+      title: 'Base De Données'
