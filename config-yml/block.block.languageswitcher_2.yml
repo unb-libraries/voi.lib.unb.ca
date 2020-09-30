@@ -9,7 +9,7 @@ dependencies:
 id: languageswitcher_2
 theme: voi_lib_unb_ca
 region: header
-weight: 0
+weight: -3
 provider: null
 plugin: 'language_block:language_interface'
 settings:
