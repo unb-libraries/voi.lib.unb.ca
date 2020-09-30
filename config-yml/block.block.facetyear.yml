@@ -1,0 +1,23 @@
+uuid: 2099a089-2862-4a87-b1e8-b93522cbc046
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.facet_year
+  module:
+    - facets
+  theme:
+    - voi_lib_unb_ca
+id: facetyear
+theme: voi_lib_unb_ca
+region: sidebar_second
+weight: -3
+provider: null
+plugin: 'facet_block:facet_year'
+settings:
+  id: 'facet_block:facet_year'
+  label: 'Filter by year:'
+  provider: facets
+  label_display: visible
+  block_id: facetyear
+visibility: {  }

@@ -1,0 +1,23 @@
+uuid: 710f584e-47c3-4675-adc9-78c5a048dcde
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.facet_month
+  module:
+    - facets
+  theme:
+    - voi_lib_unb_ca
+id: facetmonth
+theme: voi_lib_unb_ca
+region: sidebar_second
+weight: -2
+provider: null
+plugin: 'facet_block:facet_month'
+settings:
+  id: 'facet_block:facet_month'
+  label: 'Filter by month:'
+  provider: facets
+  label_display: visible
+  block_id: facetmonth
+visibility: {  }

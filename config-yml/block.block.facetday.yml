@@ -1,0 +1,23 @@
+uuid: 26556196-e205-4f12-b3c6-d9c103bea13b
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.facet_day
+  module:
+    - facets
+  theme:
+    - voi_lib_unb_ca
+id: facetday
+theme: voi_lib_unb_ca
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'facet_block:facet_day'
+settings:
+  id: 'facet_block:facet_day'
+  label: 'Filter by day:'
+  provider: facets
+  label_display: visible
+  block_id: facetday
+visibility: {  }
