@@ -1,14 +1,18 @@
 #!/bin/sh
 
 # Enable migration modules.
+printf "\n\n[Migration and setup for voi.lib.unb.ca]\n\n"
+printf "\n\nEnabling migration modules...\n\n"
 drush en --yes voi_migration
 
 # Copy files required for migration of static pages.
+printf "\n\nCopying static page files...\n\n"
 mkdir /app/html/sites/default/files/inline-images/
 cp /app/html/modules/custom/voi_migration/data/pages/img/* /app/html/sites/default/files/inline-images/
 chown nginx:nginx /app/html/sites/default/files/inline-images/
 
 # Run selected migrations.
+printf "\n\nRunning Drupal migrations...\n\n"
 drush migrate-import language
 drush migrate-import d7_user_role
 drush migrate-import d7_user
@@ -23,5 +27,10 @@ drush migrate-import d7_node_complete:page
 drush migrate-import d7_node_complete:document
 drush migrate-import d7_url_alias
 
+# Import UI translations.
+printf "\n\nImporting UI translations...\n"
+drush langimp --langcodes=fr --file=/app/html/modules/custom/voi_migration/config/lang/all-fr.po
+
 # Disable migration modules.
+printf "Disabling migration modules..."
 drush -y pmu migrate
