@@ -28,9 +28,9 @@ drush migrate-import d7_node_complete:document
 drush migrate-import d7_url_alias
 
 # Import UI translations.
-printf "\n\nImporting UI translations...\n"
-drush langimp --langcodes=fr --file=/app/html/modules/custom/voi_migration/config/lang/all-fr.po
+printf "\n\nImporting UI translations...\n\n"
+drush langimp --langcode=fr /app/html/modules/custom/voi_migration/config/lang/all-fr.po
 
 # Disable migration modules.
-printf "Disabling migration modules..."
+printf "Disabling migration modules...\n\n"
 drush -y pmu migrate
