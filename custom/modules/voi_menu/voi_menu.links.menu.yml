@@ -1,0 +1,14 @@
+voi.front:
+  title: 'Welcome'
+  description: 'Welcome'
+  parent: main
+  menu_name: main
+  route_name: <front>
+  weight: 10
+voi.about:
+  title: 'About Us'
+  description: 'About Us'
+  parent: main
+  menu_name: main
+  url: internal:/about-us
+  weight: 20

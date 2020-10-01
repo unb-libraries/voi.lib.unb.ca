@@ -1,0 +1,18 @@
+uuid: 2d95c2a3-5720-41b5-b86b-6c014707e5cc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.newspapers
+id: taxonomy_term.newspapers.name
+field_name: name
+entity_type: taxonomy_term
+bundle: newspapers
+label: Nom
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

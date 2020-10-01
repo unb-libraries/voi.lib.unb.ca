@@ -1,9 +1,9 @@
-uuid: fe44174a-676c-454c-b013-0e054481e051
-langcode: en
+uuid: 6845a9bc-1fda-4606-bed7-3e4aedf8cb67
+langcode: fr
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.newspapers
+    - node.type.article
   module:
     - content_translation
 third_party_settings:
@@ -11,8 +11,8 @@ third_party_settings:
     enabled: false
     bundle_settings:
       untranslatable_fields_hide: '0'
-id: taxonomy_term.newspapers
-target_entity_type_id: taxonomy_term
-target_bundle: newspapers
-default_langcode: und
+id: node.article
+target_entity_type_id: node
+target_bundle: article
+default_langcode: site_default
 language_alterable: false

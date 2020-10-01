@@ -1,0 +1,22 @@
+uuid: 0cba7924-9176-4f1f-bbaf-b7beda511f83
+langcode: fr
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.newspapers
+id: taxonomy_term.newspapers.status
+field_name: status
+entity_type: taxonomy_term
+bundle: newspapers
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,5 @@
+name: 'VOI Menu'
+type: module
+description: 'Menu for voi.lib.unb.ca'
+core: 8.x
+package: 'Custom'
