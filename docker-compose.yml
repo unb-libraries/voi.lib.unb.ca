@@ -73,7 +73,7 @@ services:
     networks:
       - voi.lib.unb.ca
     volumes:
-      - /home/cam/db_dumps/:/docker-entrypoint-initdb.d
+      - /home/core/cvillami/db_dumps/:/docker-entrypoint-initdb.d
 
 networks:
   voi.lib.unb.ca:
