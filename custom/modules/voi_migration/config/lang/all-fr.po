@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2020-10-01 12:17+0000\n"
-"PO-Revision-Date: 2020-10-01 12:17+0000\n"
+"POT-Creation-Date: 2020-10-02 18:20+0000\n"
+"PO-Revision-Date: 2020-10-02 18:20+0000\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
@@ -12,5 +12,33 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+msgid "Main navigation"
+msgstr "Navigation principale"
+
+msgid "Site section links"
+msgstr "Navigation principale"
+
 msgid "- Any -"
 msgstr "- Tout -"
+
+msgid "Welcome"
+msgstr "Accueil"
+
+msgid "About Us"
+msgstr "Qui Sommes-Nous?"
+
+msgid "In the Media"
+msgstr "Dans les Médias"
+
+msgid "Publications and Conferences"
+msgstr "Publications et Colloques"
+
+msgid "What is Text Analysis?"
+msgstr "Qu'est-ce que l'ADT?"
+
+msgid "Downloads"
+msgstr "Téléchargements"
+
+msgid "What is Computer-Assisted Text Analysis?"
+msgstr "Qu'est-ce que l'analyse de données textuelles?"
+

@@ -10,5 +10,48 @@ voi.about:
   description: 'About Us'
   parent: main
   menu_name: main
-  url: internal:/about-us
+  url: internal:/node/1
+  expanded: TRUE
   weight: 20
+voi.about.us:
+  title: 'About Us'
+  description: 'About Us'
+  parent: voi.about
+  menu_name: main
+  url: internal:/node/1
+  weight: 10
+voi.about.media:
+  title: 'In the Media'
+  description: 'In the Media'
+  parent: voi.about
+  menu_name: main
+  url: internal:/node/2
+  weight: 20
+voi.publications:
+  title: 'Publications and Conferences'
+  description: 'Publications and Conferences'
+  parent: main
+  menu_name: main
+  url: internal:/node/3
+  weight: 30
+voi.text-analysis:
+  title: 'What is Text Analysis?'
+  description: 'What is Computer-Assisted Text Analysis?'
+  parent: main
+  menu_name: main
+  url: internal:/node/4
+  weight: 40
+voi.db:
+  title: 'Database'
+  description: 'Database'
+  parent: main
+  menu_name: main
+  url: internal:/search
+  weight: 50
+voi.downloads:
+  title: 'Downloads'
+  description: 'Downloads'
+  parent: main
+  menu_name: main
+  url: internal:/downloads
+  weight: 60
