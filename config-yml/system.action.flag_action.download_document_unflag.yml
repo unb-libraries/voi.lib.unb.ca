@@ -1,0 +1,15 @@
+uuid: 9d13ab6d-fb8f-49ce-9c17-a28083068a1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.download_document
+  module:
+    - flag
+id: flag_action.download_document_unflag
+label: '<i class="icon-remove"></i> Remove from data download'
+type: node
+plugin: 'flag_action:download_document_unflag'
+configuration:
+  flag_id: download_document
+  flag_action: unflag

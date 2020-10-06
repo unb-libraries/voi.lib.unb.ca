@@ -1,0 +1,15 @@
+uuid: 852d33ae-8d7c-4c61-85d6-072ab3ecc6ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.download_document
+  module:
+    - flag
+id: flag_action.download_document_flag
+label: '<i class="icon-download-alt"></i> Add to data download'
+type: node
+plugin: 'flag_action:download_document_flag'
+configuration:
+  flag_id: download_document
+  flag_action: flag
