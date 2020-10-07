@@ -58,6 +58,7 @@
         "drupal/drush_language": "1.0-rc3",
         "drupal/facets": "1.5",
         "drupal/flag": "4.0-beta2",
+        "drupal/flag_search_api": "1.4",
         "drupal/fontawesome": "2.17",
         "drupal/google_analytics": "2.5",
         "drupal/health_check": "1.2",

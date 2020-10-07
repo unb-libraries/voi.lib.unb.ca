@@ -23,5 +23,8 @@
     "post-update-cmd": [
       "vendor/bin/dockworker dockworker:git:setup-hooks"
     ]
+  },
+  "require": {
+    "zaporylie/composer-drupal-optimizations": "^1.1"
   }
 }
