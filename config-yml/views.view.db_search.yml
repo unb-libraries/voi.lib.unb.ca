@@ -10,9 +10,8 @@ dependencies:
     - taxonomy.vocabulary.article_type
     - taxonomy.vocabulary.language
     - taxonomy.vocabulary.newspapers
-  content:
-    - 'node:page:b222f151-7b63-49af-b2d1-ea4def227eaa'
   module:
+    - flag_search_api
     - search_api
 id: db_search
 label: 'DB Search'
@@ -572,6 +571,55 @@ display:
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
+        flag_download_document:
+          id: flag_download_document
+          table: search_api_index_documents_voi_lib_unb_ca
+          field: flag_download_document
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          plugin_id: search_api_flag
       filters:
         search_api_fulltext:
           id: search_api_fulltext

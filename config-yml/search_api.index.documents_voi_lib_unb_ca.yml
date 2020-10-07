@@ -6,6 +6,7 @@ dependencies:
     - search_api_solr
     - node
     - search_api
+    - flag_search_api
   config:
     - field.storage.node.field_article_contents
     - field.storage.node.field_article_title
@@ -142,6 +143,12 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_year
+  flag_download_document:
+    label: 'Download document'
+    property_path: flag_download_document
+    type: integer
+    indexed_locked: true
+    type_locked: true
   langcode:
     label: Language
     datasource_id: 'entity:node'
@@ -178,6 +185,9 @@ datasource_settings:
 processor_settings:
   add_url: {  }
   aggregated_field: {  }
+  flag_indexer:
+    flag_index:
+      - download_document
   highlight:
     highlight: always
     highlight_partial: true
