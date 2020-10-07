@@ -72,6 +72,7 @@
         "drupal/search_api_solr": "4.1.0",
         "drupal/token": "1.6",
         "drupal/pathauto": "1.6",
+        "drupal/views_data_export": "1.0",
         "unb-libraries/drupal-builder": "^8.0.0"
     },
     "require-dev": {

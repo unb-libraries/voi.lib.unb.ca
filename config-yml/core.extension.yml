@@ -9,6 +9,7 @@ module:
   config_translation: 0
   contact: 0
   contextual: 0
+  csv_serialization: 0
   datetime: 0
   dblog: 0
   drush_language: 0
@@ -38,16 +39,19 @@ module:
   quickedit: 0
   rdf: 0
   redis: 0
+  rest: 0
   search: 0
   search_api: 0
   search_api_autocomplete: 0
   search_api_solr: 0
+  serialization: 0
   system: 0
   taxonomy: 0
   text: 0
   toolbar: 0
   update: 0
   user: 0
+  views_data_export: 0
   views_ui: 0
   voi_menu: 0
   menu_link_content: 1
