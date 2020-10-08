@@ -7,8 +7,6 @@
  * Refresh all documents.
  */
 
-use Drupal\node\Entity\Node;
-
 // Search for all composite node ids.
 $nids = Drupal::entityQuery('node')
   ->condition('type', 'document')->execute();
