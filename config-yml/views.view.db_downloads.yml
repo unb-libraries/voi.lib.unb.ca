@@ -863,7 +863,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: search
+      path: downloads
       cache:
         type: none
       defaults:
