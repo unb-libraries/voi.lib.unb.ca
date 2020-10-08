@@ -27,6 +27,10 @@ drush migrate-import d7_node_complete:page
 drush migrate-import d7_node_complete:document
 drush migrate-import d7_url_alias
 
+# Format article content text.
+printf "\n\nFormatting article content text...\n\n"
+drush scr /app/html/modules/custom/voi_migration/scripts/format-doc.php
+
 # Import UI translations.
 printf "\n\nImporting UI translations...\n\n"
 drush langimp --langcode=fr /app/html/modules/custom/voi_migration/config/lang/all-fr.po
