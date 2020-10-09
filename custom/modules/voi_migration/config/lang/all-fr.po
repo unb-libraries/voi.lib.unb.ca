@@ -37,8 +37,7 @@ msgid "What is Text Analysis?"
 msgstr "Qu'est-ce que l'ADT?"
 
 msgid "Downloads"
-msgstr "Téléchargements"
+msgstr "Téléchargement"
 
 msgid "What is Computer-Assisted Text Analysis?"
 msgstr "Qu'est-ce que l'analyse de données textuelles?"
-
