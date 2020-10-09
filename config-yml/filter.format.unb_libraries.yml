@@ -1,0 +1,37 @@
+uuid: 79b23cb5-e49e-42f6-b94b-6a83f9b6268c
+langcode: en
+status: true
+dependencies:
+  module:
+    - editor
+name: 'UNB Libraries'
+format: unb_libraries
+weight: -50
+filters:
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: 8
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: 9
+    settings: {  }
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: 11
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<a class href hreflang id> <em class> <strong class> <cite class> <blockquote cite class> <code class> <ul class type> <ol class start type> <li class> <dl class> <dt class> <dd class> <h2 class id> <h3 class id> <h4 class id> <h5 class id> <h6 class id> <s> <sup class> <sub class> <img class src alt data-entity-type data-entity-uuid data-align data-caption> <table class> <caption class> <tbody class> <thead class> <tfoot class> <th class> <td class> <tr class> <hr> <p class> <pre> <br> <div class> <small class> <span class>'
+      filter_html_help: true
+      filter_html_nofollow: false
