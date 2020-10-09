@@ -79,6 +79,14 @@ display:
           default_row_class: true
       row:
         type: fields
+        options:
+          default_field_elements: true
+          inline:
+            counter: counter
+            nid: nid
+            title: title
+          separator: ''
+          hide_empty: false
       fields:
         counter:
           id: counter
