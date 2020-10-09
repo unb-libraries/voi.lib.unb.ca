@@ -56,6 +56,14 @@ class PageMigrateEvent implements EventSubscriberInterface {
           default:
             $value = $row->getSourceProperty('body')[0]['value'];
             break;
+
+          case "Download Header":
+            $value = file_get_contents('/app/html/modules/custom/voi_migration/data/pages/dl-header.html');
+            break;
+
+          default:
+            $value = $row->getSourceProperty('body')[0]['value'];
+            break;
         }
 
         $body = [
