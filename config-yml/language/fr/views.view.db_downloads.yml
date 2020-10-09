@@ -1,0 +1,20 @@
+label: Téléchargement
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Recherche
+      pager:
+        options:
+          tags:
+            first: '« Première page'
+            last: 'Dernière page »'
+      fields:
+        field_newspaper:
+          label: Journal
+        field_article_type:
+          label: 'Type d''article'
+        field_language:
+          label: Langue
+      title: Téléchargement
