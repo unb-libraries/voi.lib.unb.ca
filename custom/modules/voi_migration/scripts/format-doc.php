@@ -14,6 +14,6 @@ $nids = Drupal::entityQuery('node')
 // Load and save all composites.
 foreach ($nids as $nid) {
   $node = \Drupal::entityTypeManager()->getStorage('node')->load($nid);
-  $node->field_article_contents->format = 'basic_html';
+  $node->field_article_contents->format = 'unb_libraries';
   $node->save();
 }
