@@ -892,7 +892,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: false
+          empty: true
           tokenize: true
           target: b222f151-7b63-49af-b2d1-ea4def227eaa
           view_mode: default
