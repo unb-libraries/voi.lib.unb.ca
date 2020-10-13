@@ -2,6 +2,8 @@ uuid: 66be4ad9-c3ba-4b0e-89d1-b3521ac9691c
 langcode: en
 status: true
 dependencies:
+  config:
+    - user.role.administrator
   module:
     - taxonomy
     - user
@@ -20,9 +22,10 @@ display:
     position: 0
     display_options:
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access content'
+          role:
+            administrator: administrator
       cache:
         type: tag
         options: {  }
@@ -300,7 +303,7 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user.permissions
+        - user.roles
       tags: {  }
   page_1:
     display_plugin: page
@@ -317,5 +320,5 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user.permissions
+        - user.roles
       tags: {  }
