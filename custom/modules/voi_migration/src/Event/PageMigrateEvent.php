@@ -53,12 +53,17 @@ class PageMigrateEvent implements EventSubscriberInterface {
             $value = file_get_contents('/app/html/modules/custom/voi_migration/data/pages/what-fr.html');
             break;
 
-          default:
-            $value = $row->getSourceProperty('body')[0]['value'];
-            break;
-
           case "Download Header":
-            $value = file_get_contents('/app/html/modules/custom/voi_migration/data/pages/dl-header.html');
+            $langcode = $row->getSourceProperty('language');
+
+            if ($langcode == 'fr') {
+              $path = '/app/html/modules/custom/voi_migration/data/pages/dl-header-fr.html';
+            }
+            else {
+              $path = '/app/html/modules/custom/voi_migration/data/pages/dl-header.html';
+            }
+
+            $value = file_get_contents($path);
             break;
 
           default:
