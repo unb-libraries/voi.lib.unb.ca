@@ -1,0 +1,5 @@
+name: 'VOI Forms'
+type: module
+description: 'Form overrides and customization for voi.lib.unb.ca'
+core: 8.x
+package: 'Custom'

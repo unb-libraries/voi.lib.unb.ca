@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Contains voi_forms.module.
+ */
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ * Override exposed form labels.
+ */
+ function voi_forms_form_views_exposed_form_alter(&$form, $form_state, $form_id) {
+   // Retrieve current language.
+   $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+
+   // Override min, max labels according to current language.
+   if ($language == 'fr') {
+     $form['field_year']['min']['#title'] = t('Début de la Période');
+     $form['field_year']['max']['#title'] = t('Fin de la Période');
+   }
+   else {
+     $form['field_year']['min']['#title'] = t('Start Year');
+     $form['field_year']['max']['#title'] = t('End Year');
+   }
+
+   // Make placeholder text explicitly blank.
+   $form['field_year']['min']['#attributes']['placeholder'] = "";
+   $form['field_year']['max']['#attributes']['placeholder'] = "";
+ }
