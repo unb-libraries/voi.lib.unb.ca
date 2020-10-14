@@ -885,19 +885,17 @@ display:
           plugin_id: search_api
       title: Database
       header:
-        entity_node:
-          id: entity_node
+        area_text_custom:
+          id: area_text_custom
           table: views
-          field: entity_node
+          field: area_text_custom
           relationship: none
           group_type: group
           admin_label: ''
           empty: true
-          tokenize: true
-          target: b222f151-7b63-49af-b2d1-ea4def227eaa
-          view_mode: default
-          bypass_access: false
-          plugin_id: entity
+          tokenize: false
+          content: "<p>Please note that this database is a work in progress.</p>\r\n\r\n<p>\r\nOver 20 New Brunswick newspapers and one Prince Edward Island newspaper published between 1880 and 1940 are currently being digitized for inclusion in the Vocabularies of Identity database. Given the focus of this particular research project on the expression of collective identity in Loyalist and Acadian populations in New Brunswick, only texts containing the key words starting with the characters \"Loyalist*\" and \"Acadi*\" have been included, with a few exceptions (when, for example, the term \"French\" is used to refer to Acadians). All genres have been included, ranging from journalistic articles to poetry. If you would like to contribute to proofreading articles, if you have a correction to add to a document or if you would like to know more about selection criteria or about a specific newspaper, please write to <a href=\"mailto:chantal.richard@unb.ca\">chantal.richard@unb.ca</a>. </p>\r\n\r\n<p>\r\nThis database is open to all, but we would very much appreciate being informed of projects or papers that make use of it. This will help us continue to provide digitized archival materials to researchers. Digitization update as of 11 May 2017: all newspapers targeted by this research project and published from 1880 to 1900 have been added to the database EXCEPT the following that are incomplete: Le Moniteur Acadien (nearly 50% done), The Moncton Daily Times (11% done), and The Daily Gleaner. If you can help with these papers, please contact <a href=\"mailto:chantal.richard@unb.ca\">chantal.richard@unb.ca</a>.\r\n</p>"
+          plugin_id: text_custom
       footer: {  }
       empty: {  }
       relationships: {  }
