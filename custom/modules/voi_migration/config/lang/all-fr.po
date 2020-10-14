@@ -21,6 +21,9 @@ msgstr "Navigation principale"
 msgid "- Any -"
 msgstr "- Tout -"
 
+msgid "And"
+msgstr "Et"
+
 msgid "Welcome"
 msgstr "Accueil"
 
