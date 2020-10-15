@@ -8,7 +8,7 @@ dependencies:
     - voi_lib_unb_ca
 id: languageswitcher_2
 theme: voi_lib_unb_ca
-region: header
+region: nav_main
 weight: -3
 provider: null
 plugin: 'language_block:language_interface'

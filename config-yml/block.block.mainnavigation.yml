@@ -11,7 +11,7 @@ dependencies:
 id: mainnavigation
 theme: voi_lib_unb_ca
 region: nav_main
-weight: 0
+weight: -4
 provider: null
 plugin: 'system_menu_block:main'
 settings:

@@ -3,16 +3,25 @@
 
 // Broad rules.
 
+// Body.
+body {
+  background-color: $voi-litegray;
+}
+
 // Main container.
 .dialog-off-canvas-main-canvas {
   // Background.
   background-image: url("../../images/voi_bg.jpg");
   background-position: top;
   background-repeat: no-repeat;
-  background-color: $voi-litegray;
 
   // Main hyperlink styling.
   a {
+    color: $voi-turq;
+  }
+
+  // Subheaders
+  h1, h2 {
     color: $voi-turq;
   }
 }
