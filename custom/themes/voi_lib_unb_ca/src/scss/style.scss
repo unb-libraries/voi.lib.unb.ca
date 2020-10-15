@@ -2,26 +2,51 @@
 @import 'import';
 
 // Broad rules.
-
 // Body.
 body {
   background-color: $voi-litegray;
 }
-
 // Main container.
 .dialog-off-canvas-main-canvas {
   // Background.
   background-image: url("../../images/voi_bg.jpg");
   background-position: top;
   background-repeat: no-repeat;
-
   // Main hyperlink styling.
   a {
     color: $voi-turq;
   }
-
   // Subheaders
-  h1, h2 {
+  h1, h2, .h1 {
     color: $voi-turq;
+  }
+}
+
+// Regions.
+// Content.
+main[role="main"] > .container > div > div {
+  flex: none !important;
+  max-width: 100% !important;
+  padding: 1rem;
+  background-color: white;
+}
+
+// Menu.
+.region-nav-main {
+  margin: auto;
+  background-color: white;
+}
+
+// Blocks.
+// Branding.
+.voi-branding {
+  margin: auto;
+  margin-top: 5rem;
+  width: fit-content;
+  padding: 0.5rem;
+  background-color: $voi-turq;
+
+  a, span {
+    color: white;
   }
 }

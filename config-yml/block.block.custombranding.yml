@@ -1,0 +1,26 @@
+uuid: 11c749e0-205c-4073-80cc-c66466d39262
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - voi_blocks
+  theme:
+    - voi_lib_unb_ca
+id: custombranding
+theme: voi_lib_unb_ca
+region: header
+weight: -3
+provider: null
+plugin: voi_branding
+settings:
+  id: voi_branding
+  label: 'Custom Branding'
+  provider: voi_blocks
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

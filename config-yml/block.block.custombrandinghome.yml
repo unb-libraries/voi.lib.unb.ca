@@ -1,0 +1,26 @@
+uuid: 574f678e-9daa-4059-a520-f318a15d606e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - voi_blocks
+  theme:
+    - voi_lib_unb_ca
+id: custombrandinghome
+theme: voi_lib_unb_ca
+region: header
+weight: -4
+provider: null
+plugin: voi_branding_home
+settings:
+  id: voi_branding_home
+  label: 'Custom Branding (home)'
+  provider: voi_blocks
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
