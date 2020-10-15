@@ -6,6 +6,7 @@ dependencies:
     - facets.facet.facet_month
   module:
     - facets
+    - system
   theme:
     - voi_lib_unb_ca
 id: facetmonth
@@ -20,4 +21,9 @@ settings:
   provider: facets
   label_display: visible
   block_id: facetmonth
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: false
+    context_mapping: {  }
