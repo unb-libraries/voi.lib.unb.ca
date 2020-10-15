@@ -49,3 +49,11 @@ main[role="main"] > .container > div > div {
     color: white;
   }
 }
+// Language switcher.
+#block-languageswitcher {
+  padding: .5rem;
+
+  .links {
+    margin-bottom: 0;
+  }
+}

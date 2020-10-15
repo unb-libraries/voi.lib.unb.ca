@@ -23,7 +23,7 @@ class VoiBranding extends BlockBase {
       <div class="h1 text-center voi-branding">
         <a href="/">Vocabularies of Identity</a>
         <span>|</span>
-        <a href="/fr">Vocabulaires identitaires</a>
+        <a href="/fr">Vocabulaires Identitaires</a>
       </div>
     ';
 
