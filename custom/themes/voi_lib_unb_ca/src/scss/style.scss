@@ -1,2 +1,18 @@
 // Include custom sub theme.
 @import 'import';
+
+// Broad rules.
+
+// Main container.
+.dialog-off-canvas-main-canvas {
+  // Background.
+  background-image: url("../../images/voi_bg.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: $voi-litegray;
+
+  // Main hyperlink styling.
+  a {
+    color: $voi-turq;
+  }
+}
