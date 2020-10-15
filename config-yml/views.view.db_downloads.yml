@@ -2521,8 +2521,8 @@ display:
         filters: false
         filter_groups: false
       displays:
-        page_1: page_1
         default: '0'
+        page_1: '0'
       export_method: batch
       export_batch_size: 100
       filters: {  }
