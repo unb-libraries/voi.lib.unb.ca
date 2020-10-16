@@ -20,19 +20,52 @@ body {
   h1, h2, .h1 {
     color: $voi-turq;
   }
+
+  // Nav.
+  nav.navbar {
+    padding-bottom: 0;
+  }
 }
 
 // Regions.
-// Content.
+// Main.
 main[role="main"] > .container > div > div {
   padding: 1rem;
+  border-radius: 4px;
   background-color: white;
+
+  // Content nodes.
+  .node__content {
+    text-align: justify;
+  }
+
+  // Sidebar second.
+  &.order-3 {
+    padding-top: 0;
+    padding-right: 0;
+    background-color: transparent;
+
+    .region-sidebar-second {
+      padding: 1rem;
+      border-radius: 4px;
+      background-color: white;
+    }
+
+    // Facet blocks.
+    #block-facetmonth, #block-facetday {
+      padding-top: 1rem;
+    }
+  }
 }
 
 // Menu.
 .region-nav-main {
-  margin: auto;
   display: flex;
+  margin: auto;
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 0 1rem 0 1rem;
+  border-radius: 4px;
   background-color: white;
 }
 
@@ -41,9 +74,11 @@ main[role="main"] > .container > div > div {
 .voi-branding {
   margin: auto;
   margin-top: 5rem;
+  margin-bottom: 3rem;
   width: fit-content;
-  padding: 0.5rem;
+  border-radius: 4px;
   background-color: $voi-turq;
+  padding: .5rem 3rem .5rem 3rem;
 
   a, span {
     color: white;
@@ -51,9 +86,18 @@ main[role="main"] > .container > div > div {
 }
 // Language switcher.
 #block-languageswitcher {
+  margin-left: auto;
   padding: .5rem;
 
   .links {
     margin-bottom: 0;
+
+    li {
+      list-style-type: none;
+
+      .is-active {
+        display: none;
+      }
+    }
   }
 }
