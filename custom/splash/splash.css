@@ -1,0 +1,146 @@
+body {
+  text-align: center;
+  padding: 20px;
+  background: #ededed;
+  font-family: "Raleway", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+}
+a {
+  font-weight: 600;
+}
+h1 {
+  padding: 6px;
+  color: #fff;
+  margin: 30px auto;
+  background: #20a4ac;
+  border: 1px solid #20a4ac;
+  border-radius: 10px;
+}
+h1 a {
+  color: #fff;
+  padding: 4px;
+  margin: 0;
+}
+h1 a:hover, h1 a:focus {
+  color: #111;
+}
+#main {
+  text-align: center
+}
+.menu {
+  margin: 0 auto
+}
+.row {
+  text-align: center;
+}
+ul, li {
+  list-style: none;
+  padding-left: 0
+}
+h1 span {
+  display: block;
+  margin-top: 2px;
+  color: #20a4ac;
+  height: 10px
+}
+
+#footer-logos {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+#footer-logos .img-responsive {
+    margin: 0 auto;
+}
+
+#footer-text {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+#footer-text a:visited {
+  color: #636363;
+}
+
+#footer-text a:link, #footer-text a:visited {
+  color: #20a4ac;
+}
+
+@media (min-width: 768px) {
+  h1 a {
+    white-space: nowrap;
+  }
+  h1 span {
+    display: inline;
+    color: #fff;
+  }
+  .menu {
+    position: relative;
+    background: url('splash.jpg') no-repeat center center;
+    height: 664px;
+  }
+
+  ul, li {
+    color: #fff;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu ul {
+    width: 750px;
+    height: 664px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .row li {
+    font-size: 1.25em;
+    margin: 0;
+    padding: 6px;
+    position: absolute;
+    background: #20a4ac;
+    border: 1px solid #20a4ac;
+    border-radius: 10px;
+  }
+  a {
+    color: #fff;
+  }
+  .row a:hover, a:focus {
+    color: #4c4c4c;
+  }
+  li#link-welcome {
+    left: 240px;
+    top: 260px;
+    font-size: 2em;
+  }
+  li#link-about {
+    left: 55px;
+    top: 120px;
+  }
+  li#link-database {
+    left: 420px;
+    top: 110px;
+  }
+  li#link-analysis {
+    left: 100px;
+    top: 390px;
+  }
+  li#link-analysis-fr {
+    left: 470px;
+    top: 365px;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    margin-top: 5px;
+    font-size: 22px;
+  }
+  li {
+    font-size: 1.25em;
+    line-height: 1.8em;
+  }
+}
