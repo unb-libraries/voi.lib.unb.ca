@@ -11,7 +11,7 @@ favicon:
 b4_top_container: container
 b4_body_schema: none
 b4_body_bg_schema: none
-b4_navbar_schema: none
+b4_navbar_schema: light
 b4_navbar_bg_schema: none
 b4_footer_schema: none
 b4_footer_bg_schema: none
