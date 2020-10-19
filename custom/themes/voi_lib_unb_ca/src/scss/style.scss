@@ -24,6 +24,15 @@ body {
   // Nav.
   nav.navbar {
     padding-bottom: 0;
+
+    > .container.row.mx-auto {
+
+      .navbar-toggler {
+        margin-bottom: 1rem;
+        border: none;
+        background-color: $voi-turq;
+      }
+    }
   }
 }
 
@@ -98,6 +107,18 @@ main[role="main"] > .container > div > div {
       .is-active {
         display: none;
       }
+    }
+  }
+}
+
+// Responsive.
+@media only screen and (min-width: 576px)and (max-width: 991px) {
+  // Nav - Correct pading for 'burger' menu collapse toggle.
+  nav.navbar {
+
+    > .container.row.mx-auto {
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
   }
 }
