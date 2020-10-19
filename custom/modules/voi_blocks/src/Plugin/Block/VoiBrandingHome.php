@@ -20,11 +20,13 @@ class VoiBrandingHome extends BlockBase {
    */
   public function build() {
     $markup = '
-      <h1 class="text-center voi-branding">
-        <a href="/">Vocabularies of Identity</a>
-        <span>|</span>
-        <a href="/fr">Vocabulaires Identitaires</a>
-      </h1>
+      <div class="container row mx-auto">
+        <h1 class="text-center voi-branding">
+          <a href="/">Vocabularies of Identity</a>
+          <span>|</span>
+          <a href="/fr">Vocabulaires Identitaires</a>
+        </h1>
+      </div>
     ';
 
     return [
