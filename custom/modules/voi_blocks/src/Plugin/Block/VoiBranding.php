@@ -22,7 +22,7 @@ class VoiBranding extends BlockBase {
     $markup = '
       <div class="container row mx-auto">
         <div class="h1 text-center voi-branding">
-          <a href="/">Vocabularies of Identity</a>
+          <a href="/en">Vocabularies of Identity</a>
           <span>|</span>
           <a href="/fr">Vocabulaires Identitaires</a>
         </div>
