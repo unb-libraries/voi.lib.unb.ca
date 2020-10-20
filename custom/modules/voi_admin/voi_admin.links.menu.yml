@@ -1,0 +1,16 @@
+voi_admin.admin:
+  title: 'Vocabularies of Identity'
+  description: 'Manage content admin features.'
+  route_name: <front>
+  parent: system.admin
+  weight: -100
+  options:
+    attributes:
+      class:
+        - custom-editor-menu
+voi_admin.admin.content:
+  title: 'Content'
+  description: 'Manage site content.'
+  url: internal:/all-nodes
+  parent: voi_admin.admin
+  weight: 10

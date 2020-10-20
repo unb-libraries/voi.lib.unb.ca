@@ -113,12 +113,20 @@ main[role="main"] > .container > div > div {
 
 // Responsive.
 @media only screen and (min-width: 576px)and (max-width: 991px) {
-  // Nav - Correct pading for 'burger' menu collapse toggle.
+  // Nav - Correct padding for 'burger' menu collapse toggle.
   nav.navbar {
 
     > .container.row.mx-auto {
       padding-left: 1rem;
       padding-right: 1rem;
     }
+  }
+}
+
+/* Admin Toolbar Vertical Orientation */
+.toolbar-tray-vertical {
+  .custom-editor-menu {
+    /* Add space between long menu title text and toggle icon */
+    margin-right: .25rem;
   }
 }

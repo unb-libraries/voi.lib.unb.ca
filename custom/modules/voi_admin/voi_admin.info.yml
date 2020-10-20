@@ -1,0 +1,5 @@
+name: 'VOI Admin'
+type: module
+description: 'Customized admin functionality for voi.lib.unb.ca'
+core: 8.x
+package: 'Custom'
