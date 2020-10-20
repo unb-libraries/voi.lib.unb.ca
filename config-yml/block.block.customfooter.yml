@@ -1,0 +1,20 @@
+uuid: 2e3cce60-ed1a-43e0-8bfb-6d8e4e9cba5c
+langcode: en
+status: true
+dependencies:
+  module:
+    - voi_blocks
+  theme:
+    - voi_lib_unb_ca
+id: customfooter
+theme: voi_lib_unb_ca
+region: footer
+weight: 0
+provider: null
+plugin: voi_footer
+settings:
+  id: voi_footer
+  label: 'Custom Footer'
+  provider: voi_blocks
+  label_display: '0'
+visibility: {  }

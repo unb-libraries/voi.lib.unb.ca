@@ -111,6 +111,28 @@ main[role="main"] > .container > div > div {
   }
 }
 
+// Footer.
+// Specific CSS by ID.
+#footer-logos {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+#footer-logos .img-responsive {
+    margin: 0 auto;
+}
+#footer-text {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+#footer-text a:visited {
+  color: #636363;
+}
+#footer-text a:link, #footer-text a:visited {
+  color: #20a4ac;
+}
+
 // Responsive.
 @media only screen and (min-width: 576px)and (max-width: 991px) {
   // Nav - Correct padding for 'burger' menu collapse toggle.
