@@ -8,9 +8,21 @@ voi_admin.admin:
     attributes:
       class:
         - custom-editor-menu
-voi_admin.admin.content:
-  title: 'Content'
+voi_admin.admin.add-content:
+  title: 'Add Content'
+  description: 'Add site content.'
+  url: internal:/node/add
+  parent: voi_admin.admin
+  weight: 10
+voi_admin.admin.find-content:
+  title: 'Find Content'
   description: 'Manage site content.'
   url: internal:/all-nodes
   parent: voi_admin.admin
-  weight: 10
+  weight: 20
+voi_admin.admin.taxonomies:
+  title: 'Edit Taxonomy'
+  description: 'Edit site taxonomies.'
+  url: internal:/admin/structure/taxonomy
+  parent: voi_admin.admin
+  weight: 30
