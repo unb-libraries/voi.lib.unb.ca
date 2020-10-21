@@ -60,7 +60,7 @@ class PageMigrateEvent implements EventSubscriberInterface {
 
         $body = [
           'value' => $value,
-          'format' => 'full_html',
+          'format' => 'unb_libraries',
         ];
 
         $row->setSourceProperty('body', $body);
