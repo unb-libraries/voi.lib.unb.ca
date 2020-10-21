@@ -813,7 +813,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: "<ul class=\"action-links\">\r\n<li><a href=\"/en/node/add\">Add content</a></li>\r\n</ul>"
+          content: "<ul class=\"action-links\">\r\n<li><a href=\"/en/node/add\"><i class=\"fa fa-plus mr-1\"></i>Add content</a></li>\r\n</ul>"
           plugin_id: text_custom
       footer: {  }
       empty: {  }
