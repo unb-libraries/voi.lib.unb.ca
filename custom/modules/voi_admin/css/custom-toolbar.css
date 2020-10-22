@@ -39,6 +39,7 @@
 }
 
 /* Hide default admin toolbar links */
+#toolbar-item-user-tray li[class^='account'],
 .toolbar-icon.toolbar-icon-system-admin-content {
   display: none;
 }

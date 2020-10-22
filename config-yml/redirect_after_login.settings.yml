@@ -1,0 +1,7 @@
+login_redirection:
+  anonymous: null
+  authenticated: /
+  administrator: /
+  page_editor: /
+  record_editor: /
+exclude_urls: ''

@@ -1,0 +1,5 @@
+services:
+  voi_access.voi_route_subscriber:
+    class: Drupal\voi_access\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
