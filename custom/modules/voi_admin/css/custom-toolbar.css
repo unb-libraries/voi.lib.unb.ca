@@ -37,3 +37,8 @@
   /* Add space between long menu title text and toggle icon */
   margin-right: .25rem;
 }
+
+/* Hide default admin toolbar links */
+.toolbar-icon.toolbar-icon-system-admin-content {
+  display: none;
+}

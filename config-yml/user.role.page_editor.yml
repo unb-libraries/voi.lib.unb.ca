@@ -10,7 +10,7 @@ permissions:
   - 'access content'
   - 'access content overview'
   - 'access overlay'
-  - 'create page content'
+  - 'access toolbar'
   - 'delete any page content'
   - 'delete own page content'
   - 'edit any page content'
