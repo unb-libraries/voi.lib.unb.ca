@@ -1,5 +1,7 @@
 <?php
 
+namespace Drupal\voi_access\Routing;
+
 use Drupal\Core\Routing\RouteSubscriberBase;
 use Drupal\user\Entity\User;
 use Symfony\Component\Routing\RouteCollection;
@@ -7,7 +9,7 @@ use Symfony\Component\Routing\RouteCollection;
 /**
  * Listens to the dynamic route events and restrict access to user.pass route.
  */
-class RouteSubscriber extends RouteSubscriberBase {
+class VoiAccessRouteSubscriber extends RouteSubscriberBase {
 
   /**
    * {@inheritdoc}
