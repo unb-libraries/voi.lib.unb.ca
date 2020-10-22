@@ -17,7 +17,7 @@ voi_admin.admin.add-content:
 voi_admin.admin.find-content:
   title: 'Find Content'
   description: 'Manage site content.'
-  url: internal:/all-nodes
+  url: internal:/admin/content
   parent: voi_admin.admin
   weight: 20
 voi_admin.admin.taxonomies:
