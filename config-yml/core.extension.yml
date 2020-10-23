@@ -43,6 +43,7 @@ module:
   redirect_after_login: 0
   redis: 0
   rest: 0
+  samlauth: 0
   search: 0
   search_api: 0
   search_api_autocomplete: 0
@@ -63,6 +64,7 @@ module:
   voi_menu: 0
   menu_link_content: 1
   content_translation: 10
+  externalauth: 10
   views: 10
   minimal: 1000
 theme:
