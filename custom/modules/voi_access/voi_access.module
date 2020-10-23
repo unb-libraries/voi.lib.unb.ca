@@ -6,17 +6,68 @@
 */
 
 /**
- * Implements hook_preprocess_HOOK().
- *
- * @param $variables
+ * Implements hook_form_FORM_ID_alter().
  */
-function voi_access_preprocess_status_messages(&$variables) {
-  if(isset($variables['message_list']['status'])){
-    $status_messages = $variables['message_list']['status'];
-    foreach($status_messages as $delta => $message) {
-      if (strpos((string) $message, 'SAML users must sign in with SSO') !== FALSE) {
-        $variables['message_list']['status'][$delta] = "UNB/STU patrons with accounts should use the Secure Services Login.";
-      }
+function voi_access_form_user_login_form_alter(&$form, FormStateInterface $form_state) {
+  // Add static login warning directing users to SAML.
+  $messenger = \Drupal::messenger();
+  $messenger->addMessage(
+    t('UNB/STU patrons with accounts should use the <strong>@auth_link</strong>.',
+      [
+        '@auth_link' => Link::fromTextAndUrl(
+          t('Secure Services Login'),
+          Url::fromUri('base:/saml/login')
+        )->toString(),
+      ]
+    ),
+    $messenger::TYPE_WARNING
+  );
+
+  array_push($form['#validate'], '_voi_access_validate_final');
+
+}
+
+/**
+ * Form validation callback.
+ *
+ * Alter text of error messages, removing request/reset password url references.
+ * Based on https://www.drupal.org/sandbox/ekes/emaillogin.
+ *
+ * @see voi_access_form_user_login_form_alter()
+ */
+function voi_access_validate_final(array &$form, FormStateInterface $form_state) {
+  $changed = FALSE;
+  if (($errors = $form_state->getErrors()) && !empty($errors['name']) && $errors['name'] instanceof TranslatableMarkup) {
+    $error = $errors['name']->getUntranslatedString();
+    if (strpos($error, 'Unrecognized username or password') !== false) {
+      $errors['name'] = t(
+        'Unrecognized username or password. Please try again.',
+        $errors['name']->getArguments()
+      );
+      $changed = TRUE;
+    }
+    elseif (strpos($error, 'failed login attempts for this account. It is temporarily blocked') !== false) {
+      $errors['name'] = t('There have been more than 5 failed login attempts for this account and
+        it is temporarily blocked. Please try again later.');
+      $changed = TRUE;
+    }
+    elseif (strpos($error, 'failed login attempts for this account. It is temporarily blocked') !== false) {
+      $errors['name'] = t('There have been more than 5 failed login attempts for this account and
+        it is temporarily blocked. Please try again later.');
+      $changed = TRUE;
+    }
+    elseif (strpos($error, 'SAML users must sign in') !== false) {
+      $errors['name'] = t('UNB/STU account detected: please use the <em>Secure Services Login</em> as instructed.');
+      $changed = TRUE;
     }
   }
+  if ($changed) {
+    // It's clear and reset or set the protected variable by name with
+    // FormState::setFormState().
+    $form_state->clearErrors();
+    foreach ($errors as $name => $error) {
+      $form_state->setErrorByName($name, $error);
+    }
+  }
+
 }
