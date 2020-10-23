@@ -131,7 +131,6 @@ permissions:
   - 'use media wysiwyg'
   - 'use text format filtered_html'
   - 'use text format full_html'
-  - 'use text format unb_libraries'
   - 'view files'
   - 'view own unpublished content'
   - 'view revisions'
