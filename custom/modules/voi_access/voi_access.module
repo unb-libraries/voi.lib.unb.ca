@@ -1,0 +1,22 @@
+<?php
+
+/**
+* @file
+* Contains voi_access.module.
+*/
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param $variables
+ */
+function voi_access_preprocess_status_messages(&$variables) {
+  if(isset($variables['message_list']['status'])){
+    $status_messages = $variables['message_list']['status'];
+    foreach($status_messages as $delta => $message) {
+      if (strpos((string) $message, 'SAML users must sign in with SSO') !== FALSE) {
+        $variables['message_list']['status'][$delta] = "UNB/STU patrons with accounts should use the Secure Services Login.";
+      }
+    }
+  }
+}

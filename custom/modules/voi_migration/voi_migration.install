@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Contains voi_migration.install.
+ */
+
+use Drupal\redirect\Entity\Redirect;
+
+/**
+ * Implements hook_install().
+ */
+function voi_migration_install() {
+  // Redirect SAML login.
+  Redirect::create([
+    'redirect_source' => 'login',
+    'redirect_redirect' => 'internal:/saml/login',
+    'language' => 'und',
+    'status_code' => '301',
+  ])->save();
+}
