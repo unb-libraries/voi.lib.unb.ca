@@ -57,7 +57,7 @@ module:
   user: 0
   views_data_export: 0
   views_ui: 0
-  voi_access: 0
+  voi_access: 11
   voi_admin: 0
   voi_blocks: 0
   voi_forms: 0
