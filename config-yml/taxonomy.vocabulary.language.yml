@@ -2,7 +2,7 @@ uuid: 7fc81138-39fe-4eb1-97b0-63b2d3ac8bc3
 langcode: en
 status: true
 dependencies: {  }
-name: Language
+name: Languages
 vid: language
 description: ''
 weight: 0
