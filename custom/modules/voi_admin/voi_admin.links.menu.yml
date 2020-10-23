@@ -1,7 +1,7 @@
 voi_admin.admin:
   title: 'Vocabularies of Identity'
   description: 'Manage content admin features.'
-  route_name: <front>
+  url: internal:/admin/content
   parent: system.admin
   weight: -100
   options:
