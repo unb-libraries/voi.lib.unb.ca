@@ -2,7 +2,7 @@ uuid: 93276d1c-bf47-4a8c-8636-76eedea3d170
 langcode: en
 status: true
 dependencies: {  }
-name: 'Article types'
+name: 'Article Type'
 vid: article_type
 description: ''
 weight: 0
