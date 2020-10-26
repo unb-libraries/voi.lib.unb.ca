@@ -3,3 +3,7 @@ services:
     class: Drupal\voi_migration\Event\PageMigrateEvent
     tags:
       - { name: event_subscriber }
+  voi_migration.1_voc_migrate_subscriber:
+    class: Drupal\voi_migration\Event\VocMigrateEvent
+    tags:
+      - { name: event_subscriber }

@@ -45,8 +45,13 @@ printf "\n\nImporting UI translations...\n\n"
 drush langimp --langcode=fr /app/html/modules/custom/voi_migration/config/lang/all-fr.po
 printf "\n\nImporting UI translations...[Done]\n\n"
 
+# Remove unused vocabularies and content types.
+printf "\n\nRemoving unused entity definitions...\n\n"
+drush scr /app/html/modules/custom/voi_migration/scripts/cleanup.php
+printf "\n\nRemoving unused entity definitions...[Done]\n\n"
+
 # Disable migration modules.
-printf "Disabling migration modules...\n\n"
+printf "\n\nDisabling migration modules...\n\n"
 drush -y pmu migrate
-printf "Disabling migration modules...[Done]\n\n"
+printf "\n\nDisabling migration modules...[Done]\n\n"
 printf "\n\n[Migration and setup for voi.lib.unb.ca - Done]\n\n"
