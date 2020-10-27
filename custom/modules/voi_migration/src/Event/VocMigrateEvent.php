@@ -37,7 +37,11 @@ class VocMigrateEvent implements EventSubscriberInterface {
         $name = trim($row->getSourceProperty('name'));
 
         if ($name == "Type d'article") {
-          $row->setSourceProperty('name', 'Article Type');
+          $row->setSourceProperty('name', 'Article Types');
+        }
+
+        if ($name == "Newspapers") {
+          $row->setSourceProperty('name', 'Newspaper');
         }
 
         break;
