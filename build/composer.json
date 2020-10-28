@@ -40,7 +40,12 @@
             "themes/contrib/{$name}": [
                 "type:drupal-theme"
             ]
-        }
+        },
+        "patches": {
+          "drupal/samlauth": {
+              "samlauth nocache metadata": "/build/patches/samlauth_nocache_metadata.patch"
+          }
+      }
     },
     "license": "MIT",
     "minimum-stability": "dev",
