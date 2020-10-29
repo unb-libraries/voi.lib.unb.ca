@@ -1,6 +1,11 @@
 // Include custom sub theme.
 @import 'import';
 
+// Override overarching font-size.
+html {
+  font-size: 14px;
+}
+
 // Broad rules.
 // Body.
 body {
@@ -16,7 +21,11 @@ body {
   a {
     color: $voi-turq;
   }
-  // Subheaders
+  // Headers.
+  h1, .h1 {
+    font-size: 3rem;
+  }
+
   h1, h2, .h1 {
     color: $voi-turq;
   }
@@ -42,6 +51,12 @@ main[role="main"] > .container > div > div {
   padding: 1rem;
   border-radius: 4px;
   background-color: white;
+
+  // Node title.
+  h1.page-title {
+    text-transform: uppercase;
+    text-align: left !important;
+  }
 
   // Content nodes.
   .node__content {
