@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Contains voi_lang.module.
+ */
+
+/**
+ * Implements hook_link_alter().
+ * Override language switcher link labels to target language translation.
+ */
+function voi_lang_language_switch_links_alter(&$variables) {
+  $variables['fr']['title'] = 'Français';
+}

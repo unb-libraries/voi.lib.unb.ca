@@ -1,7 +1,7 @@
 // Include custom sub theme.
 @import 'import';
 
-// Override overarching font-size.
+// Override base font-size.
 html {
   font-size: 14px;
 }
@@ -33,6 +33,19 @@ body {
   // Nav.
   nav.navbar {
     padding-bottom: 0;
+
+    // Navigation links.
+    a.nav-link {
+      color: $voi-turq;
+      font-weight: bold;
+
+      &:hover,
+      &:focus,
+      &.is-active {
+        background-color: $voi-turq;
+        color: white;
+      }
+    }
 
     > .container.row.mx-auto {
 
