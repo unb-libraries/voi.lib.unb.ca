@@ -61,6 +61,7 @@ module:
   voi_admin: 0
   voi_blocks: 0
   voi_forms: 0
+  voi_lang: 0
   voi_menu: 0
   menu_link_content: 1
   content_translation: 10
