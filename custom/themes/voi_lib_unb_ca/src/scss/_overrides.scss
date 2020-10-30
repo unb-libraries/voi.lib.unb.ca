@@ -1,4 +1,16 @@
 // Overrides go here.
 
 // Colours.
+// Links.
 $link-color: $voi-turq;
+
+// Buttons.
+.btn-primary {
+  // Colour.
+  @include button-variant(dimgrey, dimgrey, darken(dimgrey, 30%), lighten(dimgrey,5%), lighten(dimgrey, 10%), darken(dimgrey, 30%));
+
+  // Format.
+  border-radius: 4px !important;
+  border: none !important;
+  box-shadow: none !important;
+}

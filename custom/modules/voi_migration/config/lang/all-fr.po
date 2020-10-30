@@ -3,14 +3,83 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2020-10-26 19:32+0000\n"
-"PO-Revision-Date: 2020-10-26 19:32+0000\n"
+"POT-Creation-Date: 2020-10-30 16:03+0000\n"
+"PO-Revision-Date: 2020-10-30 16:03+0000\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "Delete redirect"
+msgstr "Supprimer une redirection"
+
+msgid "Redirect"
+msgstr "Rediriger"
+
+msgid "Master"
+msgstr "Maître"
+
+msgid "Sort by"
+msgstr "Trier par"
+
+msgid "‹ previous"
+msgstr "‹ précédent"
+
+msgid "next ›"
+msgstr "suivant ›"
+
+msgid "« first"
+msgstr "« premier"
+
+msgid "last »"
+msgstr "dernier »"
+
+msgid "Items per page"
+msgstr "Éléments par page"
+
+msgid "- All -"
+msgstr "- Tout -"
+
+msgid "Offset"
+msgstr "Décalage"
+
+msgid "With selection"
+msgstr "Pour la sélection"
+
+msgid "From"
+msgstr "A partir de"
+
+msgid "Created"
+msgstr "Créé"
+
+msgid "Status code"
+msgstr "Code du statut"
+
+msgid "300 Multiple Choices"
+msgstr "300 Choix Multiples"
+
+msgid "301 Moved Permanently"
+msgstr "301 Redirection Permanente"
+
+msgid "302 Found"
+msgstr "302 Trouvé"
+
+msgid "303 See Other"
+msgstr "303 Voir Ailleurs"
+
+msgid "304 Not Modified"
+msgstr "304 Non Modifié"
+
+msgid "305 Use Proxy"
+msgstr "305 Utilise un Proxy"
+
+msgid "307 Temporary Redirect"
+msgstr "307 Redirection Temporaire"
+
+msgid "Original language"
+msgstr "Langue initiale"
 
 msgid "Main navigation"
 msgstr "Navigation principale"

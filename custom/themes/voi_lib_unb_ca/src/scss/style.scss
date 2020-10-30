@@ -40,15 +40,18 @@ body {
     padding-bottom: 0;
 
     // Navigation links.
-    a.nav-link {
-      color: dimgrey !important;
-      font-weight: bold;
+    .nav-item {
 
-      &:hover,
-      &:focus,
-      &.is-active {
-        background-color: $voi-turq;
-        color: white !important;
+      a.nav-link {
+        color: dimgrey !important;
+        font-weight: bold;
+
+        &:hover,
+        &:focus,
+        &.is-active {
+          background-color: $voi-turq;
+          color: white !important;
+        }
       }
     }
 
@@ -145,6 +148,52 @@ main[role="main"] > .container > div > div {
   }
 }
 
+// Forms.
+// Database exposed form.
+#views-exposed-form-db-search-page-1 {
+  .form-item {
+
+    // Text inputs and dropdowns.
+    &.form-type-textfield,
+    &.form-type-select {
+      margin-top: 0;
+      margin-bottom: 0;
+      width: 48%;
+
+      input, select {
+        border-color: lightgrey !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+
+  // Search button.
+  #edit-actions {
+    padding-top: 1rem;
+  }
+}
+
+// Views.
+.views-row {
+  margin: 1rem;
+
+  // Zebra results.
+  &:nth-of-type(even) {
+    padding: .4rem;
+    background-color: $voi-litegray;
+  }
+
+  // Labels.
+  .views-label {
+    font-weight: 500;
+  }
+}
+// Pager.
+.pager {
+  margin-top: 2rem;
+  text-align: center;
+}
+
 // Footer.
 // Specific CSS by ID.
 #footer-logos {
@@ -173,6 +222,15 @@ main[role="main"] > .container > div > div {
   nav.navbar {
 
     > .container.row.mx-auto {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}
+@media only screen and (max-width: 991px) {
+  nav.navbar {
+
+    .nav-item {
       padding-left: 1rem;
       padding-right: 1rem;
     }
