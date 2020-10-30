@@ -10,6 +10,7 @@ html {
 // Body.
 body {
   background-color: $voi-litegray;
+  color: dimgrey;
 }
 // Main container.
 .dialog-off-canvas-main-canvas {
@@ -26,6 +27,10 @@ body {
     font-size: 3rem;
   }
 
+  h2 {
+    font-weight: 300;
+  }
+
   h1, h2, .h1 {
     color: $voi-turq;
   }
@@ -36,14 +41,14 @@ body {
 
     // Navigation links.
     a.nav-link {
-      color: $voi-turq;
+      color: dimgrey !important;
       font-weight: bold;
 
       &:hover,
       &:focus,
       &.is-active {
         background-color: $voi-turq;
-        color: white;
+        color: white !important;
       }
     }
 
@@ -67,6 +72,7 @@ main[role="main"] > .container > div > div {
 
   // Node title.
   h1.page-title {
+    font-size: 2.4rem;
     text-transform: uppercase;
     text-align: left !important;
   }
@@ -110,8 +116,8 @@ main[role="main"] > .container > div > div {
 // Branding.
 .voi-branding {
   margin: auto;
-  margin-top: 5rem;
-  margin-bottom: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   border-radius: 4px;
   width: 100%;
   background-color: $voi-turq;
