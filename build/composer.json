@@ -85,7 +85,6 @@
         "unb-libraries/drupal-builder": "^8.0.0"
     },
     "require-dev": {
-        "drupal/bootstrap4": "2.1.0",
         "unb-libraries/drupal-development-libraries": "^8.0.0"
     },
     "scripts": {
