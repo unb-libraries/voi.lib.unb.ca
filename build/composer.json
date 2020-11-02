@@ -42,10 +42,10 @@
             ]
         },
         "patches": {
-          "drupal/samlauth": {
-              "samlauth nocache metadata": "/build/patches/samlauth_nocache_metadata.patch"
-          }
-      }
+            "drupal/samlauth": {
+                "samlauth nocache metadata": "/build/patches/samlauth_nocache_metadata.patch"
+            }
+        }
     },
     "license": "MIT",
     "minimum-stability": "dev",
@@ -60,7 +60,7 @@
     "require": {
         "drupal/admin_toolbar": "2.4",
         "drupal/bootstrap4": "2.1.0",
-        "drupal/core": "8.9.6",
+        "drupal/core": "8.9.7",
         "drupal/drush_language": "1.0-rc3",
         "drupal/facets": "1.5",
         "drupal/flag": "4.0-beta2",
