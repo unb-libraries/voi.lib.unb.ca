@@ -150,7 +150,7 @@ main[role="main"] > .container > div > div {
 
 // Forms.
 // Database exposed form.
-#views-exposed-form-db-search-page-1 {
+.view {
   .form-item {
 
     // Text inputs and dropdowns.
@@ -170,6 +170,11 @@ main[role="main"] > .container > div > div {
   // Search button.
   #edit-actions {
     padding-top: 1rem;
+  }
+
+  // Content.
+  .field-content {
+    display: inline-block;
   }
 }
 

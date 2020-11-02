@@ -2562,6 +2562,9 @@ display:
       defaults:
         cache: false
         fields: false
+        relationships: false
+        filters: false
+        filter_groups: false
       fields:
         counter:
           id: counter
@@ -2650,7 +2653,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: ''
+          element_class: 'ml-1 mr-1'
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -3121,6 +3124,12 @@ display:
           empty_zero: false
           hide_alter_empty: true
           plugin_id: search_api_flag
+      relationships: {  }
+      filters: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:

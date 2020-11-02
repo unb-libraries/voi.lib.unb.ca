@@ -1,25 +1,26 @@
-uuid: 08909ee6-026b-47a9-a491-a9471fc2eb29
+uuid: 029e3b78-40a9-47f0-aad3-cc8ef1f4c854
 langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_article_contents
     - field.storage.node.field_article_type
     - field.storage.node.field_language
     - field.storage.node.field_newspaper
-    - search_api.index.documents_voi_lib_unb_ca
-    - taxonomy.vocabulary.article_type
-    - taxonomy.vocabulary.language
-    - taxonomy.vocabulary.newspapers
+    - flag.flag.download_document
+    - node.type.document
   module:
-    - flag_search_api
-    - search_api
-id: db_search
-label: 'DB Search'
+    - flag
+    - node
+    - text
+    - user
+id: db_downloads_v2
+label: 'DB Downloads V2'
 module: views
 description: ''
 tag: ''
-base_table: search_api_index_documents_voi_lib_unb_ca
-base_field: search_api_id
+base_table: node_field_data
+base_field: nid
 display:
   default:
     display_plugin: default
@@ -28,39 +29,37 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
       query:
         type: views_query
         options:
-          bypass_access: false
-          skip_access: false
-          preserve_facet_query_args: false
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: {  }
       exposed_form:
         type: basic
         options:
-          submit_button: Search
-          reset_button: true
-          reset_button_label: Clear
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: full
+        type: mini
         options:
-          items_per_page: 25
+          items_per_page: 10
           offset: 0
           id: 0
           total_pages: null
-          tags:
-            previous: ‹‹
-            next: ››
-            first: '« First'
-            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -69,13 +68,11 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 9
+          tags:
+            previous: ‹‹
+            next: ››
       style:
         type: default
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
       row:
         type: fields
         options:
@@ -139,7 +136,7 @@ display:
           plugin_id: counter
         nid:
           id: nid
-          table: search_api_index_documents_voi_lib_unb_ca
+          table: node_field_data
           field: nid
           relationship: none
           group_type: group
@@ -148,9 +145,9 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{ "[#{nid}]" }}'
-            make_link: true
-            path: '/node/{{ nid }}'
+            text: '{{ "[#{nid}] " }}'
+            make_link: false
+            path: ''
             absolute: false
             external: false
             replace_spaces: false
@@ -200,28 +197,12 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api_numeric
-          fallback_options:
-            set_precision: false
-            precision: 0
-            decimal: .
-            separator: ','
-            format_plural: false
-            format_plural_string: !!binary MQNAY291bnQ=
-            prefix: ''
-            suffix: ''
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-            format_plural_values:
-              - '1'
-              - '@count'
-          plugin_id: search_api_field
+          entity_type: node
+          entity_field: nid
+          plugin_id: field
         title:
           id: title
-          table: search_api_index_documents_voi_lib_unb_ca
+          table: node_field_data
           field: title
           relationship: none
           group_type: group
@@ -281,96 +262,12 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-          plugin_id: search_api_field
-        field_newspaper:
-          id: field_newspaper
-          table: search_api_index_documents_voi_lib_unb_ca
-          field: field_newspaper
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Newspaper
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api_entity
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-            display_methods:
-              article_type:
-                display_method: label
-              language:
-                display_method: label
-              newspapers:
-                display_method: label
-              tags:
-                display_method: label
-          plugin_id: search_api_field
+          entity_type: node
+          entity_field: title
+          plugin_id: field
         field_article_type:
           id: field_article_type
-          table: search_api_index_documents_voi_lib_unb_ca
+          table: node__field_article_type
           field: field_article_type
           relationship: none
           group_type: group
@@ -430,26 +327,10 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api_entity
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-            display_methods:
-              article_type:
-                display_method: label
-              language:
-                display_method: label
-              newspapers:
-                display_method: label
-              tags:
-                display_method: label
-          plugin_id: search_api_field
+          plugin_id: field
         field_language:
           id: field_language
-          table: search_api_index_documents_voi_lib_unb_ca
+          table: node__field_language
           field: field_language
           relationship: none
           group_type: group
@@ -509,396 +390,241 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          field_rendering: true
-          fallback_handler: search_api_entity
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-            display_methods:
-              article_type:
-                display_method: label
-              language:
-                display_method: label
-              newspapers:
-                display_method: label
-              tags:
-                display_method: label
-          plugin_id: search_api_field
-        search_api_excerpt:
-          id: search_api_excerpt
-          table: search_api_index_documents_voi_lib_unb_ca
-          field: search_api_excerpt
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          link_to_item: false
-          use_highlighting: true
-          multi_type: separator
-          multi_separator: ', '
-          plugin_id: search_api
-        flag_download_document:
-          id: flag_download_document
-          table: search_api_index_documents_voi_lib_unb_ca
-          field: flag_download_document
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          plugin_id: search_api_flag
-      filters:
-        search_api_fulltext:
-          id: search_api_fulltext
-          table: search_api_index_documents_voi_lib_unb_ca
-          field: search_api_fulltext
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: and
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: search_api_fulltext_op
-            label: 'Fulltext Search'
-            description: ''
-            use_operator: false
-            operator: search_api_fulltext_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: search_api_fulltext
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              page_editor: '0'
-              record_editor: '0'
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          parse_mode: terms
-          min_length: null
-          fields: {  }
-          plugin_id: search_api_fulltext
-        field_article_type:
-          id: field_article_type
-          table: search_api_index_documents_voi_lib_unb_ca
-          field: field_article_type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_article_type_op
-            label: 'Article Type'
-            description: ''
-            use_operator: false
-            operator: field_article_type_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_article_type
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              page_editor: '0'
-              record_editor: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: article_type
-          hierarchy: false
-          error_message: true
-          plugin_id: search_api_term
-        field_language:
-          id: field_language
-          table: search_api_index_documents_voi_lib_unb_ca
-          field: field_language
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_language_op
-            label: Language
-            description: ''
-            use_operator: false
-            operator: field_language_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_language
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              page_editor: '0'
-              record_editor: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: language
-          hierarchy: false
-          error_message: true
-          plugin_id: search_api_term
+          plugin_id: field
         field_newspaper:
           id: field_newspaper
-          table: search_api_index_documents_voi_lib_unb_ca
+          table: node__field_newspaper
           field: field_newspaper
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_newspaper_op
-            label: Newspaper
-            description: ''
-            use_operator: false
-            operator: field_newspaper_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_newspaper
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              page_editor: '0'
-              record_editor: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: newspapers
-          hierarchy: false
-          error_message: true
-          plugin_id: search_api_term
-        field_year:
-          id: field_year
-          table: search_api_index_documents_voi_lib_unb_ca
-          field: field_year
+          label: Newspaper
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_article_contents:
+          id: field_article_contents
+          table: node__field_article_contents
+          field: field_article_contents
           relationship: none
           group_type: group
           admin_label: ''
-          operator: between
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 256
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: true
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        link_flag:
+          id: link_flag
+          table: flagging
+          field: link_flag
+          relationship: flag_relationship
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          entity_type: flagging
+          plugin_id: flag_link
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
           value:
-            min: ''
-            max: ''
-            value: ''
-          group: 1
-          exposed: true
+            document: document
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
           expose:
-            operator_id: field_year_op
-            label: Year
-            description: ''
-            use_operator: false
-            operator: field_year_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: field_year
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              page_editor: '0'
-              record_editor: '0'
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: search_api_numeric
       sorts:
-        search_api_relevance:
-          id: search_api_relevance
-          table: search_api_index_documents_voi_lib_unb_ca
-          field: search_api_relevance
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
           relationship: none
           group_type: group
           admin_label: ''
-          order: DESC
           exposed: false
           expose:
             label: ''
-          plugin_id: search_api
-      title: Database
-      header:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: true
-          tokenize: false
-          content: "<p>Please note that this database is a work in progress.</p>\r\n\r\n<p>\r\nOver 20 New Brunswick newspapers and one Prince Edward Island newspaper published between 1880 and 1940 are currently being digitized for inclusion in the Vocabularies of Identity database. Given the focus of this particular research project on the expression of collective identity in Loyalist and Acadian populations in New Brunswick, only texts containing the key words starting with the characters \"Loyalist*\" and \"Acadi*\" have been included, with a few exceptions (when, for example, the term \"French\" is used to refer to Acadians). All genres have been included, ranging from journalistic articles to poetry. If you would like to contribute to proofreading articles, if you have a correction to add to a document or if you would like to know more about selection criteria or about a specific newspaper, please write to <a href=\"mailto:chantal.richard@unb.ca\">chantal.richard@unb.ca</a>. </p>\r\n\r\n<p>\r\nThis database is open to all, but we would very much appreciate being informed of projects or papers that make use of it. This will help us continue to provide digitized archival materials to researchers. Digitization update as of 11 May 2017: all newspapers targeted by this research project and published from 1880 to 1900 have been added to the database EXCEPT the following that are incomplete: Le Moniteur Acadien (nearly 50% done), The Moncton Daily Times (11% done), and The Daily Gleaner. If you can help with these papers, please contact <a href=\"mailto:chantal.richard@unb.ca\">chantal.richard@unb.ca</a>.\r\n</p>"
-          plugin_id: text_custom
+          granularity: second
+      title: Downloads
+      header: {  }
       footer: {  }
       empty: {  }
-      relationships: {  }
+      relationships:
+        flag_relationship:
+          id: flag_relationship
+          table: node_field_data
+          field: flag_relationship
+          relationship: none
+          group_type: group
+          admin_label: Flags
+          required: true
+          flag: download_document
+          user_scope: current
+          entity_type: node
+          plugin_id: flag_relationship
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
@@ -906,15 +632,14 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
+        - user.permissions
       tags:
+        - 'config:field.storage.node.field_article_contents'
         - 'config:field.storage.node.field_article_type'
         - 'config:field.storage.node.field_language'
         - 'config:field.storage.node.field_newspaper'
-        - 'config:search_api.index.documents_voi_lib_unb_ca'
   page_1:
     display_plugin: page
     id: page_1
@@ -922,22 +647,17 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: search
-      cache:
-        type: none
-      defaults:
-        cache: false
+      path: db-downloads-v2
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
+        - user.permissions
       tags:
+        - 'config:field.storage.node.field_article_contents'
         - 'config:field.storage.node.field_article_type'
         - 'config:field.storage.node.field_language'
         - 'config:field.storage.node.field_newspaper'
-        - 'config:search_api.index.documents_voi_lib_unb_ca'
