@@ -17,4 +17,3 @@ permissions:
   - 'unflag download_document'
   - 'use text format filtered_html'
   - 'view files'
-  - 'view sp metadata'

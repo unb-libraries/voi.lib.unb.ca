@@ -16,6 +16,6 @@ permissions:
   - 'edit any page content'
   - 'edit own page content'
   - 'use text format filtered_html'
-  - 'use text format unb_libraries'
+  - 'use text format full_html'
   - 'view own unpublished content'
   - 'view the administration theme'
