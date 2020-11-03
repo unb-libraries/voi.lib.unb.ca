@@ -12,8 +12,8 @@ h1 {
   padding: 6px;
   color: #fff;
   margin: 30px auto;
-  background: #20a4ac;
-  border: 1px solid #20a4ac;
+  background: #009aab;
+  border: 1px solid #009aab;
   border-radius: 10px;
 }
 h1 a {
@@ -40,7 +40,7 @@ ul, li {
 h1 span {
   display: block;
   margin-top: 2px;
-  color: #20a4ac;
+  color: #009aab;
   height: 10px
 }
 
@@ -65,7 +65,7 @@ h1 span {
 }
 
 #footer-text a:link, #footer-text a:visited {
-  color: #20a4ac;
+  color: #009aab;
 }
 
 @media (min-width: 768px) {
@@ -101,8 +101,8 @@ h1 span {
     margin: 0;
     padding: 6px;
     position: absolute;
-    background: #20a4ac;
-    border: 1px solid #20a4ac;
+    background: #009aab;
+    border: 1px solid #009aab;
     border-radius: 10px;
   }
   a {

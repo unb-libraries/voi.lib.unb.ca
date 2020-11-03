@@ -2,9 +2,6 @@ label: Téléchargement
 display:
   default:
     display_options:
-      exposed_form:
-        options:
-          submit_button: Recherche
       pager:
         options:
           tags:
@@ -17,9 +14,9 @@ display:
           label: 'Type d''article'
         field_language:
           label: Langue
+        title:
+          label: Titre
       title: Téléchargement
       header:
         area_text_custom:
           content: "<p>Cliquez sur l'icône \"CSV\" au bas pour télécharger tous les documents sélectionnés.</p>\r\n\r\n<p>Note aux utilisateurs: Les documents extraits sont automatiquement ouverts par le logiciel Excel. Celui-ci ne permet pas de visualiser plus de 32,767 caractères par cellule. Certains articles dépassent cette limite, ce qui peut provoquer une erreur et amener le logiciel à tronquer les textes. Afin de contourner ce problème, n'ouvrez pas les textes avec Excel. Plutôt, après la phase \"Exportation\", il faut ouvrir le fichier en format Word.</p>\r\n\r\n<p><a href=\"/fr/download-all\">Télécharger tous les documents</a></p>\r\n"
-        result:
-          content: 'Affiche @start - @end sur @total'
