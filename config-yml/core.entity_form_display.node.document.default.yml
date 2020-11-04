@@ -45,14 +45,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_article_type:
-    type: entity_reference_autocomplete
+    type: options_select
     weight: 8
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_author:
     type: string_textfield
@@ -70,14 +66,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_language:
-    type: entity_reference_autocomplete
+    type: options_buttons
     weight: 9
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_month:
     type: number
@@ -87,14 +79,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_newspaper:
-    type: entity_reference_autocomplete
+    type: options_select
     weight: 1
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_page_number:
     type: string_textfield
@@ -165,7 +153,7 @@ content:
     third_party_settings: {  }
   url_redirects:
     weight: 50
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }
