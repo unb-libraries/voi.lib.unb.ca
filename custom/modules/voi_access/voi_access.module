@@ -26,7 +26,7 @@ function voi_access_form_user_login_form_alter(&$form, $form_state) {
     $messenger::TYPE_WARNING
   );
 
-  array_push($form['#validate'], '_voi_access_validate_final');
+  array_push($form['#validate'], 'voi_access_validate_final');
 
 }
 

@@ -35,6 +35,6 @@ permissions:
   - 'edit terms in language'
   - 'edit terms in newspapers'
   - 'use text format filtered_html'
-  - 'use text format full_html'
+  - 'use text format unb_libraries'
   - 'view own unpublished content'
   - 'view the administration theme'

@@ -9,11 +9,7 @@
 
 use Drupal\user\Entity\Role;
 
-$role_names = [
-  'record_editor',
-];
-
-$permissions = [
+$record_permissions = [
   'create terms in article_type',
   'create terms in language',
   'create terms in newspapers',
@@ -23,14 +19,17 @@ $permissions = [
   'delete terms in article_type',
   'delete terms in language',
   'delete terms in newspapers',
+  'use text format unb_libraries',
 ];
 
-// Assign the listed permissions to the listed roles.
-foreach ($role_names as $role_name) {
-  $role_object = Role::load($role_name);
+$page_permissions = [
+  'use text format unb_libraries',
+];
 
-  foreach ($permissions as $permission) {
-    $role_object->grantPermission($permission);
-    $role_object->save();
-  }
+// Assign record editor permissions.
+$role_object = Role::load('record_editor');
+
+foreach ($record_permissions as $record_permission) {
+  $role_object->grantPermission($record_permission);
+  $role_object->save();
 }
