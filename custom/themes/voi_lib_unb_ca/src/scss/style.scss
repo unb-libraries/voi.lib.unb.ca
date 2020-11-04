@@ -75,7 +75,7 @@ main[role="main"] > .container > div > div {
 
   // Node title.
   h1.page-title {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     text-transform: uppercase;
     text-align: left !important;
   }
@@ -100,6 +100,11 @@ main[role="main"] > .container > div > div {
     // Facet blocks.
     #block-facetmonth, #block-facetday {
       padding-top: 1rem;
+    }
+    .block-facets {
+      li {
+        list-style-type: circle;
+      }
     }
   }
 }

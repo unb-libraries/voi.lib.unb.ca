@@ -1,0 +1,2 @@
+flag_short: '<i class="fas fa-download"></i><span class="ml-2">Ajouter aux documents à télécharger</span>'
+unflag_short: '<i class="fas fa-minus-square"></i><span class="ml-2">Supprimer des documents à télécharger</span>'
