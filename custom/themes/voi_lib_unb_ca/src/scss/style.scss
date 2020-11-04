@@ -82,7 +82,25 @@ main[role="main"] > .container > div > div {
 
   // Content nodes.
   .node__content {
+    margin: 1rem;
     text-align: justify;
+
+    // Content fields.
+    .field, .flag {
+      margin-top: 1rem;
+
+      .field__label::after {
+        content: ":";
+      }
+
+      &:not(.text-formatted):not(.flag) {
+        margin-top: .2rem;
+
+        > div {
+          display: inline-block;
+        }
+      }
+    }
   }
 
   // Sidebar second.
