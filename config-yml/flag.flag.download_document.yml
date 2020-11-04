@@ -11,7 +11,7 @@ bundles:
 entity_type: node
 global: false
 weight: 0
-flag_short: '<i class="fas fa-download"></i><span class="ml-2">Add to data download</span>'
+flag_short: '<i class="fas fa-file-download"></i><span class="ml-2">Add to data download</span>'
 flag_long: ''
 flag_message: ''
 unflag_short: '<i class="fas fa-minus-square"></i><span class="ml-2">Remove from data download</span>'

@@ -2642,7 +2642,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: "<p>Click on the \"CSV\" icon at the bottom to download all selected documents.</p>\r\n\r\n<p>Note to users: Articles will be automatically extracted by Microsoft Excel. However, Excel does not allow more than 32,767 characters per cell. Some of the articles in the database exceed this limit, and this can cause users to receive an error message that the cell data is too large. To avoid this, after completing the \"Extraction\" phase, when prompted to save or open the file, do not open it using Excel. Instead, open it using Microsoft Word.</p>\r\n\r\n<p><a href=\"/download-all\"><i class=\"fas fa-download\"></i><span class=\"ml-2\">Download all records</span></a></p>\r\n"
+          content: "<p>Click on the \"CSV\" icon at the bottom to download all selected documents.</p>\r\n\r\n<p>Note to users: Articles will be automatically extracted by Microsoft Excel. However, Excel does not allow more than 32,767 characters per cell. Some of the articles in the database exceed this limit, and this can cause users to receive an error message that the cell data is too large. To avoid this, after completing the \"Extraction\" phase, when prompted to save or open the file, do not open it using Excel. Instead, open it using Microsoft Word.</p>\r\n\r\n<p><a href=\"/download-all\"><i class=\"fas fa-download\"></i><span class=\"ml-2\">Download ALL records in the database</span></a></p>\r\n"
           plugin_id: text_custom
         result:
           id: result

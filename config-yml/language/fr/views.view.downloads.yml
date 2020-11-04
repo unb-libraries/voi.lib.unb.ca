@@ -17,7 +17,7 @@ display:
       title: Téléchargement
       header:
         area_text_custom:
-          content: "<p>Cliquez sur l'icône \"CSV\" ci-dessous pour télécharger tous les résultats de votre recherche.</p>\r\n\r\n<p>Note aux utilisateurs: Les documents extraits sont automatiquement ouverts par le logiciel Excel. Celui-ci ne permet pas de visualiser plus de 32 767 caractères par cellule. Certains articles dépassent cette limite, ce qui peut provoquer une erreur et amener le logiciel à tronquer les textes. Afin de contourner ce problème, n'ouvrez pas les textes avec Excel. Plutôt, après la phase \"Exportation\", il faut ouvrir le fichier en format Word. Les textes et les métadonnées apparaîtront sous forme de tableau et les articles seront reproduits en entier.</p>\r\n\r\n<p><a href=\"/download-all\"><i class=\"fas fa-download\"></i><span class=\"ml-2\">Télécharger tous les documents</span></a></p>\r\n"
+          content: "<p>Cliquez sur l'icône \"CSV\" ci-dessous pour télécharger tous les résultats de votre recherche.</p>\r\n\r\n<p>Note aux utilisateurs: Les documents extraits sont automatiquement ouverts par le logiciel Excel. Celui-ci ne permet pas de visualiser plus de 32 767 caractères par cellule. Certains articles dépassent cette limite, ce qui peut provoquer une erreur et amener le logiciel à tronquer les textes. Afin de contourner ce problème, n'ouvrez pas les textes avec Excel. Plutôt, après la phase \"Exportation\", il faut ouvrir le fichier en format Word. Les textes et les métadonnées apparaîtront sous forme de tableau et les articles seront reproduits en entier.</p>\r\n\r\n<p><a href=\"/download-all\"><i class=\"fas fa-download\"></i><span class=\"ml-2\">Télécharger TOUS les documents de la base de données</span></a></p>\r\n"
         result:
           content: 'Affiche @start - @end sur @total'
   page_1:
@@ -31,6 +31,48 @@ display:
           label: Langue
       header:
         area_text_custom:
-          content: "<p>Cliquez sur l'icône \"CSV\" ci-dessous pour télécharger tous les résultats de votre recherche.</p>\r\n\r\n<p>Note aux utilisateurs: les documents extraits sont automatiquement ouverts par le logiciel Excel. Celui-ci ne permet pas de visualiser plus de 32 767 caractères par cellule. Certains articles dépassent cette limite, ce qui peut provoquer une erreur et amener le logiciel à tronquer les textes. Afin de contourner ce problème, n'ouvrez pas les textes avec Excel. Plutôt, après la phase \"Exportation\", il faut ouvrir le fichier en format Word. Les textes et les métadonnées apparaîtront sous forme de tableau et les articles seront reproduits en entier.</p>\r\n\r\n<p><a href=\"/download-all\"><i class=\"fas fa-download\"></i><span class=\"ml-2\">Télécharger tous les documents</span></a></p>\r\n"
+          content: "<p>Cliquez sur l'icône \"CSV\" ci-dessous pour télécharger tous les résultats de votre recherche.</p>\r\n\r\n<p>Note aux utilisateurs: les documents extraits sont automatiquement ouverts par le logiciel Excel. Celui-ci ne permet pas de visualiser plus de 32 767 caractères par cellule. Certains articles dépassent cette limite, ce qui peut provoquer une erreur et amener le logiciel à tronquer les textes. Afin de contourner ce problème, n'ouvrez pas les textes avec Excel. Plutôt, après la phase \"Exportation\", il faut ouvrir le fichier en format Word. Les textes et les métadonnées apparaîtront sous forme de tableau et les articles seront reproduits en entier.</p>\r\n\r\n<p><a href=\"/download-all\"><i class=\"fas fa-download\"></i><span class=\"ml-2\">Télécharger TOUS les documents de la base de données</span></a></p>\r\n"
         result:
           content: 'Affiche @start - @end sur @total'
+  data_export_1:
+    display_options:
+      fields:
+        field_author:
+          label: Auteur(e)
+        field_newspaper:
+          label: Journal
+        field_page_number:
+          label: 'Numéro de Page'
+        field_article_type:
+          label: 'Type d''Article'
+        field_language:
+          label: Langue
+        field_year:
+          label: Année
+        field_month:
+          label: Mois
+        field_day:
+          label: Jour
+        field_article_contents:
+          label: 'Contenu de l''Article'
+  data_export_2:
+    display_options:
+      fields:
+        field_author:
+          label: Auteur(e)
+        field_newspaper:
+          label: Journal
+        field_page_number:
+          label: 'Numéro de Page'
+        field_article_type:
+          label: 'Type d''Article'
+        field_language:
+          label: Langue
+        field_year:
+          label: Année
+        field_month:
+          label: Mois
+        field_day:
+          label: Jour
+        field_article_contents:
+          label: 'Contenu de l''Article'
