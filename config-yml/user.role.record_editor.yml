@@ -10,6 +10,7 @@ permissions:
   - 'access content'
   - 'access content overview'
   - 'access overlay'
+  - 'access taxonomy overview'
   - 'access toolbar'
   - 'add terms in article_type'
   - 'add terms in language'

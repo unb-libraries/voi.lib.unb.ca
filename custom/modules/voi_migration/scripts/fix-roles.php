@@ -26,6 +26,7 @@ $record_permissions = [
   'delete terms in article_type',
   'delete terms in language',
   'delete terms in newspapers',
+  'access taxonomy overview',
 ];
 
 $all_permissions = [
