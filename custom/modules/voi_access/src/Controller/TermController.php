@@ -40,7 +40,7 @@ class TermController extends ControllerBase {
         break;
     }
 
-    // Redirect.
+    // Redirect to vocabulary overview (admin) or search by term instead.
     if ($admin) {
       return new RedirectResponse("/admin/structure/taxonomy/manage/{$vid}/overview");
     }
