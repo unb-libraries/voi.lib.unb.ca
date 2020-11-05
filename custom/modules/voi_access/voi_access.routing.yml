@@ -1,0 +1,6 @@
+voi_access.term:
+  path: '/taxonomy/term/{tid}'
+  defaults:
+    _controller: '\Drupal\voi_access\Controller\TermController::searchByTerm'
+  requirements:
+    _permission: 'access content'

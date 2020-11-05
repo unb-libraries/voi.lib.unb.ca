@@ -23,18 +23,16 @@ class VoiAccessRouteSubscriber extends RouteSubscriberBase {
       'entity.user.edit_form',
     ];
 
-    // Get current user account object.
-    $account = User::load(\Drupal::currentUser()->id());
-
-    // Only restrict for non-admin users.
-    if (!$account->hasRole('administrator')) {
-
-      // Deny access to non-admins.
-      foreach ($deny_routes as $deny_route) {
-        if ($route = $collection->get($deny_route)) {
-          $route->setRequirement('_access', 'FALSE');
-        }
+    // Deny access to non-admins.
+    foreach ($deny_routes as $deny_route) {
+      if ($route = $collection->get($deny_route)) {
+        $route->setRequirement('_role', 'administrator');
       }
+    }
+
+    // Redirect taxonomy term cannonical route to custom controller.
+    if ($route = $collection->get('entity.taxonomy_term.canonical')) {
+      $route->setDefault('_controller', '\Drupal\voi_access\Controller\TermController::searchByTerm');
     }
   }
 
