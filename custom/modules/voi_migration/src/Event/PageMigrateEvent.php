@@ -61,6 +61,14 @@ class PageMigrateEvent implements EventSubscriberInterface {
             $value = file_get_contents('/app/html/modules/custom/voi_migration/data/pages/media-fr.html');
             break;
 
+          case "Publications and Conferences":
+            $value = file_get_contents('/app/html/modules/custom/voi_migration/data/pages/pubs.html');
+            break;
+
+          case "Publications et colloques":
+            $value = file_get_contents('/app/html/modules/custom/voi_migration/data/pages/pubs-fr.html');
+            break;
+
           default:
             $value = $row->getSourceProperty('body')[0]['value'];
             break;

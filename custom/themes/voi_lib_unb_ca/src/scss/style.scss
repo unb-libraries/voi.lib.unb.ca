@@ -10,7 +10,7 @@ html {
 // Body.
 body {
   background-color: $voi-litegray;
-  color: #333;
+  color: $voi-darkgray;
 }
 // Main container.
 .dialog-off-canvas-main-canvas {
@@ -43,7 +43,7 @@ body {
     .nav-item {
 
       a.nav-link {
-        color: #333 !important;
+        color: $voi-darkgray !important;
         font-weight: bold;
 
         &:hover,
