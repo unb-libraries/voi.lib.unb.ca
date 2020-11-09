@@ -41,8 +41,8 @@ class TermController extends ControllerBase {
     }
 
     // Redirect to vocabulary overview (admin) or search by term instead.
-    if ($admin) {
-      return new RedirectResponse("/admin/structure/taxonomy/manage/{$vid}/overview");
+    if ($admin or $record) {
+      return new RedirectResponse("/taxonomy/term/{$tid}/view");
     }
     else {
       return new RedirectResponse("/search?{$filter}={$tid}");
