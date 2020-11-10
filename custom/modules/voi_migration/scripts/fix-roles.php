@@ -33,6 +33,8 @@ $all_permissions = [
   'use text format unb_libraries',
   'flag document_data_bundle',
   'unflag document_data_bundle',
+  'flag download_document',
+  'unflag download_document',
 ];
 
 // Assign record editor permissions.
