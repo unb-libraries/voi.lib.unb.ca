@@ -16,4 +16,5 @@ permissions:
   - 'unflag document_data_bundle'
   - 'unflag download_document'
   - 'use text format filtered_html'
+  - 'use text format unb_libraries'
   - 'view files'

@@ -31,6 +31,8 @@ $record_permissions = [
 
 $all_permissions = [
   'use text format unb_libraries',
+  'flag document_data_bundle',
+  'unflag document_data_bundle',
 ];
 
 // Assign record editor permissions.
