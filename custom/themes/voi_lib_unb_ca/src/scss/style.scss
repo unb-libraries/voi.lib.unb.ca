@@ -74,10 +74,16 @@ main[role="main"] > .container > div > div {
   background-color: white;
 
   // Node title.
-  h1.page-title {
-    font-size: 2.2rem;
-    text-transform: uppercase;
-    text-align: left !important;
+  .block-page-title-block {
+
+    .page-title {
+      margin-left: 1rem;
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      text-align: left !important;
+    }
+
+
   }
 
   // Content nodes.
@@ -174,6 +180,12 @@ main[role="main"] > .container > div > div {
 // Forms.
 // Database exposed form.
 .view {
+  margin: 1rem;
+
+  p {
+    text-align: justify;
+  }
+
   .form-item {
 
     // Text inputs and dropdowns.
