@@ -5,6 +5,7 @@ display:
       exposed_form:
         options:
           submit_button: Recherche
+          reset_button_label: Nettoyer
       pager:
         options:
           tags:
@@ -32,6 +33,9 @@ display:
             label: Année
             min_placeholder: 'Début de la période'
             max_placeholder: 'Fin de la période'
+        field_newspaper:
+          expose:
+            label: Journal
       title: 'Base De Données'
       header:
         area_text_custom:

@@ -202,6 +202,10 @@ main[role="main"] > .container > div > div {
     }
   }
 
+  .view-content {
+    margin-top: 2rem;
+  }
+
   // Search button.
   #edit-actions {
     padding-top: 1rem;
@@ -218,7 +222,7 @@ main[role="main"] > .container > div > div {
   margin: 1rem;
 
   // Zebra results.
-  &:nth-of-type(even) {
+  &:nth-of-type(odd) {
     padding: .4rem;
     background-color: $voi-litegray;
   }
