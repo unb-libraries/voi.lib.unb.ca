@@ -18,6 +18,7 @@ class TermController extends ControllerBase {
     // Get vocabulary and term.
     $vid = $taxonomy_term->getVocabularyId();
     $tid = $taxonomy_term->id();
+    $lang = \Drupal::languageManager()->getCurrentLanguage()->getId();
 
     // Get user and roles.
     $current_user = \Drupal::currentUser();
@@ -42,10 +43,10 @@ class TermController extends ControllerBase {
 
     // Redirect to vocabulary overview (admin) or search by term instead.
     if ($admin or $record) {
-      return new RedirectResponse("/taxonomy/term/{$tid}/view");
+      return new RedirectResponse("/{$lang}/taxonomy/term/{$tid}/view");
     }
     else {
-      return new RedirectResponse("/search?{$filter}={$tid}");
+      return new RedirectResponse("/{$lang}/search?{$filter}={$tid}");
     }
   }
 

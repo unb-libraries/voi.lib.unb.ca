@@ -237,8 +237,8 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: false
-            path: ''
+            make_link: true
+            path: '/taxonomy/term/{{ field_newspaper__target_id }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -276,7 +276,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -300,8 +300,8 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: false
-            path: ''
+            make_link: true
+            path: '/taxonomy/term/{{ field_article_type__target_id }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -339,7 +339,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -363,8 +363,8 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: false
-            path: ''
+            make_link: true
+            path: '/taxonomy/term/{{ field_language__target_id }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -402,7 +402,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -2149,6 +2149,28 @@ display:
       defaults:
         fields: false
         header: false
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: "<p>Click on the \"CSV\" icon at the bottom to download all selected documents.</p>\r\n\r\n<p>Note to users: Articles will be automatically extracted by Microsoft Excel. However, Excel does not allow more than 32,767 characters per cell. Some of the articles in the database exceed this limit, and this can cause users to receive an error message that the cell data is too large. To avoid this, after completing the \"Extraction\" phase, when prompted to save or open the file, do not open it using Excel. Instead, open it using Microsoft Word.</p>\r\n\r\n<p><a href=\"/download-all\"><i class=\"fas fa-download\"></i><span class=\"ml-2\">Download ALL records in the database</span></a></p>\r\n"
+          plugin_id: text_custom
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Displaying @start - @end of @total'
+          plugin_id: result
       fields:
         counter:
           id: counter
@@ -2212,8 +2234,8 @@ display:
           alter:
             alter_text: true
             text: '{{ "[#{nid}] " }}'
-            make_link: false
-            path: ''
+            make_link: true
+            path: '/node/{{ nid }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -2302,7 +2324,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: strong
+          element_type: ''
           element_class: ''
           element_label_type: ''
           element_label_class: d-none
@@ -2343,8 +2365,8 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: false
-            path: ''
+            make_link: true
+            path: '/taxonomy/term/{{ field_newspaper__target_id }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -2382,7 +2404,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -2406,8 +2428,8 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: false
-            path: ''
+            make_link: true
+            path: '/taxonomy/term/{{ field_article_type__target_id }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -2445,7 +2467,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -2469,8 +2491,8 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: false
-            path: ''
+            make_link: true
+            path: '/taxonomy/term/{{ field_language__target_id }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -2508,7 +2530,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -2632,28 +2654,6 @@ display:
           hide_alter_empty: true
           entity_type: flagging
           plugin_id: flag_link
-      header:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: true
-          tokenize: false
-          content: "<p>Click on the \"CSV\" icon at the bottom to download all selected documents.</p>\r\n\r\n<p>Note to users: Articles will be automatically extracted by Microsoft Excel. However, Excel does not allow more than 32,767 characters per cell. Some of the articles in the database exceed this limit, and this can cause users to receive an error message that the cell data is too large. To avoid this, after completing the \"Extraction\" phase, when prompted to save or open the file, do not open it using Excel. Instead, open it using Microsoft Word.</p>\r\n\r\n<p><a href=\"/download-all\"><i class=\"fas fa-download\"></i><span class=\"ml-2\">Download ALL records in the database</span></a></p>\r\n"
-          plugin_id: text_custom
-        result:
-          id: result
-          table: views
-          field: result
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          content: 'Displaying @start - @end of @total'
-          plugin_id: result
     cache_metadata:
       max-age: -1
       contexts:

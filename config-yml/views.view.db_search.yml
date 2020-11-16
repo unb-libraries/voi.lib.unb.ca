@@ -301,8 +301,8 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: false
-            path: ''
+            make_link: true
+            path: '/taxonomy/term/{{ field_newspaper__target_id }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -340,7 +340,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -364,8 +364,6 @@ display:
               language:
                 display_method: label
               newspapers:
-                display_method: label
-              tags:
                 display_method: label
           plugin_id: search_api_field
         field_article_type:
@@ -380,8 +378,8 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: false
-            path: ''
+            make_link: true
+            path: '/taxonomy/term/{{ field_article_type__target_id }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -419,7 +417,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -443,8 +441,6 @@ display:
               language:
                 display_method: label
               newspapers:
-                display_method: label
-              tags:
                 display_method: label
           plugin_id: search_api_field
         field_language:
@@ -459,8 +455,8 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: false
-            path: ''
+            make_link: true
+            path: '/taxonomy/term/{{ field_language__target_id }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -498,7 +494,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -522,8 +518,6 @@ display:
               language:
                 display_method: label
               newspapers:
-                display_method: label
-              tags:
                 display_method: label
           plugin_id: search_api_field
         search_api_excerpt:
