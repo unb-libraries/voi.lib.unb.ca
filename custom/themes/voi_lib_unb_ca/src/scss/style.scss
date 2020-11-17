@@ -170,8 +170,12 @@ main[role="main"] > .container > div > div {
     li {
       list-style-type: none;
 
-      .is-active {
+      &.is-active {
         display: none;
+      }
+
+      svg {
+        color: $voi-turq;
       }
     }
   }
