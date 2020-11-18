@@ -30,7 +30,7 @@ drush migrate-import d7_node_complete:document
 drush migrate-import d7_url_alias
 printf "\n\nRunning Drupal migrations...[Done]\n\n"
 
-# Format article content text.
+# Update role permissions.
 printf "\n\nUpdating role permissions...\n\n"
 drush scr /app/html/modules/custom/voi_migration/scripts/fix-roles.php
 printf "\n\nUpdating role permissions...[Done]\n\n"
