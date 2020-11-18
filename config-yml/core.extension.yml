@@ -44,6 +44,7 @@ module:
   redirect_after_login: 0
   redis: 0
   rest: 0
+  saml_features: 11
   samlauth: 0
   search: 0
   search_api: 0
@@ -58,6 +59,7 @@ module:
   user: 0
   views_data_export: 0
   views_ui: 0
+  voi_access: 0
   voi_admin: 0
   voi_blocks: 0
   voi_forms: 0
@@ -67,7 +69,6 @@ module:
   content_translation: 10
   externalauth: 10
   views: 10
-  voi_access: 11
   minimal: 1000
 theme:
   stark: 0

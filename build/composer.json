@@ -82,7 +82,8 @@
         "drupal/token": "1.6",
         "drupal/pathauto": "1.6",
         "drupal/views_data_export": "1.0",
-        "unb-libraries/drupal-builder": "^8.0.0"
+        "unb-libraries/drupal-builder": "^8.0.0",
+        "unb-libraries/saml_features": "dev-8.x-1.x"
     },
     "require-dev": {
         "unb-libraries/drupal-development-libraries": "^8.0.0"
