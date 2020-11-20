@@ -34,6 +34,10 @@ Feature: Core
     When I visit "/"
     Then I should not see a "a.toolbar-icon-voi-admin-admin" element
 
+  Scenario: Anonymous contributors cannot add data 2
+    When I go to "/node/add"
+    Then I should see "ACCESS DENIED"
+
   Scenario: Site should support English and French
     When I visit "/en/what-is-text-analysis"
     Then I should see "WHAT IS COMPUTER-ASSISTED TEXTUAL ANALYSIS?"
@@ -45,4 +49,3 @@ Feature: Core
     When I visit "/en/search"
     Then I should see a "div.views-row" element
     And I should see "Add to data download"
-    
