@@ -31,5 +31,5 @@ Feature: Core
     And I should see "Document"
 
   Scenario: Anonymous contributors cannot add data
-    When I visit "/en/node/add"
-    Then I should see "ACCESS DENIED"
+    When I visit "/"
+    Then I should not see a "a.toolbar-icon-voi-admin-admin" element
