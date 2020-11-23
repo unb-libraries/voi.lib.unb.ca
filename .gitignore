@@ -1,6 +1,5 @@
 .gitkeep
 vendor
 composer.lock
-tests/behat/features/bootstrap
 scripts/local
 custom/modules/voi_migration/data/dump
