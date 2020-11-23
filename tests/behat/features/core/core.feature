@@ -14,8 +14,8 @@ Feature: Core
       | name      | status |
       | Test user |      1 |
     When I am logged in as "Test user"
-    And I visit "/en/publications-and-conferences"
-    Then I should see "Discours fondateurs en Acadie"
+    And I visit "/en"
+    Then I should see "Laboratoire"
     And I should not see a "a.toolbar-icon-voi-admin-admin" element
 
   Scenario: Logged in page editors can add only pages
@@ -31,7 +31,7 @@ Feature: Core
     And I should see "Document"
 
   Scenario: Anonymous contributors cannot add data
-    When I visit "/"
+    When I visit "/en"
     Then I should not see a "a.toolbar-icon-voi-admin-admin" element
 
   Scenario: Anonymous contributors cannot add data 2
@@ -39,11 +39,11 @@ Feature: Core
     Then I should see "ACCESS DENIED"
 
   Scenario: Site should support English and French
-    When I visit "/en/what-is-text-analysis"
-    Then I should see "WHAT IS COMPUTER-ASSISTED TEXTUAL ANALYSIS?"
+    When I visit "/en"
+    Then I should see "What is Vocabularies of Identity?"
     And I should see "Français"
     When I click "Français"
-    Then I should see "QU'EST-CE QUE L'ANALYSE DE DONNÉES TEXTUELLES?"
+    Then I should see "Les vocabulaires identitaires"
 
   Scenario: Database available and download links visible
     When I visit "/en/search"
