@@ -52,16 +52,11 @@ Feature: Core
     Then I should see "ACCESS DENIED"
 
   Scenario: Site should support English and French
-    When I visit "/en"
-    Then I should see "What is Text Analysis?"
-    And I should see "Français"
-    When I click "Français"
-    Then I should see "Qu'est-ce que l'ADT?"
-
-  Scenario: Database available and download links visible
-  Given "document" content:
-    | title   | field_article_title | field_artice_contents |
-    | Hello   | Hello               | Hello world!          |
-  When I visit "/en/search?search_api_fulltext=world%21"
-  Then I should see a "div.views-row" element
-  And I should see "Add to data download"
+  Given "page" content:
+    | title   | body          | path      |
+    | Welcome | Hello world!  | /hello    |
+  When I visit "/hello"
+  Then I should see "What is Text Analysis?"
+  And I should see "Français"
+  When I click "Français"
+  Then I should see "Qu'est-ce que l'ADT?"
