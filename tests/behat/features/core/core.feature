@@ -13,9 +13,12 @@ Feature: Core
     Given users:
       | name      | status |
       | Test user |      1 |
+    And "page" content:
+      | title   | body          | path      |
+      | Welcome | Hello world!  | /hello    |
     When I am logged in as "Test user"
-    And I visit "/en"
-    Then I should see "Laboratoire"
+    And I visit "/hello"
+    Then I should see "Hello world!"
     And I should not see a "a.toolbar-icon-voi-admin-admin" element
 
   Scenario: Logged in page editors can add only pages
@@ -31,8 +34,18 @@ Feature: Core
     And I should see "Document"
 
   Scenario: Anonymous contributors cannot add data
-    When I visit "/en"
-    Then I should not see a "a.toolbar-icon-voi-admin-admin" element
+  Given "page" content:
+    | title   | body          | path      |
+    | Welcome | Hello world!  | /hello    |
+  When I visit "/hello"
+  Then I should not see a "a.toolbar-icon-voi-admin-admin" element
+
+  Scenario: Anonymous contributors cannot edit data
+  Given "page" content:
+    | title   | body          | path      |
+    | Welcome | Hello world!  | /hello    |
+  When I visit "/hello"
+  Then I should not see a "nav.tabs-primary" element
 
   Scenario: Anonymous contributors cannot add data 2
     When I go to "/node/add"
@@ -40,12 +53,15 @@ Feature: Core
 
   Scenario: Site should support English and French
     When I visit "/en"
-    Then I should see "What is Vocabularies of Identity?"
+    Then I should see "What is Text Analysis?"
     And I should see "Français"
     When I click "Français"
-    Then I should see "Les vocabulaires identitaires"
+    Then I should see "Qu'est-ce que l'ADT?"
 
   Scenario: Database available and download links visible
-    When I visit "/en/search"
-    Then I should see a "div.views-row" element
-    And I should see "Add to data download"
+  Given "document" content:
+    | title   | field_article_title | field_artice_contents |
+    | Hello   | Hello               | Hello world!          |
+  When I visit "/en/search?search_api_fulltext=world%21"
+  Then I should see a "div.views-row" element
+  And I should see "Add to data download"
