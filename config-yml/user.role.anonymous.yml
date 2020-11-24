@@ -18,3 +18,4 @@ permissions:
   - 'use text format filtered_html'
   - 'use text format unb_libraries'
   - 'view files'
+  - 'view the administration theme'
