@@ -51,17 +51,6 @@ Feature: Core
       When I go to "/node/add"
       Then I should see "ACCESS DENIED"
 
-  Scenario: Site should support English and French
-    Given "page" content:
-      | title   | body          | path      |
-      | Welcome | Hello world!  | /hello    |
-    When I visit "/hello"
-    Then I should see "Welcome"
-    And I should see "Français"
-    When I click "Français"
-    And I wait 10
-    Then I should see "Accueil"
-
   Scenario: Database available and download links visible
     Given "document" content:
       | title         | field_article_title | field_artice_contents |
