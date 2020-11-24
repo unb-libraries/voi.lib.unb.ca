@@ -22,41 +22,51 @@ Feature: Core
     And I should not see a "a.toolbar-icon-voi-admin-admin" element
 
   Scenario: Logged in page editors can add only pages
-    Given I am logged in as a user with the "page_editor" role
-    When I visit "/en/node/add"
-    Then I should see "Basic page"
-    And I should not see "Document"
+      Given I am logged in as a user with the "page_editor" role
+      When I visit "/en/node/add"
+      Then I should see "Basic page"
+      And I should not see "Document"
 
   Scenario: Logged in record editors can add only documents
-    Given I am logged in as a user with the "record_editor" role
-    When I visit "/en/node/add"
-    Then I should not see "Basic page"
-    And I should see "Document"
+      Given I am logged in as a user with the "record_editor" role
+      When I visit "/en/node/add"
+      Then I should not see "Basic page"
+      And I should see "Document"
 
   Scenario: Anonymous contributors cannot add data
-  Given "page" content:
-    | title   | body          | path      |
-    | Welcome | Hello world!  | /hello    |
-  When I visit "/hello"
-  Then I should not see a "a.toolbar-icon-voi-admin-admin" element
+    Given "page" content:
+      | title   | body          | path      |
+      | Welcome | Hello world!  | /hello    |
+    When I visit "/hello"
+    Then I should not see a "a.toolbar-icon-voi-admin-admin" element
 
   Scenario: Anonymous contributors cannot edit data
-  Given "page" content:
-    | title   | body          | path      |
-    | Welcome | Hello world!  | /hello    |
-  When I visit "/hello"
-  Then I should not see a "nav.tabs-primary" element
+    Given "page" content:
+      | title   | body          | path      |
+      | Welcome | Hello world!  | /hello    |
+    When I visit "/hello"
+    Then I should not see a "nav.tabs-primary" element
 
-  Scenario: Anonymous contributors cannot add data 2
-    When I go to "/node/add"
-    Then I should see "ACCESS DENIED"
+    Scenario: Anonymous contributors cannot add data 2
+      When I go to "/node/add"
+      Then I should see "ACCESS DENIED"
 
   Scenario: Site should support English and French
-  Given "page" content:
-    | title   | body          | path      |
-    | Welcome | Hello world!  | /hello    |
-  When I visit "/hello"
-  Then I should see "What is Text Analysis?"
-  And I should see "Français"
-  When I click "Français"
-  Then I should see "Qu'est-ce que l'ADT?"
+    Given "page" content:
+      | title   | body          | path      |
+      | Welcome | Hello world!  | /hello    |
+    When I visit "/hello"
+    Then I should see "What is Text Analysis?"
+    And I should see "Français"
+    When I click "Français"
+    And I wait 5
+    Then I should see "Qu'est-ce que l'ADT?"
+
+  Scenario: Database available and download links visible
+    Given "document" content:
+      | title   | field_article_title | field_artice_contents |
+      | Hello   | Hello               | Hello world!          |
+    When I re-index "documents_voi_lib_unb_ca" and wait 5
+    When I visit "/en/search?search_api_fulltext=world%21"
+    Then I should see a "div.views-row" element
+    And I should see "Add to data download"
