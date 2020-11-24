@@ -56,11 +56,11 @@ Feature: Core
       | title   | body          | path      |
       | Welcome | Hello world!  | /hello    |
     When I visit "/hello"
-    Then I should see "What is Text Analysis?"
+    Then I should see "Welcome"
     And I should see "Français"
     When I click "Français"
     And I wait 10
-    Then I should see "Qu'est-ce que l'ADT?"
+    Then I should see "Accueil"
 
   Scenario: Database available and download links visible
     Given "document" content:
