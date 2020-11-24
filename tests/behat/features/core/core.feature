@@ -59,14 +59,14 @@ Feature: Core
     Then I should see "What is Text Analysis?"
     And I should see "Français"
     When I click "Français"
-    And I wait 5
+    And I wait 10
     Then I should see "Qu'est-ce que l'ADT?"
 
   Scenario: Database available and download links visible
     Given "document" content:
-      | title   | field_article_title | field_artice_contents |
-      | Hello   | Hello               | Hello world!          |
-    When I re-index "documents_voi_lib_unb_ca" and wait 5
+      | title         | field_article_title | field_artice_contents |
+      | Hello  world! | Hello               | Hello world!          |
+    When I re-index "documents_voi_lib_unb_ca" and wait 10
     When I visit "/en/search?search_api_fulltext=world%21"
     Then I should see a "div.views-row" element
     And I should see "Add to data download"
