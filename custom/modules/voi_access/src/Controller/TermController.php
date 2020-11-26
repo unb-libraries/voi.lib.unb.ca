@@ -16,7 +16,7 @@ class TermController extends ControllerBase {
    */
   public function searchByTerm(TermInterface $taxonomy_term) {
     // Get vocabulary and term.
-    $vid = $taxonomy_term->getVocabularyId();
+    $vid = $taxonomy_term->bundle();
     $tid = $taxonomy_term->id();
     $lang = \Drupal::languageManager()->getCurrentLanguage()->getId();
 
