@@ -2,9 +2,9 @@
 
 /**
  * @file
- * Contains refresh-doc.php.
+ * Contains format-doc.php.
  *
- * Refresh all documents.
+ * Set all documents to use unb_libraries text format in body.
  */
 
 // Search for all document node ids.
