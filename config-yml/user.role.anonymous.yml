@@ -18,4 +18,5 @@ permissions:
   - 'use text format filtered_html'
   - 'use text format unb_libraries'
   - 'view files'
+  - 'view sp metadata'
   - 'view the administration theme'
