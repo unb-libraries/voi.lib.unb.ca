@@ -7,7 +7,7 @@ Feature: Core
   @api
   Scenario: Visit as an anonymous user
     When I visit "/user"
-    Then I should see "UNB/STU patrons must sign in using Secure Services Login"
+    Then I should see "UNB/STU accounts must sign in using Secure Services Login"
 
   Scenario: Log in as a user created during this scenario
     Given users:
