@@ -17,6 +17,6 @@ dockworker:
     push_branches:
       - dev
       - prod
-    name: unblibraries/voi.lib.unb.ca
+    name: ghcr.io/unb-libraries/voi.lib.unb.ca
     date_tag_image: true
-    repository: dockercloud
+    repository: ghcr

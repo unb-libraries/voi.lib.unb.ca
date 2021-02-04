@@ -14,7 +14,7 @@ $conf['chq_redis_cache_enabled'] = TRUE;
 require_once dirname(__FILE__) . "/settings.redis.inc";
 
 // For migration.
-$databases['migrate']['default'] = array (
+$databases['migrate']['default'] = [
   'database'  => 'voi',
   'username'  => 'root',
   'password'  => 'datadump',
@@ -22,4 +22,9 @@ $databases['migrate']['default'] = array (
   'port'      => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver'    => 'mysql',
-);
+];
+
+// Newrelic.
+if (extension_loaded('newrelic')) {
+  require_once dirname(__FILE__) . "/settings.newrelic.inc";
+}
