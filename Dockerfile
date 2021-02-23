@@ -1,4 +1,4 @@
-FROM unblibraries/drupal:8.x-3.x-unblib
+FROM ghcr.io/unb-libraries/drupal:8.x-3.x-unblib
 MAINTAINER UNB Libraries <libsupport@unb.ca>
 
 # Install additional OS packages.
@@ -22,9 +22,6 @@ COPY ./custom/modules ${DRUPAL_ROOT}/modules/custom
 COPY ./custom/splash  ${DRUPAL_ROOT}/splash
 
 # Container metadata.
-ARG BUILD_DATE
-ARG VCS_REF
-ARG VERSION
 LABEL ca.unb.lib.generator="drupal8" \
   com.microscaling.docker.dockerfile="/Dockerfile" \
   com.microscaling.license="MIT" \
