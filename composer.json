@@ -17,7 +17,7 @@
   ],
   "require-dev": {
     "drupal/bootstrap4": "1.0-rc4",
-    "unb-libraries/dockworker-drupal": "~3"
+    "unb-libraries/dockworker-drupal": "~4"
   },
   "scripts": {
     "post-update-cmd": [
