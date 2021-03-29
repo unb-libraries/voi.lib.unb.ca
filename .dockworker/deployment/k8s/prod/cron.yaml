@@ -7,7 +7,8 @@ metadata:
     app: drupal
     tier: cron
 spec:
-  schedule: "*/15 * * * *"
+  schedule: "00,15,30,45 * * * *"
+  startingDeadlineSeconds: 480
   concurrencyPolicy: Forbid
   jobTemplate:
     metadata:
