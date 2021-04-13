@@ -42,9 +42,6 @@
             ]
         },
         "patches": {
-            "drupal/samlauth": {
-                "samlauth nocache metadata": "/build/patches/samlauth_nocache_metadata.patch"
-            }
         }
     },
     "license": "MIT",
