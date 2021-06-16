@@ -9,6 +9,8 @@ use_regular_file: true
 use_light_file: true
 use_brands_file: true
 use_duotone_file: true
-external_svg_integrity: null
+external_svg_integrity: ''
 _core:
   default_config_hash: tBvH-4rFd4yx9dmyxlCjZn5HflzIVejjiSve31KN1bg
+load_assets: true
+allow_pseudo_elements: false
