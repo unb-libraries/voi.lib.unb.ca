@@ -44,6 +44,7 @@ services:
 
   drupal-solr-lib-unb-ca:
     image: ghcr.io/unb-libraries/solr-drupal:8.x-4.x
+    restart: always
     expose:
       - "8983"
     networks:
@@ -54,6 +55,7 @@ services:
 
   mailhog:
     image: mailhog/mailhog
+    restart: always
     expose:
       - "1025"
       - "8025"
@@ -61,19 +63,6 @@ services:
       - "4110:8025"
     networks:
       - voi.lib.unb.ca
-
-  # For migration.
-  mysqlimport:
-    image: mysql:5.7
-    expose:
-     - "3306"
-    environment:
-      MYSQL_DATABASE: voi
-      MYSQL_ROOT_PASSWORD: datadump
-    networks:
-      - voi.lib.unb.ca
-    volumes:
-      - /home/core/cvillami/db_dumps/:/docker-entrypoint-initdb.d
 
 networks:
   voi.lib.unb.ca:
