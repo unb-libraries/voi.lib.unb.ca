@@ -1,16 +1,18 @@
 dockworker:
-  version: '3.0'
+  version: '4'
   application:
     name: voi.lib.unb.ca
     finish_marker: '99_zz_notify_user_URI'
     project_prefix: VOI
     upstream_images:
-      - ghcr.io/unb-libraries/drupal:8.x-3.x-unblib
+      - ghcr.io/unb-libraries/drupal:9.x-1.x-unblib
     uuid: 3110
   deployment:
     environments:
       - dev
       - prod
+  drupal:
+    version: 9
   github:
     repo: voi.lib.unb.ca
     owner: unb-libraries

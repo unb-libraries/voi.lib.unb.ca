@@ -2,4 +2,5 @@ name: 'VOI Language'
 type: module
 description: 'Language overrides and customization for voi.lib.unb.ca'
 core: 8.x
+core_version_requirement: ^8 || ^9
 package: 'Custom'
