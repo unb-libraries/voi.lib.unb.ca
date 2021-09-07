@@ -60,7 +60,7 @@
     "require": {
         "drupal/admin_toolbar": "2.5",
         "drupal/bootstrap4": "2.1.13",
-        "drupal/core": "9.2.4",
+        "drupal/core": "9.2.5",
         "drupal/drush_language": "1.0-rc4",
         "drupal/facets": "1.8",
         "drupal/flag": "4.0-beta2",
