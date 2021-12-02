@@ -15,10 +15,14 @@ RUN ${RSYNC_MOVE} /build/scripts/container/ /scripts/ && \
   /scripts/setupStandardConf.sh && \
   /scripts/build.sh
 
-# Deploy custom assets, configuration.
+# Deploy configuration.
 COPY ./config-yml ${DRUPAL_CONFIGURATION_DIR}
+RUN /scripts/pre-init.d/72_secure_config_sync_dir.sh
+
+# Deploy custom modules, themes.
 COPY ./custom/themes ${DRUPAL_ROOT}/themes/custom
 COPY ./custom/modules ${DRUPAL_ROOT}/modules/custom
+
 COPY ./custom/splash  ${DRUPAL_ROOT}/splash
 
 # Container metadata.
