@@ -63,7 +63,7 @@
         "drupal/core": "9.2.10",
         "drupal/drush_language": "1.0-rc4",
         "drupal/facets": "1.8",
-        "drupal/flag": "4.0-beta2",
+        "drupal/flag": "4.0-beta3",
         "drupal/flag_search_api": "dev-1.x",
         "drupal/fontawesome": "2.19",
         "drupal/google_analytics": "2.5",
