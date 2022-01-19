@@ -73,7 +73,7 @@
         "drupal/redis": "1.5",
         "drupal/samlauth": "3.4",
         "drupal/search_api": "1.22",
-        "drupal/search_api_autocomplete": "1.5",
+        "drupal/search_api_autocomplete": "1.6",
         "drupal/search_api_solr": "4.2.3",
         "drupal/views_data_export": "1.0",
         "unb-libraries/drupal-builder": "^9",
