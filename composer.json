@@ -26,5 +26,8 @@
     "post-update-cmd": [
       "vendor/bin/dockworker dockworker:git:setup-hooks"
     ]
+  },
+  "replace": {
+    "drupal/core": "*"
   }
 }
