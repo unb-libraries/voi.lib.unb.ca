@@ -2,11 +2,6 @@ uuid: 7e740114-cacd-448b-ac17-0af13534b956
 langcode: en
 status: true
 dependencies:
-  module:
-    - search_api_solr
-    - node
-    - search_api
-    - flag_search_api
   config:
     - field.storage.node.field_article_contents
     - field.storage.node.field_article_title
@@ -19,24 +14,26 @@ dependencies:
     - field.storage.node.field_page_number
     - field.storage.node.field_year
     - search_api.server.drupal_solr_lib_unb_ca
+  module:
+    - search_api_solr
+    - node
+    - search_api
+    - flag_search_api
 third_party_settings:
   search_api_solr:
     finalize: false
     commit_before_finalize: false
     commit_after_finalize: false
-    multilingual:
-      limit_to_content_language: false
-      include_language_independent: true
     highlighter:
       maxAnalyzedChars: 51200
       fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
       regex:
         slop: 0.5
         pattern: blank
         maxAnalyzedChars: 10000
-      usePhraseHighlighter: true
-      highlightMultiTerm: true
-      preserveMulti: false
       highlight:
         mergeContiguous: false
         requireFieldMatch: false
@@ -57,6 +54,9 @@ third_party_settings:
       index_prefix: ''
       collection: ''
       timezone: ''
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
 id: documents_voi_lib_unb_ca
 name: documents.voi.lib.unb.ca
 description: ''
@@ -185,19 +185,21 @@ datasource_settings:
 processor_settings:
   add_url: {  }
   aggregated_field: {  }
+  entity_type: {  }
   flag_indexer:
     flag_index:
       - download_document
   highlight:
-    highlight: always
-    highlight_partial: true
-    excerpt: true
-    excerpt_length: 256
-    exclude_fields: {  }
-    prefix: '<strong>'
-    suffix: '</strong>'
     weights:
       postprocess_query: 0
+    prefix: '<strong>'
+    suffix: '</strong>'
+    excerpt: true
+    excerpt_always: false
+    excerpt_length: 256
+    exclude_fields: {  }
+    highlight: always
+    highlight_partial: true
   language_with_fallback: {  }
   rendered_item: {  }
   solr_date_range:
@@ -207,6 +209,7 @@ tracker_settings:
   default:
     indexing_order: lifo
 options:
-  index_directly: true
   cron_limit: 100
+  index_directly: true
+  track_changes_in_references: true
 server: drupal_solr_lib_unb_ca

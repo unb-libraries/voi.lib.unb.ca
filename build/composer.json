@@ -49,6 +49,9 @@
       ]
     },
     "patches": {
+      "drupal/flag_search_api": {
+        "Multi-valued document index issue": "https://www.drupal.org/files/issues/2020-11-21/3183850.patch"
+      },
       "drupal/samlauth": {
         "Ignore Role Restrictions": "/build/patches/samlauth_rolematch.patch"
       }
