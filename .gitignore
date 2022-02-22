@@ -3,3 +3,4 @@ vendor
 composer.lock
 scripts/local
 custom/modules/voi_migration/data/dump
+config-yml/.htaccess
