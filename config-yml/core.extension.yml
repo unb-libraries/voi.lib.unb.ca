@@ -9,6 +9,7 @@ module:
   config: 0
   config_translation: 0
   contact: 0
+  content_translation: 10
   contextual: 0
   csv_serialization: 0
   datetime: 0
@@ -16,6 +17,7 @@ module:
   drush_language: 0
   dynamic_page_cache: 0
   editor: 0
+  externalauth: 10
   facets: 0
   field: 0
   field_ui: 0
@@ -32,7 +34,10 @@ module:
   language: 0
   link: 0
   locale: 0
+  menu_link_content: 1
   menu_ui: 0
+  minimal: 1000
+  mysql: 0
   node: 0
   options: 0
   page_cache: 0
@@ -44,6 +49,7 @@ module:
   redirect_after_login: 0
   redis: 0
   rest: 0
+  saml_features: 11
   samlauth: 0
   search: 0
   search_api: 0
@@ -56,6 +62,7 @@ module:
   toolbar: 0
   update: 0
   user: 0
+  views: 10
   views_data_export: 0
   views_ui: 0
   voi_access: 0
@@ -64,12 +71,6 @@ module:
   voi_forms: 0
   voi_lang: 0
   voi_menu: 0
-  menu_link_content: 1
-  content_translation: 10
-  externalauth: 10
-  views: 10
-  saml_features: 11
-  minimal: 1000
 theme:
   stark: 0
   seven: 0
