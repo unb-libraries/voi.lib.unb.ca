@@ -67,7 +67,7 @@
   "require": {
     "drupal/admin_toolbar": "2.5",
     "drupal/bootstrap4": "2.1.15",
-    "drupal/core": "9.4.7",
+    "drupal/core": "9.4.8",
     "drupal/drush_language": "1.0-rc4",
     "drupal/facets": "2.0.5",
     "drupal/flag": "4.0-beta3",
