@@ -79,7 +79,7 @@
     "drupal/redirect_after_login": "2.7",
     "drupal/redis": "1.5",
     "drupal/samlauth": "3.8",
-    "drupal/search_api": "1.25",
+    "drupal/search_api": "1.26",
     "drupal/search_api_autocomplete": "1.6",
     "drupal/search_api_solr": "4.2.8",
     "drupal/views_data_export": "1.1",
