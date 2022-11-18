@@ -1,8 +1,8 @@
 ui:
   show:
+    performance_statistics: true
     sql_query:
       enabled: true
-    performance_statistics: true
 field_rewrite_elements:
   div: DIV
   span: SPAN
