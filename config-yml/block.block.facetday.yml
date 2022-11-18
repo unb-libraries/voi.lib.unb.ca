@@ -18,12 +18,12 @@ plugin: 'facet_block:facet_day'
 settings:
   id: 'facet_block:facet_day'
   label: 'Filter by day:'
-  provider: facets
   label_display: visible
+  provider: facets
   block_id: facetday
 visibility:
   request_path:
     id: request_path
-    pages: /search
     negate: false
     context_mapping: {  }
+    pages: /search

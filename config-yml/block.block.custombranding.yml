@@ -16,11 +16,11 @@ plugin: voi_branding
 settings:
   id: voi_branding
   label: 'Custom Branding'
-  provider: voi_blocks
   label_display: '0'
+  provider: voi_blocks
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: true
     context_mapping: {  }
+    pages: '<front>'

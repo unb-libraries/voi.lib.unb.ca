@@ -15,6 +15,6 @@ plugin: voi_footer
 settings:
   id: voi_footer
   label: 'Custom Footer'
-  provider: voi_blocks
   label_display: '0'
+  provider: voi_blocks
 visibility: {  }

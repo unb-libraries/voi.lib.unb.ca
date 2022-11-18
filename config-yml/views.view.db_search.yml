@@ -22,70 +22,12 @@ base_table: search_api_index_documents_voi_lib_unb_ca
 base_field: search_api_id
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: none
-        options: {  }
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          bypass_access: false
-          skip_access: false
-          preserve_facet_query_args: false
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Search
-          reset_button: true
-          reset_button_label: Clear
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: full
-        options:
-          items_per_page: 25
-          offset: 0
-          id: 0
-          total_pages: null
-          tags:
-            previous: ‹‹
-            next: ››
-            first: '« First'
-            last: 'Last »'
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          quantity: 9
-      style:
-        type: default
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-      row:
-        type: fields
-        options:
-          default_field_elements: true
-          inline:
-            counter: counter
-            nid: nid
-            title: title
-          separator: ''
-          hide_empty: false
+      title: Database
       fields:
         counter:
           id: counter
@@ -94,6 +36,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: counter
           label: ''
           exclude: false
           alter:
@@ -136,7 +79,6 @@ display:
           empty_zero: false
           hide_alter_empty: true
           counter_start: 1
-          plugin_id: counter
         nid:
           id: nid
           table: search_api_index_documents_voi_lib_unb_ca
@@ -144,6 +86,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_field
           label: ''
           exclude: false
           alter:
@@ -218,7 +161,6 @@ display:
             format_plural_values:
               - '1'
               - '@count'
-          plugin_id: search_api_field
         title:
           id: title
           table: search_api_index_documents_voi_lib_unb_ca
@@ -226,6 +168,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_field
           label: ''
           exclude: false
           alter:
@@ -288,7 +231,6 @@ display:
             use_highlighting: false
             multi_type: separator
             multi_separator: ', '
-          plugin_id: search_api_field
         field_newspaper:
           id: field_newspaper
           table: search_api_index_documents_voi_lib_unb_ca
@@ -296,6 +238,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_field
           label: Newspaper
           exclude: false
           alter:
@@ -365,7 +308,6 @@ display:
                 display_method: label
               newspapers:
                 display_method: label
-          plugin_id: search_api_field
         field_article_type:
           id: field_article_type
           table: search_api_index_documents_voi_lib_unb_ca
@@ -373,6 +315,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_field
           label: 'Article Type'
           exclude: false
           alter:
@@ -442,7 +385,6 @@ display:
                 display_method: label
               newspapers:
                 display_method: label
-          plugin_id: search_api_field
         field_language:
           id: field_language
           table: search_api_index_documents_voi_lib_unb_ca
@@ -450,6 +392,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_field
           label: Language
           exclude: false
           alter:
@@ -519,7 +462,6 @@ display:
                 display_method: label
               newspapers:
                 display_method: label
-          plugin_id: search_api_field
         search_api_excerpt:
           id: search_api_excerpt
           table: search_api_index_documents_voi_lib_unb_ca
@@ -527,6 +469,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api
           label: ''
           exclude: false
           alter:
@@ -572,7 +515,6 @@ display:
           use_highlighting: true
           multi_type: separator
           multi_separator: ', '
-          plugin_id: search_api
         flag_download_document:
           id: flag_download_document
           table: search_api_index_documents_voi_lib_unb_ca
@@ -580,6 +522,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_flag
           label: ''
           exclude: false
           alter:
@@ -621,7 +564,59 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          plugin_id: search_api_flag
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 25
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Search
+          reset_button: true
+          reset_button_label: Clear
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: none
+        options: {  }
+      cache:
+        type: none
+        options: {  }
+      empty: {  }
+      sorts:
+        search_api_relevance:
+          id: search_api_relevance
+          table: search_api_index_documents_voi_lib_unb_ca
+          field: search_api_relevance
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: search_api_relevance
+          exposed: false
+      arguments: {  }
       filters:
         search_api_fulltext:
           id: search_api_fulltext
@@ -630,6 +625,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_fulltext
           operator: and
           value: ''
           group: 1
@@ -668,7 +664,6 @@ display:
           parse_mode: terms
           min_length: null
           fields: {  }
-          plugin_id: search_api_fulltext
         field_article_type:
           id: field_article_type
           table: search_api_index_documents_voi_lib_unb_ca
@@ -676,6 +671,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_term
           operator: or
           value: {  }
           group: 1
@@ -712,12 +708,11 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: select
-          limit: true
           vid: article_type
+          type: select
           hierarchy: false
+          limit: true
           error_message: true
-          plugin_id: search_api_term
         field_language:
           id: field_language
           table: search_api_index_documents_voi_lib_unb_ca
@@ -725,6 +720,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_term
           operator: or
           value: {  }
           group: 1
@@ -761,12 +757,11 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: select
-          limit: true
           vid: language
+          type: select
           hierarchy: false
+          limit: true
           error_message: true
-          plugin_id: search_api_term
         field_newspaper:
           id: field_newspaper
           table: search_api_index_documents_voi_lib_unb_ca
@@ -774,6 +769,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_term
           operator: or
           value: {  }
           group: 1
@@ -810,12 +806,11 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: select
-          limit: true
           vid: newspapers
+          type: select
           hierarchy: false
+          limit: true
           error_message: true
-          plugin_id: search_api_term
         field_year:
           id: field_year
           table: search_api_index_documents_voi_lib_unb_ca
@@ -823,6 +818,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: search_api_numeric
           operator: between
           value:
             min: ''
@@ -848,9 +844,9 @@ display:
               administrator: '0'
               page_editor: '0'
               record_editor: '0'
-            placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -863,21 +859,29 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: search_api_numeric
-      sorts:
-        search_api_relevance:
-          id: search_api_relevance
-          table: search_api_index_documents_voi_lib_unb_ca
-          field: search_api_relevance
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: search_api
-      title: Database
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline:
+            counter: counter
+            nid: nid
+            title: title
+          separator: ''
+          hide_empty: false
+      query:
+        type: search_api_query
+        options:
+          bypass_access: false
+          skip_access: false
+          preserve_facet_query_args: false
+      relationships: {  }
       header:
         area_text_custom:
           id: area_text_custom
@@ -886,14 +890,11 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: true
-          tokenize: false
-          content: "<p>Please note that this database is a work in progress.</p>\r\n\r\n<p>\r\nOver 20 New Brunswick newspapers and one Prince Edward Island newspaper published between 1880 and 1940 are currently being digitized for inclusion in the Vocabularies of Identity database. Given the focus of this particular research project on the expression of collective identity in Loyalist and Acadian populations in New Brunswick, only texts containing the key words starting with the characters \"Loyalist*\" and \"Acadi*\" have been included, with a few exceptions (when, for example, the term \"French\" is used to refer to Acadians). All genres have been included, ranging from journalistic articles to poetry. If you would like to contribute to proofreading articles, if you have a correction to add to a document or if you would like to know more about selection criteria or about a specific newspaper, please write to <a href=\"mailto:chantal.richard@unb.ca\">chantal.richard@unb.ca</a>. </p>\r\n\r\n<p>\r\nThis database is open to all, but we would very much appreciate being informed of projects or papers that make use of it. This will help us continue to provide digitized archival materials to researchers. Digitization update as of 11 May 2017: all newspapers targeted by this research project and published from 1880 to 1900 have been added to the database EXCEPT the following that are incomplete: Le Moniteur Acadien (nearly 50% done), The Moncton Daily Times (11% done), and The Daily Gleaner. If you can help with these papers, please contact <a href=\"mailto:chantal.richard@unb.ca\">chantal.richard@unb.ca</a>.\r\n</p>"
           plugin_id: text_custom
+          empty: true
+          content: "<p>Please note that this database is a work in progress.</p>\r\n\r\n<p>\r\nOver 20 New Brunswick newspapers and one Prince Edward Island newspaper published between 1880 and 1940 are currently being digitized for inclusion in the Vocabularies of Identity database. Given the focus of this particular research project on the expression of collective identity in Loyalist and Acadian populations in New Brunswick, only texts containing the key words starting with the characters \"Loyalist*\" and \"Acadi*\" have been included, with a few exceptions (when, for example, the term \"French\" is used to refer to Acadians). All genres have been included, ranging from journalistic articles to poetry. If you would like to contribute to proofreading articles, if you have a correction to add to a document or if you would like to know more about selection criteria or about a specific newspaper, please write to <a href=\"mailto:chantal.richard@unb.ca\">chantal.richard@unb.ca</a>. </p>\r\n\r\n<p>\r\nThis database is open to all, but we would very much appreciate being informed of projects or papers that make use of it. This will help us continue to provide digitized archival materials to researchers. Digitization update as of 11 May 2017: all newspapers targeted by this research project and published from 1880 to 1900 have been added to the database EXCEPT the following that are incomplete: Le Moniteur Acadien (nearly 50% done), The Moncton Daily Times (11% done), and The Daily Gleaner. If you can help with these papers, please contact <a href=\"mailto:chantal.richard@unb.ca\">chantal.richard@unb.ca</a>.\r\n</p>"
+          tokenize: false
       footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -910,17 +911,17 @@ display:
         - 'config:field.storage.node.field_newspaper'
         - 'config:search_api.index.documents_voi_lib_unb_ca'
   page_1:
-    display_plugin: page
     id: page_1
     display_title: Page
+    display_plugin: page
     position: 1
     display_options:
-      display_extenders: {  }
-      path: search
       cache:
         type: none
       defaults:
         cache: false
+      display_extenders: {  }
+      path: search
     cache_metadata:
       max-age: -1
       contexts:
