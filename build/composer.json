@@ -82,7 +82,7 @@
     "drupal/search_api": "1.28",
     "drupal/search_api_autocomplete": "1.7",
     "drupal/search_api_solr": "4.2.10",
-    "drupal/views_data_export": "1.2",
+    "drupal/views_data_export": "1.3",
     "unb-libraries/drupal-builder": "^9",
     "unb-libraries/saml_features": "dev-9.x-1.x"
   },
