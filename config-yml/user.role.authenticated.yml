@@ -1,7 +1,11 @@
 uuid: 1fd8d1a8-054e-4cbd-bd90-8631872f3b12
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - comment
+    - google_analytics
+    - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
@@ -12,6 +16,7 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'flag document_data_bundle'
+  - 'opt-in or out of google analytics tracking'
   - 'post comments'
   - 'skip comment approval'
   - 'unflag document_data_bundle'
