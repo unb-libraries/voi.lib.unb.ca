@@ -1,6 +1,7 @@
 .gitkeep
 vendor
-composer.lock
+/composer.lock
 scripts/local
 custom/modules/voi_migration/data/dump
-config-yml/.htaccess
+configuration/.htaccess
+/build/vendor

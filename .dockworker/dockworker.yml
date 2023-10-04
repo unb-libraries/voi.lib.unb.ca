@@ -1,28 +1,71 @@
 dockworker:
-  version: '5'
+  version: '6'
   application:
-    name: voi.lib.unb.ca
-    finish_marker: '99_zz_notify_user_URI'
-    project_prefix: VOI
-    upstream_images:
-      - ghcr.io/unb-libraries/drupal:9.x-2.x-unblib
-    uuid: 3110
-  deployment:
-    environments:
+    name: Vocabularies of Identity
+    uri: https://voi.lib.unb.ca
+    description: >
+      Combining quantitative and qualitative approaches, this interuniversity and multidisciplinary project analyzes the evolution 
+      of collective identities in public discourse among Acadians and Loyalist descendants in New Brunswick at the end of the 19th 
+      century and in the first part of 20th century.
+    topics:
+      - language
+      - history
+      - research
+    identifiers:
+      id: voi.lib.unb.ca
+      slug: voi-lib-unb-ca
+      short_slug: voi
+      uuid: 3110
+    framework:
+      name: Drupal
+      version: 10
+      startup_finished_marker: '99_startup_sequence_complete'
+      endpoint:
+        name: http
+        port: 80
+        readiness_timeout: 15
+    license:
+      license: MIT
+      holder: University of New Brunswick Libraries
+    shell:
+      path: /bin/sh
+  endpoints:
+    env:
       - dev
       - prod
-    workflow:
-      source: dockworker-drupal
-      type: deployment-workflow
-  drupal:
-    version: 9
-  github:
-    repo: voi.lib.unb.ca
-    owner: unb-libraries
-  image:
-    push_branches:
-      - dev
-      - prod
-    name: ghcr.io/unb-libraries/voi.lib.unb.ca
-    date_tag_image: true
-    repository: ghcr
+    deployments:
+      voi-lib-unb-ca:
+        default: true
+        managed: true
+        name: voi-lib-unb-ca
+      drupal-mysql-lib-unb-ca:
+        managed: false
+        name: mysql
+      drupal-redis-lib-unb-ca:
+        managed: false
+        name: redis
+      drupal-solr-lib-unb-ca:
+        managed: false
+        name: solr
+  workflows:
+    vcs:
+      type: github
+      owner: unb-libraries
+      name: voi.lib.unb.ca
+    jira:
+      project_keys:
+        - VOI
+    image:
+      name: ghcr.io/unb-libraries/voi.lib.unb.ca
+      parent: ghcr.io/unb-libraries/drupal:10.x-1.x-unblib
+      repository: GitHub
+      push-branches:
+        - dev
+        - prod
+    e2e_tests:
+        - id: core
+          frequency: '*/5 * * * *'
+          source_files:
+            - .dockworker/tests/e2e/voi.lib.unb.ca.yml
+          namespaces:
+            - prod

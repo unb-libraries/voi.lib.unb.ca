@@ -2,7 +2,7 @@ name: 'VOI Migration'
 type: module
 description: 'D7->D8 migration for voi.lib.unb.ca'
 core: 8.x
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9 || ^10
 package: 'Custom'
 dependencies:
   - migrate_drupal
