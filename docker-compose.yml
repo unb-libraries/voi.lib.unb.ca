@@ -1,5 +1,5 @@
 services:
-  voi.lib.unb.ca:
+  voi-lib-unb-ca:
     build:
       context: .
     restart: unless-stopped
