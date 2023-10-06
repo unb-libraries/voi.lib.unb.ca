@@ -75,6 +75,19 @@
     {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
+    },
+    {
+      "package": {
+        "name": "unb-libraries/flag_search_api",
+        "source": {
+          "reference": "8.x-1.x",
+          "type": "git",
+          "url": "https://github.com/unb-libraries/flag_search_api.git"
+        },
+        "type": "drupal-module",
+        "version": "1.x-dev"
+      },
+      "type": "package"
     }
   ],
   "require": {
@@ -102,6 +115,7 @@
     "drupal/views_data_export": "^1",
     "unb-libraries/drupal-development-libraries": "^10",
     "unb-libraries/composer-drupal-scaffold": "^10",
+    "unb-libraries/flag_search_api": "^1.x-dev",
     "unb-libraries/saml_features": "dev-10.x-1.x"
   },
   "require-dev": {
