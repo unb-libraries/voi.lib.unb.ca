@@ -11,7 +11,7 @@ display:
         field_newspaper:
           label: Journal
         field_article_type:
-          label: 'Type d''Article'
+          label: "Type d'Article"
         field_language:
           label: Langue
       title: Téléchargement
@@ -31,7 +31,7 @@ display:
         field_newspaper:
           label: Journal
         field_article_type:
-          label: 'Type d''Article'
+          label: "Type d'Article"
         field_language:
           label: Langue
   data_export_1:
@@ -44,7 +44,7 @@ display:
         field_page_number:
           label: 'Numéro de Page'
         field_article_type:
-          label: 'Type d''Article'
+          label: "Type d'Article"
         field_language:
           label: Langue
         field_year:
@@ -54,7 +54,7 @@ display:
         field_day:
           label: Jour
         field_article_contents:
-          label: 'Contenu de l''Article'
+          label: "Contenu de l'Article"
         title:
           label: Titre
   data_export_2:
@@ -67,7 +67,7 @@ display:
         field_page_number:
           label: 'Numéro de Page'
         field_article_type:
-          label: 'Type d''Article'
+          label: "Type d'Article"
         field_language:
           label: Langue
         field_year:
@@ -77,6 +77,6 @@ display:
         field_day:
           label: Jour
         field_article_contents:
-          label: 'Contenu de l''Article'
+          label: "Contenu de l'Article"
         title:
           label: Titre

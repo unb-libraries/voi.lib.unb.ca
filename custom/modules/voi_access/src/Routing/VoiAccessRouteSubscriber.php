@@ -26,7 +26,7 @@ class VoiAccessRouteSubscriber extends RouteSubscriberBase {
     // Deny access to non-admins.
     foreach ($deny_routes as $deny_route) {
       if ($route = $collection->get($deny_route)) {
-        $route->setRequirement('_role', 'administrator');
+        $route->setRequirement('_permission', 'administer_users');
       }
     }
 

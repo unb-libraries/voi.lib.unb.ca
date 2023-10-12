@@ -11,7 +11,7 @@ field_name: ldap_user_current_dn
 entity_type: user
 bundle: user
 label: 'User LDAP DN'
-description: 'May change when user''s DN changes. This field should not be edited.'
+description: "May change when user's DN changes. This field should not be edited."
 required: false
 translatable: false
 default_value: {  }

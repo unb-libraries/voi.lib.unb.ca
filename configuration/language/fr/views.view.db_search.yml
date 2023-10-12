@@ -15,7 +15,7 @@ display:
         field_newspaper:
           label: Journal
         field_article_type:
-          label: 'Type d''article'
+          label: "Type d'article"
         field_language:
           label: Langue
       filters:
@@ -24,7 +24,7 @@ display:
             label: 'Recherche Plein Texte'
         field_article_type:
           expose:
-            label: 'Type d''Article'
+            label: "Type d'Article"
         field_language:
           expose:
             label: Langue

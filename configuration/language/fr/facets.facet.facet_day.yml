@@ -1,6 +1,6 @@
 widget:
   config:
     soft_limit_settings:
-      show_less_label: 'Moins d''options'
-      show_more_label: 'Plus d''options'
+      show_less_label: "Moins d'options"
+      show_more_label: "Plus d'options"
     reset_text: 'Toutes les options'

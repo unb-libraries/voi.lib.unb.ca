@@ -10,7 +10,7 @@ id: user.user.ldap_user_puid
 field_name: ldap_user_puid
 entity_type: user
 bundle: user
-label: 'Value of user''s permanent unique id.  This should never change for a given ldap identified user.'
+label: "Value of user's permanent unique id.  This should never change for a given ldap identified user."
 description: 'This field should not be edited.'
 required: false
 translatable: false

@@ -10,7 +10,7 @@ id: user.user.ldap_user_puid_property
 field_name: ldap_user_puid_property
 entity_type: user
 bundle: user
-label: 'Property specified as user''s puid.'
+label: "Property specified as user's puid."
 description: 'This field should not be edited.'
 required: false
 translatable: false
