@@ -1353,8 +1353,8 @@ display:
       display_extenders: {  }
       path: download-csv
       displays:
-        page_1: page_1
         default: '0'
+        page_1: '0'
       filename: my_downloads.csv
       automatic_download: false
       export_method: batch
@@ -2630,6 +2630,7 @@ display:
       defaults:
         fields: false
         header: false
+        footer: false
       header:
         area_text_custom:
           id: area_text_custom
@@ -2640,7 +2641,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: "<p>Click on the \"CSV\" icon at the bottom to download all selected documents.</p>\r\n\r\n<p>Note to users: Articles will be automatically extracted by Microsoft Excel. However, Excel does not allow more than 32,767 characters per cell. Some of the articles in the database exceed this limit, and this can cause users to receive an error message that the cell data is too large. To avoid this, after completing the \"Extraction\" phase, when prompted to save or open the file, do not open it using Excel. Instead, open it using Microsoft Word.</p>\r\n\r\n<p><a href=\"/download-all\"><i class=\"fas fa-download\"></i><span class=\"ml-2\">Download ALL records in the database</span></a></p>\r\n"
+          content: "<p>Click on the link at the bottom to download the selected documents only.</p>\r\n\r\n<p>Note to users: Articles will be automatically extracted by Microsoft Excel. However, Excel does not allow more than 32,767 characters per cell. Some of the articles in the database exceed this limit, and this can cause users to receive an error message that the cell data is too large. To avoid this, after completing the \"Extraction\" phase, when prompted to save or open the file, do not open it using Excel. Instead, open it using Microsoft Word.</p>\r\n\r\n<p><a href=\"/download-all\"><i class=\"fas fa-download\"></i><span class=\"ml-2\">Download ALL documents in the database</span></a></p>\r\n"
           tokenize: false
         result:
           id: result
@@ -2652,6 +2653,18 @@ display:
           plugin_id: result
           empty: false
           content: 'Displaying @start - @end of @total'
+      footer:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: false
+          content: "<p><a href=\"/download-csv?page&_format=csv\"><i class=\"fas fa-download\"></i><span class=\"ml-2\">Download selected documents</span></a></p>\r\n"
+          tokenize: false
       rendering_language: '***LANGUAGE_entity_translation***'
       display_extenders: {  }
       path: downloads
