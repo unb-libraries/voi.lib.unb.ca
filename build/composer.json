@@ -65,9 +65,6 @@
       ]
     },
     "patches": {
-      "drupal/search_api_autocomplete": {
-        "Fixes SEARCH_API_SOLR_SCHEMA_VERSION error": "https://www.drupal.org/files/issues/2023-10-01/3382226-22--solr_version_check_bug.patch"
-      }
     }
   },
   "license": "MIT",
