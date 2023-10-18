@@ -24,6 +24,7 @@ COPY ./custom/themes ${DRUPAL_ROOT}/themes/custom
 COPY ./custom/modules ${DRUPAL_ROOT}/modules/custom
 
 COPY ./custom/splash  ${DRUPAL_ROOT}/splash
+COPY ./custom/google5ed9cf1363065b07.html ${DRUPAL_ROOT}/google5ed9cf1363065b07.html
 
 # Container metadata.
 LABEL ca.unb.lib.generator="drupal9" \
