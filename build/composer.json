@@ -112,6 +112,7 @@
     "drupal/search_api": "^1",
     "drupal/search_api_autocomplete": "^1",
     "drupal/search_api_solr": "^4",
+    "drupal/simple_sitemap:" : "^4",
     "drupal/views_data_export": "^1",
     "unb-libraries/drupal-development-libraries": "^10",
     "unb-libraries/composer-drupal-scaffold": "^10",
