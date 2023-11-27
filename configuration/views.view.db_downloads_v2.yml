@@ -2625,7 +2625,15 @@ display:
       defaults:
         fields: false
       rendering_language: '***LANGUAGE_entity_translation***'
-      display_extenders: {  }
+      display_extenders:
+        simple_sitemap_display_extender:
+          variants:
+            default:
+              index: true
+              priority: '0.5'
+              changefreq: ''
+              arguments: {  }
+              max_links: 100
       path: db-downloads-v2
     cache_metadata:
       max-age: -1

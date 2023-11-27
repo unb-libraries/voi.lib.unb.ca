@@ -2666,7 +2666,15 @@ display:
           content: "<p><a href=\"/download-csv?page&_format=csv\"><i class=\"fas fa-download\"></i><span class=\"ml-2\">Download selected documents</span></a></p>\r\n"
           tokenize: false
       rendering_language: '***LANGUAGE_entity_translation***'
-      display_extenders: {  }
+      display_extenders:
+        simple_sitemap_display_extender:
+          variants:
+            default:
+              index: true
+              priority: '0.5'
+              changefreq: ''
+              arguments: {  }
+              max_links: 100
       path: downloads
     cache_metadata:
       max-age: -1

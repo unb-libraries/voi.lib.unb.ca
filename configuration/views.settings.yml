@@ -1,3 +1,5 @@
+display_extenders:
+  simple_sitemap_display_extender: simple_sitemap_display_extender
 ui:
   show:
     performance_statistics: true
