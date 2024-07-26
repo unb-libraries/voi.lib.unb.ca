@@ -66,6 +66,8 @@ services:
       - "4110:8025"
     networks:
       - voi.lib.unb.ca
+    profiles:
+      - mailhog
 networks:
   voi.lib.unb.ca:
     name: voi.lib.unb.ca
