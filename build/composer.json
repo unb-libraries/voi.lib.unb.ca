@@ -116,7 +116,7 @@
     "drupal/views_data_export": "^1",
     "unb-libraries/drupal-development-libraries": "^10",
     "unb-libraries/composer-drupal-scaffold": "^10",
-    "unb-libraries/flag_search_api": "^1.x-dev",
+    "unb-libraries/flag_search_api": "^2",
     "unb-libraries/saml_features": "dev-10.x-1.x"
   },
   "require-dev": {
