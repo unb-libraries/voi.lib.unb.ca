@@ -16,7 +16,9 @@
       "cweagans/composer-patches": true,
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "drupal/core-composer-scaffold": true,
-      "phpstan/extension-installer": true
+      "phpstan/extension-installer": true,
+      "php-http/discovery": true,
+      "tbachert/spi": true
     },
     "discard-changes": true,
     "preferred-install": {
@@ -100,6 +102,7 @@
     "drupal/drush_language": "^1",
     "drupal/facets": "^2",
     "drupal/flag": "^4.0@beta",
+    "drupal/flag_search_api": "^2",
     "drupal/fontawesome": "^2",
     "drupal/google_analytics": "^4",
     "drupal/health_check": "^1",
@@ -116,7 +119,6 @@
     "drupal/views_data_export": "^1",
     "unb-libraries/drupal-development-libraries": "^10",
     "unb-libraries/composer-drupal-scaffold": "^10",
-    "unb-libraries/flag_search_api": "^2",
     "unb-libraries/saml_features": "dev-10.x-1.x"
   },
   "require-dev": {
