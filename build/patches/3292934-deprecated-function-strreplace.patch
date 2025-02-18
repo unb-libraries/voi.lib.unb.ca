@@ -1,0 +1,13 @@
+diff --git a/core/lib/Drupal/Core/Access/RouteProcessorCsrf.php b/core/lib/Drupal/Core/Access/RouteProcessorCsrf.php
+index d0aec3018557b7052ce050ef00ac14b7f4c9a2bd..3706a41009412874f5d2cb2388fc89ac6fa6ecfb 100644
+--- a/core/lib/Drupal/Core/Access/RouteProcessorCsrf.php
++++ b/core/lib/Drupal/Core/Access/RouteProcessorCsrf.php
+@@ -38,7 +38,7 @@ public function processOutbound($route_name, Route $route, array &$parameters, B
+       $path = ltrim($route->getPath(), '/');
+       // Replace the path parameters with values from the parameters array.
+       foreach ($parameters as $param => $value) {
+-        $path = str_replace("{{$param}}", $value, $path);
++        $path = str_replace("{{$param}}", (string) $value, $path);
+       }
+       // Adding this to the parameters means it will get merged into the query
+       // string when the route is compiled.

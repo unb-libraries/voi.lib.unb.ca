@@ -67,6 +67,9 @@
       ]
     },
     "patches": {
+      "drupal/core": {
+        "Core fix 3292934 conflict with drupal/flag": "/build/patches/3292934-deprecated-function-strreplace.patch"
+      }
     }
   },
   "license": "MIT",
