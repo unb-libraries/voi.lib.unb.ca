@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7bf9b7e1192aaa70152cefb6e56e1ae",
+    "content-hash": "cb47473d2336e59836c204b7f2bb0f22",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3448,28 +3448,31 @@
         },
         {
             "name": "drupal/flag_search_api",
-            "version": "dev-1.x",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/flag_search_api.git",
-                "reference": "e6cdc11e8d48463e7a860d9a800f9abe990387f3"
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/flag_search_api-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "59cbad24ed6e0d97c279c6999c61094c3c1dc8d0"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/core": "^9.4 || ^10 || ^11",
                 "drupal/flag": "*",
                 "drupal/search_api": "*"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.5+3-dev",
-                    "datestamp": "1700234378",
+                    "version": "2.0.1",
+                    "datestamp": "1714487855",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -14169,7 +14172,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/flag": 10,
         "unb-libraries/saml_features": 20
     },
     "prefer-stable": true,
