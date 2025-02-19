@@ -68,7 +68,8 @@
     },
     "patches": {
       "drupal/core": {
-        "Core fix 3292934 conflict with drupal/flag": "/build/patches/3292934-deprecated-function-strreplace.patch"
+        "Core fix 3292934 conflict with drupal/flag": "/build/patches/3292934-deprecated-function-strreplace.patch",
+        "Core fix 3338057 routing preg_match()": "https://www.drupal.org/files/issues/2024-10-23/3338057-20.patch"
       }
     }
   },
