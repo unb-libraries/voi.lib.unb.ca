@@ -70,6 +70,9 @@
       "drupal/core": {
         "Core fix 3292934 conflict with drupal/flag": "/build/patches/3292934-deprecated-function-strreplace.patch",
         "Core fix 3338057 routing preg_match()": "https://www.drupal.org/files/issues/2024-10-23/3338057-20.patch"
+      },
+      "drupal/flag": {
+        "Custom fix default drupal/flag link view mode to full": "/build/patches/unblib-voi-flag-default-view-mode-full.patch"
       }
     }
   },
@@ -105,7 +108,7 @@
     "drupal/core-recommended": "^10",
     "drupal/drush_language": "^1",
     "drupal/facets": "^2",
-    "drupal/flag": "^4.0@beta",
+    "drupal/flag": "^4",
     "drupal/flag_search_api": "^2",
     "drupal/fontawesome": "^2",
     "drupal/google_analytics": "^4",
