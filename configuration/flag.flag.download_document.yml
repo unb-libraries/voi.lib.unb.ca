@@ -21,9 +21,7 @@ weight: 0
 flag_type: 'entity:node'
 link_type: ajax_link
 flagTypeConfig:
-  show_in_links:
-    full: full
-    teaser: teaser
+  show_in_links: {  }
   show_as_field: true
   show_on_form: false
   show_contextual_link: false
