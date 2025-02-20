@@ -12,6 +12,15 @@ body {
   background-color: $voi-litegray;
   color: $voi-darkgray;
 }
+header {
+  .alert-success {
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    border: 3px solid #004800;
+  }
+}
 // Main container.
 .dialog-off-canvas-main-canvas {
   // Background.
@@ -261,7 +270,7 @@ main[role="main"] > .container > div > div {
   color: #636363;
 }
 #footer-text a:link, #footer-text a:visited {
-  color: #20a4ac;
+  color: $voi-turq;
 }
 
 // Responsive.

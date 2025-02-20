@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Contains voi_core.module.
+ */
+
+use Drupal\Core\Render\Markup;
+
+/**
+ * Implements hook_preprocess_HOOK().
+ *
+ * @param $variables
+ */
+function voi_core_preprocess_status_messages(&$variables) {
+
+  if(isset($variables['message_list']['status'])) {
+    $status_messages = $variables['message_list']['status'];
+    
+    foreach($status_messages as $delta => $message) {
+      $original = (string) $message;
+      
+      if (strpos($original, 'vde-automatic-download') !== FALSE) {  
+        $new = str_replace('Export complete. Download the file ', '<b>Export complete.</b> ', $original);
+        $new = str_replace('here</a>.', 'Download the file here.</a>', $new);
+        $variables['message_list']['status'][$delta] = Markup::create($new);
+      }
+    }
+  }
+}
