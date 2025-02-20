@@ -66,6 +66,7 @@ module:
   voi_access: 0
   voi_admin: 0
   voi_blocks: 0
+  voi_core: 0
   voi_forms: 0
   voi_lang: 0
   voi_menu: 0
