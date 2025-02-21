@@ -1,3 +1,125 @@
+diff --git a/flag.module b/flag.module
+index b278591..6b7f322 100644
+--- a/flag.module
++++ b/flag.module
+@@ -332,7 +332,7 @@ function flag_build_entity_links(array &$links, EntityInterface $entity, array &
+  *
+  * Handles the 'show_in_links' and 'show_as_field' flag options.
+  */
+-function flag_entity_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, ?string $view_mode = NULL) {
++function flag_entity_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, ?string $view_mode = 'full') {
+   // Don't show on previews.
+   if ($entity->isNew()) {
+     return;
+diff --git a/modules/flag_count/src/Plugin/ActionLink/CountLink.php b/modules/flag_count/src/Plugin/ActionLink/CountLink.php
+index 1bb9ef0..5dc5420 100644
+--- a/modules/flag_count/src/Plugin/ActionLink/CountLink.php
++++ b/modules/flag_count/src/Plugin/ActionLink/CountLink.php
+@@ -24,7 +24,7 @@ class CountLink extends AJAXactionLink {
+   /**
+    * {@inheritdoc}
+    */
+-  public function getAsFlagLink(FlagInterface $flag, EntityInterface $entity, ?string $view_mode = NULL): array {
++  public function getAsFlagLink(FlagInterface $flag, EntityInterface $entity, ?string $view_mode = 'full'): array {
+     // Get the render array.
+     $build = parent::getAsFlagLink($flag, $entity, $view_mode);
+ 
+diff --git a/src/ActionLink/ActionLinkTypeBase.php b/src/ActionLink/ActionLinkTypeBase.php
+index 7fb1e01..266f808 100644
+--- a/src/ActionLink/ActionLinkTypeBase.php
++++ b/src/ActionLink/ActionLinkTypeBase.php
+@@ -82,7 +82,7 @@ abstract class ActionLinkTypeBase extends PluginBase implements ActionLinkTypePl
+   /**
+    * {@inheritdoc}
+    */
+-  public function getAsLink(FlagInterface $flag, EntityInterface $entity, ?string $view_mode = NULL) {
++  public function getAsLink(FlagInterface $flag, EntityInterface $entity, ?string $view_mode = 'full') {
+     // Trigger deprecation, if the $view_mode wasn't provided.:
+     // @see original issue: https://www.drupal.org/project/flag/issues/3049155
+     // @see change record: https://www.drupal.org/node/3458551.
+@@ -103,7 +103,7 @@ abstract class ActionLinkTypeBase extends PluginBase implements ActionLinkTypePl
+   /**
+    * {@inheritdoc}
+    */
+-  public function getAsFlagLink(FlagInterface $flag, EntityInterface $entity, ?string $view_mode = NULL): array {
++  public function getAsFlagLink(FlagInterface $flag, EntityInterface $entity, ?string $view_mode = 'full'): array {
+     $action = $this->getAction($flag, $entity);
+     $access = $flag->actionAccess($action, $this->currentUser, $entity);
+ 
+diff --git a/src/ActionLink/ActionLinkTypePluginInterface.php b/src/ActionLink/ActionLinkTypePluginInterface.php
+index 415545a..e2ba82e 100644
+--- a/src/ActionLink/ActionLinkTypePluginInterface.php
++++ b/src/ActionLink/ActionLinkTypePluginInterface.php
+@@ -25,7 +25,7 @@ interface ActionLinkTypePluginInterface extends PluginFormInterface, Configurabl
+    * @return array
+    *   The render array.
+    */
+-  public function getAsFlagLink(FlagInterface $flag, EntityInterface $entity, ?string $view_mode = NULL): array;
++  public function getAsFlagLink(FlagInterface $flag, EntityInterface $entity, ?string $view_mode = 'full'): array;
+ 
+   /**
+    * Get the action link as a Link object.
+@@ -40,6 +40,6 @@ interface ActionLinkTypePluginInterface extends PluginFormInterface, Configurabl
+    * @return \Drupal\Core\Link
+    *   The action Link.
+    */
+-  public function getAsLink(FlagInterface $flag, EntityInterface $entity, ?string $view_mode = NULL);
++  public function getAsLink(FlagInterface $flag, EntityInterface $entity, ?string $view_mode = 'full');
+ 
+ }
+diff --git a/src/Controller/ActionLinkController.php b/src/Controller/ActionLinkController.php
+index 6fa41a8..0cec6d9 100644
+--- a/src/Controller/ActionLinkController.php
++++ b/src/Controller/ActionLinkController.php
+@@ -73,7 +73,7 @@ class ActionLinkController implements ContainerInjectionInterface {
+    *
+    * @see \Drupal\flag\Plugin\Reload
+    */
+-  public function flag(FlagInterface $flag, $entity_id, ?string $view_mode = NULL) {
++  public function flag(FlagInterface $flag, $entity_id, ?string $view_mode = 'full') {
+     /** @var \Drupal\Core\Entity\EntityInterface $entity */
+     $entity = $this->flagService->getFlaggableById($flag, $entity_id);
+ 
+@@ -107,7 +107,7 @@ class ActionLinkController implements ContainerInjectionInterface {
+    *
+    * @see \Drupal\flag\Plugin\Reload
+    */
+-  public function unflag(FlagInterface $flag, $entity_id, ?string $view_mode = NULL) {
++  public function unflag(FlagInterface $flag, $entity_id, ?string $view_mode = 'full') {
+     /** @var \Drupal\Core\Entity\EntityInterface $entity */
+     $entity = $this->flagService->getFlaggableById($flag, $entity_id);
+ 
+@@ -141,7 +141,7 @@ class ActionLinkController implements ContainerInjectionInterface {
+    * @return \Drupal\Core\Ajax\AjaxResponse
+    *   The response object.
+    */
+-  private function generateResponse(FlagInterface $flag, EntityInterface $entity, $message, ?string $view_mode = NULL) {
++  private function generateResponse(FlagInterface $flag, EntityInterface $entity, $message, ?string $view_mode = 'full') {
+     // Create a new AJAX response.
+     $response = new AjaxResponse();
+ 
+diff --git a/src/Controller/ActionLinkNoJsController.php b/src/Controller/ActionLinkNoJsController.php
+index b500a4d..a3a7e42 100644
+--- a/src/Controller/ActionLinkNoJsController.php
++++ b/src/Controller/ActionLinkNoJsController.php
+@@ -75,7 +75,7 @@ class ActionLinkNoJsController implements ContainerInjectionInterface {
+    *
+    * @see \Drupal\flag\Plugin\Reload
+    */
+-  public function flag(FlagInterface $flag, $entity_id, ?string $view_mode = NULL) {
++  public function flag(FlagInterface $flag, $entity_id, ?string $view_mode = 'full') {
+     /** @var \Drupal\Core\Entity\EntityInterface $entity */
+     $entity = $this->flagService->getFlaggableById($flag, $entity_id);
+ 
+@@ -110,7 +110,7 @@ class ActionLinkNoJsController implements ContainerInjectionInterface {
+    *
+    * @see \Drupal\flag\Plugin\Reload
+    */
+-  public function unflag(FlagInterface $flag, $entity_id, ?string $view_mode = NULL) {
++  public function unflag(FlagInterface $flag, $entity_id, ?string $view_mode = 'full') {
+     /** @var \Drupal\Core\Entity\EntityInterface $entity */
+     $entity = $this->flagService->getFlaggableById($flag, $entity_id);
+ 
 diff --git a/src/FlagLinkBuilder.php b/src/FlagLinkBuilder.php
 index bbbf0f3..c89038a 100644
 --- a/src/FlagLinkBuilder.php
@@ -11,3 +133,41 @@ index bbbf0f3..c89038a 100644
      $entity = $this->entityTypeManager->getStorage($entity_type_id)->load($entity_id);
      $flag = $this->flagService->getFlagById($flag_id);
  
+diff --git a/src/FlagLinkBuilderInterface.php b/src/FlagLinkBuilderInterface.php
+index 3da2f28..58a74b3 100644
+--- a/src/FlagLinkBuilderInterface.php
++++ b/src/FlagLinkBuilderInterface.php
+@@ -23,6 +23,6 @@ interface FlagLinkBuilderInterface {
+    *   A render array for the action link, empty if the user does not have
+    *   access.
+    */
+-  public function build($entity_type_id, $entity_id, $flag_id, $view_mode = NULL);
++  public function build($entity_type_id, $entity_id, $flag_id, $view_mode = 'full');
+ 
+ }
+diff --git a/src/Plugin/ActionLink/AJAXactionLink.php b/src/Plugin/ActionLink/AJAXactionLink.php
+index fedd428..c7a8415 100644
+--- a/src/Plugin/ActionLink/AJAXactionLink.php
++++ b/src/Plugin/ActionLink/AJAXactionLink.php
+@@ -76,7 +76,7 @@ class AJAXactionLink extends Reload {
+   /**
+    * {@inheritdoc}
+    */
+-  public function getAsFlagLink(FlagInterface $flag, EntityInterface $entity, ?string $view_mode = NULL): array {
++  public function getAsFlagLink(FlagInterface $flag, EntityInterface $entity, ?string $view_mode = 'full'): array {
+     $build = parent::getAsFlagLink($flag, $entity, $view_mode);
+     $build['#attached']['library'][] = 'flag/flag.link_ajax';
+     $build['#attributes']['class'][] = 'use-ajax';
+diff --git a/src/Plugin/ActionLink/FormEntryTypeBase.php b/src/Plugin/ActionLink/FormEntryTypeBase.php
+index 979748f..8113f85 100644
+--- a/src/Plugin/ActionLink/FormEntryTypeBase.php
++++ b/src/Plugin/ActionLink/FormEntryTypeBase.php
+@@ -129,7 +129,7 @@ abstract class FormEntryTypeBase extends ActionLinkTypeBase implements FormEntry
+   /**
+    * {@inheritdoc}
+    */
+-  public function getAsFlagLink(FlagInterface $flag, EntityInterface $entity, ?string $view_mode = NULL): array {
++  public function getAsFlagLink(FlagInterface $flag, EntityInterface $entity, ?string $view_mode = 'full'): array {
+     $render = parent::getAsFlagLink($flag, $entity, $view_mode);
+     if ($this->configuration['form_behavior'] !== 'default') {
+       $render['#attached']['library'][] = 'core/drupal.ajax';
