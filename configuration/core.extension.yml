@@ -77,10 +77,8 @@ module:
   saml_features: 11
   minimal: 1000
 theme:
-  stark: 0
   claro: 0
   stable9: 0
-  olivero: 0
   bootstrap4: 0
   voi_lib_unb_ca: 0
 profile: minimal
