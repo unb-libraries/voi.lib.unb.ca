@@ -112,7 +112,7 @@
     "drupal/flag_search_api": "^2",
     "drupal/fontawesome": "^2",
     "drupal/google_analytics": "^4",
-    "drupal/health_check": "^1",
+    "drupal/health_check": "^3",
     "drupal/quickedit": "^1", 
     "drupal/redirect": "^1",
     "drupal/redirect_after_login": "^2",
