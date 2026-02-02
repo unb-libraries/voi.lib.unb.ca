@@ -14,13 +14,11 @@ module:
   contextual: 0
   csv_serialization: 0
   datetime: 0
-  dblog: 0
   drush_language: 0
   dynamic_page_cache: 0
   editor: 0
   facets: 0
   field: 0
-  field_ui: 0
   file: 0
   filter: 0
   flag: 0
@@ -62,7 +60,6 @@ module:
   update: 0
   user: 0
   views_data_export: 0
-  views_ui: 0
   voi_access: 0
   voi_admin: 0
   voi_blocks: 0
