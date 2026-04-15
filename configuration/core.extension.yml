@@ -14,7 +14,6 @@ module:
   contextual: 0
   csv_serialization: 0
   datetime: 0
-  drush_language: 0
   dynamic_page_cache: 0
   editor: 0
   facets: 0

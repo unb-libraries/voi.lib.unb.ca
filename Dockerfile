@@ -1,8 +1,8 @@
-FROM ghcr.io/unb-libraries/drupal:10.x-1.x-unblib
+FROM ghcr.io/unb-libraries/drupal:11.x-1.x-unblib
 MAINTAINER UNB Libraries <libsupport@unb.ca>
 
 # Install additional OS packages.
-ENV ADDITIONAL_OS_PACKAGES postfix php-ldap php-xmlreader php-zip php81-pecl-redis
+ENV ADDITIONAL_OS_PACKAGES postfix php-ldap php-xmlreader php-zip php83-pecl-redis
 ENV DRUPAL_SITE_ID voi
 ENV DRUPAL_SITE_URI voi.lib.unb.ca
 ENV DRUPAL_SITE_UUID 87375ebe-f3d5-4681-b0ca-5e1352a52f83
@@ -27,7 +27,7 @@ COPY ./custom/splash  ${DRUPAL_ROOT}/splash
 COPY ./custom/google5ed9cf1363065b07.html ${DRUPAL_ROOT}/google5ed9cf1363065b07.html
 
 # Container metadata.
-LABEL ca.unb.lib.generator="drupal9" \
+LABEL ca.unb.lib.generator="drupal11" \
   com.microscaling.docker.dockerfile="/Dockerfile" \
   com.microscaling.license="MIT" \
   org.label-schema.build-date=$BUILD_DATE \
