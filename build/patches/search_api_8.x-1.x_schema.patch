@@ -1,0 +1,64 @@
+diff --git a/config/schema/search_api.index.schema.yml b/config/schema/search_api.index.schema.yml
+index 1be7c79a..03d9680d 100644
+--- a/config/schema/search_api.index.schema.yml
++++ b/config/schema/search_api.index.schema.yml
+@@ -63,8 +63,7 @@ search_api.index.*:
+       label: 'Processor settings'
+       orderby: key
+       sequence:
+-        type: plugin.plugin_configuration.search_api_processor.[%key]
+-        label: 'The configuration for a single processor'
++        type: ignore
+     tracker_settings:
+       type: sequence
+       label: 'Tracker settings'
+diff --git a/config/schema/search_api.server.schema.yml b/config/schema/search_api.server.schema.yml
+index 99cafafc..5febc584 100644
+--- a/config/schema/search_api.server.schema.yml
++++ b/config/schema/search_api.server.schema.yml
+@@ -19,6 +19,45 @@ search_api.server.*:
+       label: 'Backend Plugin ID'
+     backend_config:
+       type: plugin.plugin_configuration.search_api_backend.[%parent.backend]
++      mapping:
++        retrieve_data:
++          type: ignore
++        skip_schema_check:
++          type: ignore
++        highlight_data:
++          type: ignore
++        site_hash:
++          type: ignore
++        server_prefix:
++          type: ignore
++        domain:
++          type: ignore
++        environment:
++          type: ignore
++        connector:
++          type: ignore
++        connector_config:
++          type: ignore
++        optimize:
++          type: ignore
++        disabled_caches:
++          type: ignore
++        disabled_field_types:
++          type: ignore
++        disabled_request_handlers:
++          type: ignore
++        disabled_request_dispatchers:
++          type: ignore
++        rows:
++          type: ignore
++        fallback_multiple:
++          type: ignore
++        index_single_documents_fallback_count:
++          type: ignore
++        index_empty_text_fields:
++          type: ignore
++        suppress_missing_languages:
++          type: ignore
+     langcode:
+       type: string
+       label: 'Language code'

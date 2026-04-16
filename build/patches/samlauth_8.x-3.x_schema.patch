@@ -1,0 +1,19 @@
+diff --git a/config/schema/samlauth.schema.yml b/config/schema/samlauth.schema.yml
+index 10056b9..3b166b8 100644
+--- a/config/schema/samlauth.schema.yml
++++ b/config/schema/samlauth.schema.yml
+@@ -196,6 +196,14 @@ samlauth.authentication:
+     bypass_relay_state_check:
+       type: boolean
+       label: 'Bypass safety check for dynamic redirect URLs'
++    drupal_saml_login:
++      type: ignore
++    idp_cert_type:
++      type: ignore
++    idp_x509_certificate:
++      type: ignore
++    idp_x509_certificate_multi:
++      type: ignore
+ 
+ views.field.samlauth_link_delete:
+   type: views.field.authmap_link_delete

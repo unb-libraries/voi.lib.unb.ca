@@ -1,0 +1,11 @@
+diff --git a/config/schema/flag_search_api.schema.yml b/config/schema/flag_search_api.schema.yml
+new file mode 100644
+index 0000000..4b9b525
+--- /dev/null
++++ b/config/schema/flag_search_api.schema.yml
+@@ -0,0 +1,5 @@
++flag_search_api.settings:
++  type: mapping
++  mapping:
++    reindex_on_flagging:
++      type: ignore

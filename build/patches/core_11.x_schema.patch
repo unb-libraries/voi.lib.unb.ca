@@ -1,0 +1,176 @@
+diff --git a/core/modules/system/config/schema/system.schema.yml b/core/modules/system/config/schema/system.schema.yml
+index 99f7d186361..12ee8210919 100644
+--- a/core/modules/system/config/schema/system.schema.yml
++++ b/core/modules/system/config/schema/system.schema.yml
+@@ -200,6 +200,8 @@ system.performance:
+             max_age:
+               type: integer
+               label: 'Max age'
++            use_internal:
++              type: ignore
+     css:
+       type: mapping
+       label: 'CSS performance settings'
+@@ -236,6 +238,10 @@ system.performance:
+         gzip:
+           type: boolean
+           label: 'Compress JavaScript files.'
++    stale_file_threshold:
++      type: ignore
++    response:
++      type: ignore
+ 
+ system.theme:
+   type: config_object
+@@ -338,6 +344,9 @@ system.file:
+       type: mapping
+       label: 'Path settings'
+       deprecated: "The 'path' config schema is deprecated in drupal:11.2.0 and will be removed from drupal 12.0.0. Use 'file_temp_path' key in settings.php instead. See https://www.drupal.org/node/3039255."
++      mapping:
++        temporary:
++        type: ignore
+     temporary_maximum_age:
+       type: integer
+       label: 'Maximum age for temporary files'
+@@ -502,3 +511,25 @@ condition.plugin.current_theme:
+     theme:
+       type: string
+       label: Theme
++
++system.authorize:
++  type: config_object
++  constraints:
++    FullyValidatable: ~
++  mapping:
++    filetransfer_default:
++      type: ignore
++
++system.rss:
++  type: config_object
++  constraints:
++    FullyValidatable: ~
++  mapping:
++    _core:
++      type: ignore
++    langcode:
++      type: string
++    items:
++      type: ignore
++    channel:
++      type: ignore
+diff --git a/core/modules/views/config/schema/views.schema.yml b/core/modules/views/config/schema/views.schema.yml
+index 01fbdd20541..1e31e6bea35 100644
+--- a/core/modules/views/config/schema/views.schema.yml
++++ b/core/modules/views/config/schema/views.schema.yml
+@@ -46,6 +46,10 @@ views.settings:
+             display_embed:
+               type: boolean
+               label: 'Allow embedded displays'
++            advanced_column:
++              type: ignore
++            master_display:
++              type: ignore
+         always_live_preview:
+           type: boolean
+           label: 'Automatically update preview on changes'
+@@ -58,6 +62,8 @@ views.settings:
+       sequence:
+         type: string
+         label: 'Element'
++    skip_cache:
++      type: ignore
+ 
+ views.view.*:
+   type: config_entity
+@@ -134,6 +140,71 @@ views.view.*:
+               cacheable:
+                 type: boolean
+                 label: 'Cacheable'
++views.view.downloads:
++  type: config_entity
++  label: 'View'
++  mapping:
++    id:
++      type: machine_name
++      label: 'ID'
++      constraints:
++        Length:
++          # View IDs are specifically limited to 128 characters.
++          # @see \Drupal\views_ui\ViewAddForm::form()
++          max: 128
++    label:
++      type: required_label
++      label: 'Label'
++    module:
++      type: string
++      label: 'Module'
++    description:
++      type: text
++      label: 'Administrative description'
++    tag:
++      type: string
++      label: 'Tag'
++    base_table:
++      type: string
++      label: 'Base table'
++    base_field:
++      type: string
++      label: 'Base field'
++    display:
++      type: ignore
++views.view.db_downloads_v2:
++  type: config_entity
++  label: 'View'
++  mapping:
++    id:
++      type: machine_name
++      label: 'ID'
++      constraints:
++        Length:
++          # View IDs are specifically limited to 128 characters.
++          # @see \Drupal\views_ui\ViewAddForm::form()
++          max: 128
++    label:
++      type: required_label
++      label: 'Label'
++    module:
++      type: string
++      label: 'Module'
++    description:
++      type: text
++      label: 'Administrative description'
++    tag:
++      type: string
++      label: 'Tag'
++    base_table:
++      type: string
++      label: 'Base table'
++    base_field:
++      type: string
++      label: 'Base field'
++    display:
++      type: ignore
++
+ views_block:
+   type: block_settings
+   label: 'View block'
+@@ -163,3 +234,19 @@ block.settings.views_block:*:
+ 
+ block.settings.views_exposed_filter_block:*:
+   type: views_block
++
++rest.settings:
++  type: config_object
++  label: 'REST settings'
++  mapping:
++    bc_entity_resource_permissions:
++      type: ignore
++
++serialization.settings:
++  type: config_object
++  label: 'Serialization settings'
++  mapping:
++    bc_primitives_as_strings:
++      type: ignore
++    bc_timestamp_normalizer_unix:
++      type: ignore

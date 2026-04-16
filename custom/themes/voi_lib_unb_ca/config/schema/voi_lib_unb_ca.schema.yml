@@ -1,0 +1,37 @@
+voi_lib_unb_ca.settings:
+  type: theme_settings
+  label: 'Bootstrap 4 theme settings'
+  mapping:
+    b4_body_schema:
+      type: string
+      label: 'Body theme'
+    b4_body_bg_schema:
+      type: string
+      label: 'Body background'
+    b4_navbar_schema:
+      type: string
+      label: 'Navbar theme'
+    b4_navbar_bg_schema:
+      type: string
+      label: 'Navbar background'
+    b4_footer_schema:
+      type: string
+      label: 'Footer theme'
+    b4_footer_bg_schema:
+      type: string
+      label: 'Footer background'
+    b4_top_container:
+      type: string
+      label: 'Website container type'
+    b4_top_container_config:
+      type: string
+      label: 'Website container type configuration'
+    subtheme_folder:
+      type: text
+      label: 'subtheme_folder'
+    subtheme_name:
+      type: text
+      label: 'subtheme_name'
+    subtheme_machine_name:
+      type: text
+      label: 'subtheme_machine_name'
