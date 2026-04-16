@@ -616,12 +616,14 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - user
         - 'user.node_grants:view'
       tags:
         - 'config:field.storage.node.field_article_contents'
         - 'config:field.storage.node.field_article_type'
         - 'config:field.storage.node.field_language'
         - 'config:field.storage.node.field_newspaper'
+        - flag.flag.download_document
   data_export_1:
     id: data_export_1
     display_title: 'Download Flags'
@@ -1346,25 +1348,29 @@ display:
       defaults:
         fields: false
       display_description: ''
-      display_extenders: {  }
+      display_extenders:
+        simple_sitemap_display_extender:
+          variants: {  }
       path: download-csv-v2
       displays:
         page_1: page_1
         default: '0'
       filename: my_downloads.csv
-      automatic_download: false
+      automatic_download: 1
       export_method: batch
-      export_batch_size: 100
+      export_batch_size: '100'
       store_in_public_file_directory: null
-      custom_redirect_path: false
+      custom_redirect_path: 0
       redirect_to_display: none
-      include_query_params: false
+      include_query_params: 0
+      export_filesystem: public
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
+        - user
         - 'user.node_grants:view'
       tags:
         - 'config:field.storage.node.field_article_contents'
@@ -1376,6 +1382,7 @@ display:
         - 'config:field.storage.node.field_newspaper'
         - 'config:field.storage.node.field_page_number'
         - 'config:field.storage.node.field_year'
+        - flag.flag.download_document
   data_export_2:
     id: data_export_2
     display_title: 'Download All'
@@ -2104,19 +2111,22 @@ display:
         sorts: false
       relationships: {  }
       display_description: ''
-      display_extenders: {  }
+      display_extenders:
+        simple_sitemap_display_extender:
+          variants: {  }
       path: download-all-v2
       displays:
         default: '0'
         page_1: '0'
       filename: all_records.csv
-      automatic_download: false
+      automatic_download: 1
       export_method: batch
       export_batch_size: 100
       store_in_public_file_directory: null
-      custom_redirect_path: false
+      custom_redirect_path: 0
       redirect_to_display: none
-      include_query_params: false
+      include_query_params: 0
+      export_filesystem: public
     cache_metadata:
       max-age: -1
       contexts:
@@ -2642,9 +2652,11 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - user
         - 'user.node_grants:view'
       tags:
         - 'config:field.storage.node.field_article_contents'
         - 'config:field.storage.node.field_article_type'
         - 'config:field.storage.node.field_language'
         - 'config:field.storage.node.field_newspaper'
+        - flag.flag.download_document
