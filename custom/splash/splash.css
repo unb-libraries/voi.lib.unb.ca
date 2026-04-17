@@ -7,6 +7,13 @@ body {
 }
 a {
   font-weight: 600;
+  color: #fff !important;
+}
+a.unblib {
+  color: #000 !important;
+}
+a:focus {
+  outline: none !important;
 }
 h1 {
   padding: 6px;
@@ -19,7 +26,6 @@ h1 {
   border-radius: 10px;
 }
 h1 a {
-  color: #fff !important;
   padding: 4px;
   margin: 0;
 }
@@ -103,9 +109,6 @@ h1 span {
     border: 1px solid #007a8b
 ;
     border-radius: 10px;
-  }
-  a {
-    color: #fff !important;
   }
   li#link-welcome {
     left: 240px;
