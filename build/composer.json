@@ -67,17 +67,8 @@
       ]
     },
     "patches": {
-      "drupal/core": {
-        "Drupal 11 schema fixes": "/build/patches/core_11.x_schema.patch"
-      },
       "drupal/flag": {
         "Custom fix default drupal/flag link view mode to full": "/build/patches/unblib-voi-flag-default-view-mode-full.patch"
-      },
-      "drupal/flag_search_api": {
-        "Drupal 11 schema fixes": "/build/patches/flag_search_api_2.0.x_schema.patch"
-      },
-      "drupal/samlauth": {
-        "Drupal 11 schema fixes": "/build/patches/samlauth_8.x-3.x_schema.patch"
       },
       "drupal/search_api": {
         "Drupal 11 schema fixes": "/build/patches/search_api_8.x-1.x_schema.patch"
