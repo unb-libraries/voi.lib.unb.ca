@@ -23,7 +23,7 @@ services:
       - drupal-redis-lib-unb-ca
       - drupal-solr-lib-unb-ca
   drupal-mysql-lib-unb-ca:
-    image: public.ecr.aws/docker/library/mariadb:12.0
+    image: ghcr.io/unb-libraries/mariadb:12.0
     command:
       - mariadbd
       - --skip-name-resolve
@@ -38,7 +38,7 @@ services:
     volumes:
       - mysql-data:/var/lib/mysql
   drupal-redis-lib-unb-ca:
-    image: public.ecr.aws/docker/library/redis:8.2-alpine
+    image: ghcr.io/unb-libraries/redis:8.2-alpine
     command:
       - redis-server
       - --maxmemory-policy allkeys-lru
@@ -63,7 +63,7 @@ services:
     volumes:
       - solr-data:/var/solr/data
   mailhog:
-    image: public.ecr.aws/alekitto/mailhog:latest
+    image: ghcr.io/unb-libraries/mailpit:v1.29
     restart: unless-stopped
     expose:
       - "1025"
