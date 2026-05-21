@@ -15,7 +15,7 @@ jobs:
       image-name: 'ghcr.io/unb-libraries/voi.lib.unb.ca'
       k8s-deployment-name: 'voi-lib-unb-ca'
       push-branches: '["dev","prod"]'
-      php-version: '8.3'
+      php-version: '8.4'
       composer-version: '2.9.5'
     secrets:
       KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_DATA }}
