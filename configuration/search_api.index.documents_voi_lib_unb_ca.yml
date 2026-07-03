@@ -15,10 +15,8 @@ dependencies:
     - field.storage.node.field_year
     - search_api.server.drupal_solr_lib_unb_ca
   module:
-    - search_api_solr
     - node
-    - search_api
-    - flag_search_api
+    - search_api_solr
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -146,12 +144,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_year
-  flag_download_document:
-    label: 'Download document'
-    property_path: flag_download_document
-    type: integer
-    indexed_locked: true
-    type_locked: true
   langcode:
     label: Language
     datasource_id: 'entity:node'
@@ -188,21 +180,20 @@ datasource_settings:
 processor_settings:
   add_url: {  }
   aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
+  custom_value: {  }
   entity_type: {  }
-  flag_indexer:
-    flag_index:
-      - download_document
   highlight:
-    weights:
-      postprocess_query: 0
+    highlight: always
+    highlight_partial: 1
+    excerpt: 1
+    excerpt_always: 0
+    excerpt_length: '256'
+    exclude_fields: {  }
     prefix: '<strong>'
     suffix: '</strong>'
-    excerpt: true
-    excerpt_always: false
-    excerpt_length: 256
-    exclude_fields: {  }
-    highlight: always
-    highlight_partial: true
+    weights:
+      postprocess_query: 0
   language_with_fallback: {  }
   rendered_item: {  }
   solr_date_range:
@@ -213,6 +204,7 @@ tracker_settings:
     indexing_order: lifo
 options:
   cron_limit: 100
+  delete_on_fail: true
   index_directly: true
   track_changes_in_references: true
 server: drupal_solr_lib_unb_ca

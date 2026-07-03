@@ -20,8 +20,6 @@ module:
   field: 0
   file: 0
   filter: 0
-  flag: 0
-  flag_search_api: 0
   fontawesome: 0
   google_analytics: 0
   health_check: 0
