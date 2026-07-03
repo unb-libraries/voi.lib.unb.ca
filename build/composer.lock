@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e227351ace6ffc393bd8f8d33578ce21",
+    "content-hash": "4cc53a434acb47bb8b27fea753d9137f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2010,26 +2010,26 @@
         },
         {
             "name": "drupal/quickedit",
-            "version": "1.0.1",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/quickedit.git",
-                "reference": "1.0.1"
+                "reference": "2.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/quickedit-1.0.1.zip",
-                "reference": "1.0.1",
-                "shasum": "03e654bd70a62b7ae89768e901dbaf1f01d57b17"
+                "url": "https://ftp.drupal.org/files/projects/quickedit-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "a9d03552ebf0d0dc4af3b058df1ce3d9a2879005"
             },
             "require": {
-                "drupal/core": ">=9"
+                "drupal/core": "^10.2 || ^11"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.1",
-                    "datestamp": "1645032884",
+                    "version": "2.0.1",
+                    "datestamp": "1770843440",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2079,9 +2079,13 @@
                 }
             ],
             "description": "In-place content editing (contrib).",
-            "homepage": "https://www.drupal.org/project/quickedit",
+            "homepage": "https://drupal.org/project/quickedit",
+            "keywords": [
+                "Drupal"
+            ],
             "support": {
-                "source": "https://git.drupalcode.org/project/quickedit"
+                "source": "https://git.drupalcode.org/project/quickedit",
+                "issues": "https://drupal.org/project/issues/quickedit"
             }
         },
         {
@@ -8598,7 +8602,7 @@
     },
     "prefer-stable": true,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
 }
