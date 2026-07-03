@@ -48,10 +48,3 @@ voi.db:
   menu_name: main
   url: internal:/search
   weight: 50
-voi.downloads:
-  title: 'Downloads'
-  description: 'Downloads'
-  parent: main
-  menu_name: main
-  url: internal:/downloads
-  weight: 60
