@@ -6,7 +6,7 @@
  */
 
 /**
- * Delete flagging content so the flag module can be uninstalled.
+ * Truncate flagging storage so the flag module can be uninstalled.
  */
 function voi_core_post_update_remove_flaggings(&$sandbox) {
   $entity_type_manager = \Drupal::entityTypeManager();
@@ -18,19 +18,24 @@ function voi_core_post_update_remove_flaggings(&$sandbox) {
     return t('Flagging entity type not present; nothing to remove.');
   }
 
-  $storage = $entity_type_manager->getStorage('flagging');
+  // The site has millions of flaggings, so deleting them through the entity
+  // API (which fires hooks and search_api tracking per item) is far too slow
+  // to complete within a deploy. The module and its tables are dropped on
+  // uninstall anyway, so truncate the storage tables directly instead.
+  $database = \Drupal::database();
+  $definition = $entity_type_manager->getDefinition('flagging');
+  $tables = [
+    $definition->getBaseTable(),
+    $definition->getDataTable(),
+    // Aggregate counts maintained by the flag module.
+    'flag_counts',
+  ];
 
-  if (!isset($sandbox['ids'])) {
-    $sandbox['ids'] = array_values($storage->getQuery()->accessCheck(FALSE)->execute());
-    $sandbox['total'] = count($sandbox['ids']);
+  foreach (array_filter($tables) as $table) {
+    if ($database->schema()->tableExists($table)) {
+      $database->truncate($table)->execute();
+    }
   }
 
-  $batch = array_splice($sandbox['ids'], 0, 50);
-  if (!empty($batch)) {
-    $storage->delete($storage->loadMultiple($batch));
-  }
-
-  $sandbox['#finished'] = empty($sandbox['ids']) ? 1 : (1 - (count($sandbox['ids']) / max($sandbox['total'], 1)));
-
-  return t('Removed @count flaggings so the flag module can be uninstalled.', ['@count' => $sandbox['total']]);
+  return t('Truncated flagging storage so the flag module can be uninstalled.');
 }
