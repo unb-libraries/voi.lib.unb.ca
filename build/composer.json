@@ -107,6 +107,8 @@
     "drupal/core-composer-scaffold": "^11",
     "drupal/core-recommended": "^11",
     "drupal/facets": "^2",
+    "drupal/flag": "^4",
+    "drupal/flag_search_api": "^2",
     "drupal/fontawesome": "^2",
     "drupal/google_analytics": "^4",
     "drupal/health_check": "^3",
