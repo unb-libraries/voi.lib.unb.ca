@@ -27,6 +27,9 @@ COPY ./custom/splash  ${DRUPAL_ROOT}/splash
 COPY ./custom/google5ed9cf1363065b07.html ${DRUPAL_ROOT}/google5ed9cf1363065b07.html
 
 # Container metadata.
+ARG BUILD_DATE
+ARG VCS_REF
+ARG VERSION
 LABEL ca.unb.lib.generator="drupal11" \
   com.microscaling.docker.dockerfile="/Dockerfile" \
   com.microscaling.license="MIT" \
