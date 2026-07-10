@@ -1,5 +1,4 @@
 FROM ghcr.io/unb-libraries/drupal:11.x-1.x-unblib
-MAINTAINER UNB Libraries <libsupport@unb.ca>
 
 # Install additional OS packages.
 ENV ADDITIONAL_OS_PACKAGES postfix php${PHP_VERSION}-ldap php${PHP_VERSION}-xmlreader php${PHP_VERSION}-zip php${PHP_VERSION}-pecl-redis
@@ -34,6 +33,7 @@ LABEL ca.unb.lib.generator="drupal11" \
   com.microscaling.docker.dockerfile="/Dockerfile" \
   com.microscaling.license="MIT" \
   org.label-schema.build-date=$BUILD_DATE \
+  org.opencontainers.image.authors="UNB Libraries <libsupport@unb.ca>" \
   org.label-schema.description="voi.lib.unb.ca is the digital home for the bilingual research project, 'Vocabularies of Identity II'" \
   org.label-schema.name="voi.lib.unb.ca" \
   org.label-schema.schema-version="1.0" \
