@@ -1,10 +1,10 @@
 FROM ghcr.io/unb-libraries/drupal:11.x-1.x-unblib
 
 # Install additional OS packages.
-ENV ADDITIONAL_OS_PACKAGES postfix php${PHP_VERSION}-ldap php${PHP_VERSION}-xmlreader php${PHP_VERSION}-zip php${PHP_VERSION}-pecl-redis
-ENV DRUPAL_SITE_ID voi
-ENV DRUPAL_SITE_URI voi.lib.unb.ca
-ENV DRUPAL_SITE_UUID 87375ebe-f3d5-4681-b0ca-5e1352a52f83
+ENV ADDITIONAL_OS_PACKAGES="postfix php${PHP_VERSION}-ldap php${PHP_VERSION}-xmlreader php${PHP_VERSION}-zip php${PHP_VERSION}-pecl-redis"
+ENV DRUPAL_SITE_ID="voi"
+ENV DRUPAL_SITE_URI="voi.lib.unb.ca"
+ENV DRUPAL_SITE_UUID="87375ebe-f3d5-4681-b0ca-5e1352a52f83"
 
 # Build application.
 COPY ./build/ /build/
