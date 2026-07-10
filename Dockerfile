@@ -29,17 +29,13 @@ COPY ./custom/google5ed9cf1363065b07.html ${DRUPAL_ROOT}/google5ed9cf1363065b07.
 ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION
-LABEL ca.unb.lib.generator="drupal11" \
-  com.microscaling.docker.dockerfile="/Dockerfile" \
-  com.microscaling.license="MIT" \
-  org.label-schema.build-date=$BUILD_DATE \
+LABEL org.opencontainers.image.title="voi.lib.unb.ca" \
+  org.opencontainers.image.description="voi.lib.unb.ca is the digital home for the bilingual research project, 'Vocabularies of Identity II'" \
+  org.opencontainers.image.vendor="University of New Brunswick Libraries" \
   org.opencontainers.image.authors="UNB Libraries <libsupport@unb.ca>" \
-  org.label-schema.description="voi.lib.unb.ca is the digital home for the bilingual research project, 'Vocabularies of Identity II'" \
-  org.label-schema.name="voi.lib.unb.ca" \
-  org.label-schema.schema-version="1.0" \
-  org.label-schema.url="https://voi.lib.unb.ca" \
-  org.label-schema.vcs-ref=$VCS_REF \
-  org.label-schema.vcs-url="https://github.com/unb-libraries/voi.lib.unb.ca" \
-  org.label-schema.vendor="University of New Brunswick Libraries" \
-  org.label-schema.version=$VERSION \
-  org.opencontainers.image.source="https://github.com/unb-libraries/voi.lib.unb.ca"
+  org.opencontainers.image.url="https://voi.lib.unb.ca" \
+  org.opencontainers.image.source="https://github.com/unb-libraries/voi.lib.unb.ca" \
+  org.opencontainers.image.version="$VERSION" \
+  org.opencontainers.image.revision="$VCS_REF" \
+  org.opencontainers.image.created="$BUILD_DATE" \
+  ca.unb.lib.generator="drupal11"
