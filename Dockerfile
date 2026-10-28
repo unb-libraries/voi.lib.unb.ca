@@ -29,6 +29,9 @@ COPY ./custom/google5ed9cf1363065b07.html ${DRUPAL_ROOT}/google5ed9cf1363065b07.
 ARG BUILD_DATE
 ARG VCS_REF
 ARG VERSION
+# Drupal's deployment_identifier (service container, APCu and Twig cache keys) changes with
+# every build. Set here, in the last layers, so it does not invalidate the cached layers above.
+ENV DRUPAL_DEPLOYMENT_IDENTIFIER=$VERSION
 LABEL org.opencontainers.image.title="voi.lib.unb.ca" \
   org.opencontainers.image.description="voi.lib.unb.ca is the digital home for the bilingual research project, 'Vocabularies of Identity II'" \
   org.opencontainers.image.vendor="University of New Brunswick Libraries" \
