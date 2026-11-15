@@ -855,7 +855,7 @@ display:
         simple_sitemap_display_extender:
           variants:
             default:
-              index: true
+              index: false
               priority: '0.5'
               changefreq: ''
               arguments: {  }
