@@ -1,0 +1,75 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.unb_libraries
+  module:
+    - ckeditor5
+format: unb_libraries
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - heading
+      - bold
+      - italic
+      - strikethrough
+      - subscript
+      - superscript
+      - '|'
+      - link
+      - blockQuote
+      - bulletedList
+      - numberedList
+      - insertTable
+      - horizontalLine
+      - '|'
+      - sourceEditing
+  plugins:
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_list:
+      properties:
+        reversed: false
+        startIndex: true
+        styles: true
+      multiBlock: true
+    ckeditor5_sourceEditing:
+      allowed_tags:
+        - '<a class hreflang id>'
+        - '<cite class>'
+        - '<blockquote cite class>'
+        - '<code class>'
+        - '<ul class>'
+        - '<ol class>'
+        - '<li class>'
+        - '<dl class>'
+        - '<dt class>'
+        - '<dd class>'
+        - '<sup class>'
+        - '<sub class>'
+        - '<img class src alt data-entity-type data-entity-uuid data-align data-caption>'
+        - '<table class>'
+        - '<caption class>'
+        - '<tbody class>'
+        - '<thead class>'
+        - '<tfoot class>'
+        - '<th class>'
+        - '<td class>'
+        - '<tr class>'
+        - '<div class>'
+        - '<small class>'
+        - '<span class>'
+        - '<p class>'
+        - '<h2 class id>'
+        - '<h3 class id>'
+        - '<h4 class id>'
+        - '<h5 class id>'
+        - '<h6 class id>'
+image_upload:
+  status: false
